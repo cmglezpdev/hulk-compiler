@@ -81,7 +81,7 @@ class BasicHulk:
                 except ValueError:
                     try:
                         token = fixed_tokens[item]
-                    except:
+                    except KeyError:
                         token = UnknownToken(item)
                 tokens.append(token)
             eof = Token('$', G.EOF)
