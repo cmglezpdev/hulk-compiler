@@ -104,15 +104,14 @@ def regex_tokenizer(text, G, skip_whitespaces=True):
 class Regex:
     def __init__(self, regex: str, skip_whitespaces=False) -> None:
         self.regex = regex
-        self.automaton = self.build_automaton(regex)
+        self.automaton = self.build_automaton(regex, skip_whitespaces)
         
     def __call__(self, text: str):
         return self.automaton.recognize(text)
 
     @staticmethod
-    def build_automaton(regex, skip_whitespaces=False):
+    def build_automaton(regex: str, skip_whitespaces=False):
         tokens = regex_tokenizer(regex, G, skip_whitespaces)
-
         parser = LL1Parser(G)
         left_parse = parser(tokens)
         
