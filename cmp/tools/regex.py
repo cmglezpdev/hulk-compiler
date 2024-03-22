@@ -78,9 +78,9 @@ A %= symbol, lambda h,s: SymbolNode(s[1]), None
 A %= opar + E + cpar, lambda h,s: s[2], None, None, None
 A %= epsilon, lambda h,s: EpsilonNode(s[1]), None
 
-print(G)
 
-def regex_tokenizer(text, G, skip_whitespaces=True):
+
+def regex_tokenizer(text, G, skip_whitespaces=True) -> list[Token]:
     tokens = []
     fixed_tokens = {
         '|': Token('|', pipe),
@@ -112,8 +112,9 @@ class Regex:
     @staticmethod
     def build_automaton(regex: str, skip_whitespaces=False):
         tokens = regex_tokenizer(regex, G, skip_whitespaces)
+     
         parser = LL1Parser(G)
-        left_parse = parser(tokens)
+        left_parse = parser([t.token_type for t in tokens])
         
         ast = evaluate_parse(left_parse, tokens)
         print(printer(ast))
