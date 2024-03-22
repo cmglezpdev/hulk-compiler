@@ -1,85 +1,8 @@
 # import zlib, base64
 # exec(zlib.decompress(base64.b64decode('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')))
 # # Created by pyminifier (https://github.com/liftoff/pyminifier)
-import pydot    
 from cmp.utils import ContainerSet, DisjointSet
-
-
-class NFA:
-    def __init__(self, states, finals, transitions, start=0):
-        self.states = states
-        self.start = start
-        self.finals = set(finals)
-        self.map = transitions
-        self.vocabulary = set()
-        self.transitions = { state: {} for state in range(states) }
-        
-        for (origin, symbol), destinations in transitions.items():
-            assert hasattr(destinations, '__iter__'), 'Invalid collection of states'
-            self.transitions[origin][symbol] = destinations
-            self.vocabulary.add(symbol)
-            
-        self.vocabulary.discard('')
-        
-    def epsilon_transitions(self, state):
-        assert state in self.transitions, 'Invalid state'
-        try:
-            return self.transitions[state]['']
-        except KeyError:
-            return ()
-            
-    def graph(self):
-        G = pydot.Dot(rankdir='LR', margin=0.1)
-        G.add_node(pydot.Node('start', shape='plaintext', label='', width=0, height=0))
-
-        for (start, tran), destinations in self.map.items():
-            tran = 'ε' if tran == '' else tran
-            G.add_node(pydot.Node(start, shape='circle', style='bold' if start in self.finals else ''))
-            for end in destinations:
-                G.add_node(pydot.Node(end, shape='circle', style='bold' if end in self.finals else ''))
-                G.add_edge(pydot.Edge(start, end, label=tran, labeldistance=2))
-
-        G.add_edge(pydot.Edge('start', self.start, label='', style='dashed'))
-        return G
-
-    def _repr_svg_(self):
-        try:
-            return self.graph().create_svg().decode('utf8')
-        except Exception as e:
-            print(e)
-            pass        
-class DFA(NFA):
-    
-    def __init__(self, states, finals, transitions, start=0):
-        assert all(isinstance(value, int) for value in transitions.values())
-        assert all(len(symbol) > 0 for origin, symbol in transitions)
-        
-        transitions = { key: [value] for key, value in transitions.items() }
-        NFA.__init__(self, states, finals, transitions, start)
-        self.current = start
-        
-    def _move(self, symbol):
-        try:
-            self.current = self.transitions[self.current][symbol][0]
-            return self.current
-        except:  # noqa: E722
-            self.current = None
-            return None
-
-        
-        
-    def _reset(self):
-        self.current = self.start
-        
-    def recognize(self, string):
-        self._reset()
-        for s in string:
-            next = self._move(s)
-            if next is None:
-                return False
-        return self.current in self.finals
-        
-
+from cmp.automata import DFA, NFA
 
 def move(automaton, states, symbol):
     moves = set()
