@@ -15,10 +15,11 @@ def compute_local_first(firsts: dict[Symbol, ContainerSet], alpha: Sentence) -> 
         first_alpha.set_epsilon()
     else:
         for symbol in alpha:
-            first_alpha.hard_update(firsts[symbol])
-            if symbol.IsTerminal or not firsts[symbol].contains_epsilon:
+            first_alpha.update(firsts[symbol])
+            if not firsts[symbol].contains_epsilon:
                 break
-
+        else:
+            first_alpha.set_epsilon()
     return first_alpha
 
 def compute_firsts(G: Grammar) -> dict[Symbol, ContainerSet]:
@@ -66,7 +67,6 @@ def compute_follows(G: Grammar, firsts: dict[Symbol, ContainerSet]) -> dict[Symb
     
     local_firsts = {}
     
-    # init Follow(Vn)
     for nonterminal in G.nonTerminals:
         follows[nonterminal] = ContainerSet()
     follows[G.startSymbol] = ContainerSet(G.EOF)
@@ -74,7 +74,6 @@ def compute_follows(G: Grammar, firsts: dict[Symbol, ContainerSet]) -> dict[Symb
     while change:
         change = False
         
-        # P: X -> alpha
         for production in G.Productions:
             X = production.Left
             alpha = production.Right
@@ -85,12 +84,11 @@ def compute_follows(G: Grammar, firsts: dict[Symbol, ContainerSet]) -> dict[Symb
                     try:
                         beta = local_firsts[alpha, i]
                     except KeyError:                        
-                        beta = compute_local_first(firsts, Sentence(*islice(alpha, i + 1, None)))
-                        local_firsts[alpha, i] = beta
+                        local_firsts[alpha, i] = compute_local_first(firsts, Sentence(*islice(alpha, i + 1, None)))
+                        beta = local_firsts[alpha, i]
 
                     change |= follows[symbol].update(beta)
                     if beta.contains_epsilon:
                         change |= follows[symbol].update(follow_X)
 
-    # Follow(Vn)
     return follows
