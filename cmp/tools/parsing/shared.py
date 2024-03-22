@@ -1,10 +1,11 @@
+from itertools import islice
 from symtable import Symbol
 from cmp.pycompiler import Grammar, Sentence
 from cmp.utils import ContainerSet
 
 def compute_local_first(firsts: dict[Symbol, ContainerSet], alpha: Sentence) -> ContainerSet:
     first_alpha = ContainerSet()
-    
+
     try:
         alpha_is_epsilon = alpha.IsEpsilon
     except KeyError:
@@ -12,12 +13,11 @@ def compute_local_first(firsts: dict[Symbol, ContainerSet], alpha: Sentence) -> 
     
     if alpha_is_epsilon:
         first_alpha.set_epsilon()
-        return first_alpha
-        
-    for symbol in alpha:
-        first_alpha.hard_update(firsts[symbol])
-        if symbol.IsTerminal or  not firsts[symbol].contains_epsilon:
-            return first_alpha
+    else:
+        for symbol in alpha:
+            first_alpha.hard_update(firsts[symbol])
+            if symbol.IsTerminal or not firsts[symbol].contains_epsilon:
+                break
 
     return first_alpha
 
@@ -79,13 +79,17 @@ def compute_follows(G: Grammar, firsts: dict[Symbol, ContainerSet]) -> dict[Symb
             X = production.Left
             alpha = production.Right
             
-            follow_X = follows[X]
-            
+            follow_X = follows[X]            
             for i, symbol in enumerate(alpha):
                 if symbol.IsNonTerminal:
-                    local_firsts = compute_local_first(firsts, alpha[i + 1:])
-                    change |= follows[symbol].update(local_firsts)
-                    if local_firsts.contains_epsilon or i == len(alpha) - 1:
+                    try:
+                        beta = local_firsts[alpha, i]
+                    except KeyError:                        
+                        beta = compute_local_first(firsts, Sentence(*islice(alpha, i + 1, None)))
+                        local_firsts[alpha, i] = beta
+
+                    change |= follows[symbol].update(beta)
+                    if beta.contains_epsilon:
                         change |= follows[symbol].update(follow_X)
 
     # Follow(Vn)
