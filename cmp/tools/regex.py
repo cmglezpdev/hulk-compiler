@@ -8,7 +8,7 @@ from cmp.tools.automata import NFA, nfa_to_dfa
 from cmp.tools.automata import automata_union, automata_concatenation, automata_closure, automata_minimization
 from cmp.ast import get_printer, AtomicNode, UnaryNode, BinaryNode
 from cmp.utils import Token
-from cmp.tools.parsing import metodo_predictivo_no_recursivo
+from cmp.tools.parsing.ll1 import LL1Parser
 from cmp.tools.evaluation import evaluate_parse
 
 printer = get_printer(AtomicNode=AtomicNode, UnaryNode=UnaryNode, BinaryNode=BinaryNode)
@@ -113,7 +113,7 @@ class Regex:
     def build_automaton(regex, skip_whitespaces=False):
         tokens = regex_tokenizer(regex, G, skip_whitespaces)
 
-        parser = metodo_predictivo_no_recursivo(G)
+        parser = LL1Parser(G)
         left_parse = parser(tokens)
         
         ast = evaluate_parse(left_parse, tokens)

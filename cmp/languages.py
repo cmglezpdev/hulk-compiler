@@ -1,6 +1,6 @@
 from cmp.pycompiler import Sentence, Production
 from cmp.utils import ContainerSet, Token, UnknownToken
-from cmp.tools.parsing import build_parsing_table, metodo_predictivo_no_recursivo
+from cmp.tools.parsing.ll1 import LL1Parser
 
 class BasicHulk:
     def __init__(self, G):
@@ -221,8 +221,5 @@ class Regex:
 
     @property
     def parser(self):
-        firsts = self.firsts
-        follows = self.follows
-        M = build_parsing_table(self.G, firsts, follows)
-        parser = metodo_predictivo_no_recursivo(self.G, M)
+        parser = LL1Parser(self.G)
         return parser
