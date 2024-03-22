@@ -19,8 +19,6 @@ class Lexer:
     def _build_regexs(self, table):
         regexs = []
         for n, (token_type, regex) in enumerate(table):
-            # - Remember to tag the final states with the token_type and priority.
-            # - <State>.tag might be useful for that purpose ;-)
             regx = Regex(regex)
             automaton = State.from_nfa(regx.automaton)
             # display(automaton)
