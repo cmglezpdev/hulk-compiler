@@ -1,8 +1,3 @@
-# import zlib, base64
-# exec(zlib.decompress(base64.b64decode('eJytVsFu2zgQvesreFhDVE0IdY8BCNTZtVRg2yyaOKgdwxAYiYrZSKRK0qnttp+1v7HftCQlWbLWTXPYgwzyzXDem9Fw5FyKEqRlFRKlASsrITWYalGy9EpkFF0yTuTeLW/blZe3Z6p9KsqKFVS2R2NJypLIzkULUaiQbE1IoknjBv+IpujKPC2epIVQW0l7gOAp0ZQTzQTv4JJxVrLDAN1yu+U5SbRIspwEQ376RIqtO9QKbRCaVEQqOvS3IOMPrXNJtchEUkmasVSzJ5FwkUiabo3Xk+gObzUrVHtoLh4p975gk6uXFkQpMKsUKwS3NYRdjYMLD2Q0PyqCiha5BYGkeis5+AKVNrjCE5Sb11EovHq9RloSrphNSeFvPwJP4l74hvBmX96L4sV8CttlWNDdGfI3R/LJgBy+Riq4mBgNKe4YGwm/1y/WaTh2kGV7a+Oy1JR2I7JakaiotIKsMNqvwLBNGg/vI+6FbwhvbS84uq53f8FXuHBI/pzXNdjAz7vGR642Wde0/zf5yVUYiogi3LF6NrCkD3RnLoLpPnagEmq60yhG6pFVydcNM++yIql5oXNZ823wau2BOMbfdheuZ+EOxavdOsiFBDvA+Mr/7iP/lXmgeQLz/PO3v/7hAetwMA7AUljlLAdDGkB4Bg4hU24LXYLAZKQZ31Kz1nLvoM84jlcHIwTQXUorDf6k+5mUQjbWWtnBKPOV6zF/HRiL68miDrEJSVVRnsHPxnLc1Af933wUh7O/osDYmgJvXLnut6zIkod6bjl9MY7bnQdmOA6vBJ9TWVoq6M985CrngTmK0BQt0BLdnTop6M9BBKZgAZbgzjeuFfqAbtAlIujWuPb8voNXAIIA1DkBU1jLOcLz8QIVpLzPCNggdaFWb9bIMNBTcGLqtRjhajzr49dwYweEPRM4u0m8Hg19L+tjchjhaLx8IdXS6OqjUdQyTSzT8lmmaISn47sXMt2N8Ic++tERBc7wDMd0hEkfTWEjzRhu+wbZM9yMZ+PLoa5jk8RejAct4r3Hz38QYBw0A+Ha3sVm3iaJ+XbpJHHzFrlb+t9LGZmuqKfAJzeM7SJ0vtj9un0zGQTHn8Ja2xGBzitoGVNzOVpGe0lPIzcp9gIaqlQ82LnhxkZwdnKdpXwulQ0ezqT6yJmhVB+yFxu/hxu7mOPTTzXMkcPf4Xl4/IRZYIG7PwDwnUUe8dn/DXARdMk/ev8C0IsPHg==')))
-# # Created by pyminifier (https://github.com/liftoff/pyminifier)
-
-
 from cmp.pycompiler import Grammar
 from cmp.tools.automata import NFA, nfa_to_dfa
 from cmp.tools.automata import automata_union, automata_concatenation, automata_closure, automata_minimization
@@ -51,7 +46,7 @@ class ConcatNode(BinaryNode):
 # ConcatNode(SymbolNode('a'), SymbolNode('b')).evaluate()
 
 
-
+# ============================================= GRAMMAR DEFINITION =========================================
 G = Grammar()
 
 E = G.NonTerminal('E', True)
@@ -79,6 +74,7 @@ A %= opar + E + cpar, lambda h,s: s[2], None, None, None
 A %= epsilon, lambda h,s: EpsilonNode(s[1]), None
 
 
+# =============================================REGEX DEFINITION =========================================
 
 def regex_tokenizer(text, G, skip_whitespaces=True) -> list[Token]:
     tokens = []
@@ -98,6 +94,7 @@ def regex_tokenizer(text, G, skip_whitespaces=True) -> list[Token]:
         except KeyError:
             tokens.append(Token(char, symbol))
 
+    # TODO: Here, change $ by Hulk grammar token
     tokens.append(Token('$', G.EOF))
     return tokens
 
