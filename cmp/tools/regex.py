@@ -51,7 +51,7 @@ G = Grammar()
 
 E = G.NonTerminal('E', True)
 T, F, A, X, Y, Z = G.NonTerminals('T F A X Y Z')
-pipe, star, opar, cpar, symbol, epsilon = G.Terminals('| * ( ) symbol ε')
+pipe, star, opar, cpar, symbol, epsilon = G.Terminals('| ^ [ ] symbol ε')
 
 # > PRODUCTIONS
 E %= T + X, lambda h,s: s[2], None, lambda h,s: s[1]
@@ -80,10 +80,10 @@ def regex_tokenizer(text, G, skip_whitespaces=True) -> list[Token]:
     tokens = []
     fixed_tokens = {
         '|': Token('|', pipe),
-        '*': Token('*', star),
+        '^': Token('^', star),
         'ε': Token('ε', epsilon),
-        '(': Token('(', opar),
-        ')': Token(')', cpar),
+        '[': Token('[', opar),
+        ']': Token(']', cpar),
     }
 
     for char in text:
@@ -109,7 +109,6 @@ class Regex:
     @staticmethod
     def build_automaton(regex: str, skip_whitespaces=False):
         tokens = regex_tokenizer(regex, G, skip_whitespaces)
-     
         parser = LL1Parser(G)
         left_parse = parser([t.token_type for t in tokens])
         
