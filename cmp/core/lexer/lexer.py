@@ -55,7 +55,13 @@ class Lexer:
     def _tokenize(self, text):
         remaining_text = text
         while remaining_text:
+            print(remaining_text)
             final_state, lexeme = self._walk(remaining_text)
+            
+            if lexeme == '':
+                print(remaining_text)
+                raise KeyError('Unexcepted character: ', remaining_text[0])
+                
             if final_state:
                 sorted_states = [s for s in final_state.state if s.tag is not None]
                 sorted_states.sort(key= lambda x: x.tag[0])
