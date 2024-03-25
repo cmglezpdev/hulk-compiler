@@ -7,7 +7,7 @@ lower = '|'.join(chr(i) for i in range(ord('a'), ord('z') + 1))
 upper = '|'.join(chr(i) for i in range(ord('A'), ord('Z') + 1))
 symbol = ['+', '-', '*', '/']
 
-INTEGER = f'[{nonzerodigits}][{digits}]^'
+INTEGER = f'[{nonzerodigits}][.|ε][{digits}]^'
 SYMBOLS = ['+', '-', '*', '/', '(', ')']
 SPACE = '[ |\n|\t|\f|\r|\v][ |\n|\t|\f|\r|\v]^'
 
