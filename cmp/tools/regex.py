@@ -50,8 +50,9 @@ class ConcatNode(BinaryNode):
 G = Grammar()
 
 E = G.NonTerminal('E', True)
-T, F, A, X, Y, Z = G.NonTerminals('T F A X Y Z')
-pipe, star, opar, cpar, symbol, epsilon = G.Terminals('| ^ [ ] symbol ε')
+T, F, A, X, Y, Z,  = G.NonTerminals('T F A X Y Z ')
+pipe, star, opar, cpar, symbol, epsilon = G.Terminals('| * ( ) symbol ε')
+scape = G.Terminal('\\')
 
 # > PRODUCTIONS
 E %= T + X, lambda h,s: s[2], None, lambda h,s: s[1]
@@ -61,7 +62,7 @@ X %= G.Epsilon, lambda h,s: h[0]
 
 T %= F + Y, lambda h,s: s[2], None, lambda h,s: s[1]
 
-Y %= F + Y, lambda h,s: s[2], None, lambda h,s: ConcatNode(h[0], s[1])
+Y %= F + Y, lambda h,s: s[2], None, lambda h,s:ConcatNode(h[0], s[1])
 Y %= G.Epsilon, lambda h,s: h[0]
 
 F %= A + Z, lambda h,s: s[2], None, lambda h,s: s[1]
@@ -69,7 +70,11 @@ F %= A + Z, lambda h,s: s[2], None, lambda h,s: s[1]
 Z %= star + Z, lambda h,s: s[2], None, lambda h,s: ClosureNode(h[0])
 Z %= G.Epsilon, lambda h,s: h[0]
 
-A %= symbol, lambda h,s: SymbolNode(s[1]), None
+
+def tmp(h,s):
+           return SymbolNode(s[2])
+A %= scape + symbol , tmp ,None ,None
+A %= symbol , lambda h,s : SymbolNode(s[1]) , None
 A %= opar + E + cpar, lambda h,s: s[2], None, None, None
 A %= epsilon, lambda h,s: EpsilonNode(s[1]), None
 
@@ -80,22 +85,25 @@ def regex_tokenizer(text, G, skip_whitespaces=True) -> list[Token]:
     tokens = []
     fixed_tokens = {
         '|': Token('|', pipe),
-        '^': Token('^', star),
+        '*': Token('*', star),
         'ε': Token('ε', epsilon),
-        '[': Token('[', opar),
-        ']': Token(']', cpar),
+        '(': Token('(', opar),
+        ')': Token(')', cpar),
+        '\\': Token('\\',scape)
     }
 
     for char in text:
         if skip_whitespaces and char.isspace():
             continue
-        try:
-            tokens.append(fixed_tokens[char])
-        except KeyError:
-            tokens.append(Token(char, symbol))
+        if len(tokens)>0 and tokens[-1].lex == '\\':
+                tokens.append(Token(char, symbol))
+        else:
+            try:
+                tokens.append(fixed_tokens[char])
+            except KeyError:
+                tokens.append(Token(char, symbol))
 
-    # TODO: Here, change $ by Hulk grammar token
-    tokens.append(Token('$', G.EOF))
+    tokens.append(Token('\0', G.EOF))
     return tokens
 
 class Regex:
@@ -113,7 +121,6 @@ class Regex:
         left_parse = parser([t.token_type for t in tokens])
         
         ast = evaluate_parse(left_parse, tokens)
-        print(printer(ast))
         # Automaton
         nfa = ast.evaluate()
         # display(nfa)
