@@ -38,27 +38,25 @@ class LR1Parser(ShiftReduceParser):
     
     @staticmethod
     def _register(table, key, value):
-        assert key not in table or table[key] == value, 'Shift-Reduce or Reduce-Reduce conflict!!!'
+        assert key not in table or table[key] == value, f'Shift-Reduce or Reduce-Reduce conflict!!!: {(key, value)}'
         table[key] = value
 
     def expand(self, item: Item, firsts):
-        G = self.G
         next_symbol = item.NextSymbol
         if next_symbol is None or not next_symbol.IsNonTerminal:
             return []
         
         lookaheads = ContainerSet()
         # (Compute lookahead for child items)
-        for sentence in item.Preview():
-            local_firsts = compute_local_first(firsts, sentence)
+        for preview in item.Preview():
+            local_firsts = compute_local_first(firsts, preview)
             lookaheads.update(local_firsts)
         
         assert not lookaheads.contains_epsilon
         # (Build and return child items)
         children = []
-        for prod in G.Productions:
-            if prod.Left == next_symbol:
-                children.append(Item(prod, 0, lookaheads))
+        for prod in next_symbol.productions:
+            children.append(Item(prod, 0, lookaheads))
         
         return children
 
