@@ -116,6 +116,7 @@ instr_list %= instr + semicolon + instr_list
 
 #instruction
 #<instr> -> <var-dec> | <func-call> | <func-dec> | <type-dec> | <scope> | <flux-control> | <var-asign> | <expression>
+
 instr %= var_dec
 # instr %= function_declaration
 # instr %= type_declaration
@@ -124,8 +125,8 @@ instr %= flux_control
 instr %= var_asignation
 instr %= expression
 
-#var declaration <var-dec> -> let <var-init-list> in <var-decl-expression> 
-var_dec %= let + var_inicialization_list+ in_ + var_decl_expression
+# #var declaration <var-dec> -> let <var-init-list> in <var-decl-expression> 
+# var_dec %= let + var_inicialization_list + in_ + var_decl_expression
 
 #var declaration expression <var-decl-expression> -> <scope> | <flux-control> | <var-decl> | <expression> | (<var-dec>)
 var_decl_expression %= scope
@@ -134,28 +135,28 @@ var_decl_expression %= expression
 # var_decl_expression %= open_curly_braket + var_dec + closed_curly_braket
 var_decl_expression %= var_dec
 
-#var-inicialization-list <var-init-list> -> <var-init> | <var-init> , <var-init-list>
-var_inicialization_list %= var_initialization
-var_inicialization_list %= var_initialization + comma + var_inicialization_list
+# #var-inicialization-list <var-init-list> -> <var-init> | <var-init> , <var-init-list>
+# var_inicialization_list %= var_initialization
+# var_inicialization_list %= var_initialization + comma + var_inicialization_list
 
 #var initialization <var-init> -> ID = <expression> | ID = <var-asign>
 var_initialization %= identifier + inicialization + expression
 var_initialization %= identifier + inicialization  + var_asignation #TODO desambiguar let a = b=c =4 y let a = c:=4
 
-#id list <id-list> -> <identifier> | <identifier>, <id-list>
-id_list %= identifier
-id_list %= identifier + comma + id_list
+# #id list <id-list> -> <identifier> | <identifier>, <id-list>
+# id_list %= identifier
+# id_list %= identifier + comma + id_list
 
-#identifier <identifier> -> ID | ID <type-anotation>
-identifier %= ID
-identifier %= ID + type_anotation
+# #identifier <identifier> -> ID | ID <type-anotation>
+# identifier %= ID
+# identifier %= ID + type_anotation
 
-#type anotation <type-anotation> -> : Number
-type_anotation %= type_asignator + number_type
+# #type anotation <type-anotation> -> : Number
+# type_anotation %= type_asignator + number_type
 
-#scopes <scope> -> { <inst-list> } | {}
-scope%=open_bracket+instr_list+closed_bracket
-scope%=open_bracket+closed_bracket
+# #scopes <scope> -> { <inst-list> } | {}
+# scope%=open_bracket+instr_list+closed_bracket
+# scope%=open_bracket+closed_bracket
 
 #expressions <expresion> -> <aritmetic-op> | <type-instanciation> | <string-operation>
 expression %= aritmetic_operation
@@ -164,18 +165,21 @@ expression %= aritmetic_operation
 
 #artimetic expresssion <aritmetic-expresion> -> <factor> + <aritmetic-expression> | <factor> - <aritmetic-expression> | <factor>
 
-aritmetic_operation %= factor +plus_operator+ aritmetic_operation
-aritmetic_operation %= factor + minus_operator + aritmetic_operation
+aritmetic_operation %= aritmetic_operation + plus_operator + factor
+aritmetic_operation %= aritmetic_operation + minus_operator + factor
 aritmetic_operation %= factor
 
 #factor <factor> -> <atom> * <factor> | <atom> / <factor> | <atom>
+
 factor %= atom + multiplication + factor
 factor %= atom + division + factor
+
 factor %= atom
 
-#atom <atom> -> (<expression>) | number | <function-call> | id
+# #atom <atom> -> (<expression>) | number | <function-call> | id
 atom %= open_curly_braket + aritmetic_operation + closed_curly_braket
 atom %= number
+
 atom %= function_call
 atom %= ID
 # atom %= variable_atribute
