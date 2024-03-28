@@ -1,0 +1,3586 @@
+>>> Building Lexer...
+>>> Tokenizing..
+ let a = 0, c = 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+let a = 0, c = 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ a = 0, c = 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+a = 0, c = 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ = 0, c = 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+= 0, c = 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ 0, c = 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+0, c = 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+, c = 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ c = 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+c = 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ = 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+= 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ 2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+2 in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+in
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+
+                let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+let b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+b = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ = 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+= 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ 1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+1 , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ , x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+, x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+x =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+ =2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+=2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+2+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
++5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+5-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+-(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+(3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+3*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+*9) in {
+                    print(a);
+                    print(b);
+                };
+       
+9) in {
+                    print(a);
+                    print(b);
+                };
+       
+) in {
+                    print(a);
+                    print(b);
+                };
+       
+ in {
+                    print(a);
+                    print(b);
+                };
+       
+in {
+                    print(a);
+                    print(b);
+                };
+       
+ {
+                    print(a);
+                    print(b);
+                };
+       
+{
+                    print(a);
+                    print(b);
+                };
+       
+
+                    print(a);
+                    print(b);
+                };
+       
+print(a);
+                    print(b);
+                };
+       
+(a);
+                    print(b);
+                };
+       
+a);
+                    print(b);
+                };
+       
+);
+                    print(b);
+                };
+       
+;
+                    print(b);
+                };
+       
+
+                    print(b);
+                };
+       
+print(b);
+                };
+       
+(b);
+                };
+       
+b);
+                };
+       
+);
+                };
+       
+;
+                };
+       
+
+                };
+       
+};
+       
+;
+       
+
+       
+>>> Cleaning tokens...
+>>> Done !
+['let', 'a', '=', '0', ',', 'c', '=', '2', 'in', 'let', 'b', '=', '1', ',', 'x', '=', '2', '+', '5', '-', '(', '3', '*', '9', ')', 'in', '{', 'print', '(', 'a', ')', ';', 'print', '(', 'b', ')', ';', '}', ';', '$']
+['let', 'ID', '=', 'number', ',', 'ID', '=', 'number', 'in', 'let', 'ID', '=', 'number', ',', 'ID', '=', 'number', '+', 'number', '-', '(', 'number', '*', 'number', ')', 'in', '{', 'ID', '(', 'ID', ')', ';', 'ID', '(', 'ID', ')', ';', '}', ';', '$']
+>>> Parsing...
+0 	 <factor> -> .<atom>/<factor>, {';', '+', '-'}
+	 <scope> -> .{}, {';'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {';'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/'}
+	 <scope> -> .{<inst-list>}, {';'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {';'}
+	 <inst-list> -> .<inst>;, {'$'}
+	 <full-conditional> -> .if(<conditional-expresssion>){<inst-list>}, {';'}
+	 <inline-conditional> -> .if(<conditional-expresssion>)<expression>, {';'}
+	 <inst> -> .<flux-control>, {';'}
+	 <conditional> -> .<inline-conditional>, {';'}
+	 <var-dec> -> .let<vat-init-list>in<var-decl-expr>, {';'}
+	 <full-conditional> -> .if(<conditional-expresssion>){<inst-list>}<else-statement>, {';'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/'}
+	 <flux-control> -> .<conditional>, {';'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/'}
+	 <var-asign> -> .ID:=<expression>, {';'}
+	 <inst> -> .<var-asign>, {';'}
+	 <factor> -> .<atom>, {';', '+', '-'}
+	 <aritmetic-operation> -> .<factor>, {';'}
+	 <flux-control> -> .<while-loop>, {';'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/'}
+	 <inst> -> .<var-dec>, {';'}
+	 <atom> -> .number, {';', '+', '-', '*', '/'}
+	 <inst-list> -> .<inst>;<inst-list>, {'$'}
+	 <for-loop> -> .for(ID<iterable-expression>)<scope>, {';'}
+	 <while-loop> -> .while(<conditional-expresssion>)<scope>, {';'}
+	 <inline-conditional> -> .if(<conditional-expresssion>)<expression><else-statement>, {';'}
+	 <expression> -> .<aritmetic-operation>, {';'}
+	 <factor> -> .<atom>*<factor>, {';', '+', '-'}
+	 <inst> -> .<scope>, {';'}
+	 <conditional> -> .<full-conditional>, {';'}
+	 S' -> .<program>, {'$'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/'}
+	 <program> -> .<inst-list>, {'$'}
+	 <flux-control> -> .<for-loop>, {';'}
+	 <inst> -> .<expression>, {';'} 
+
+1 	 <while-loop> -> while.(<conditional-expresssion>)<scope>, {';'} 
+
+2 	 <condition> -> .<boolean-value>, {'|', '&', ')'}
+	 <expression> -> .<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <comparation> -> .<expression>=<<expression>, {'|', '&', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <conditional-expresssion> -> .<condition>|<conditional-expresssion>, {')'}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <conditional-expresssion> -> .<condition>&<conditional-expresssion>, {')'}
+	 <boolean-value> -> .false, {'|', '&', ')'}
+	 <conditional-expresssion> -> .<condition>, {')'}
+	 <comparation> -> .<expression>!=<expression>, {'|', '&', ')'}
+	 <while-loop> -> while(.<conditional-expresssion>)<scope>, {';'}
+	 <comparation> -> .<expression>>=<expression>, {'|', '&', ')'}
+	 <aritmetic-operation> -> .<factor>, {'>', '<', '>=', '=<', '==', '!='}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <condition> -> .<comparation>, {'|', '&', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <comparation> -> .<expression>><expression>, {'|', '&', ')'}
+	 <comparation> -> .<expression><<expression>, {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <boolean-value> -> .true, {'|', '&', ')'}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <conditional-expresssion> -> .!<condition>, {')'}
+	 <comparation> -> .<expression>==<expression>, {'|', '&', ')'}
+	 <condition> -> .(<conditional-expresssion>), {'|', '&', ')'} 
+
+3 	 <atom> -> ID., {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <function-call> -> ID.(), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <function-call> -> ID.(<param-list>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='} 
+
+4 	 <param-list> -> .<expression>, {')'}
+	 <param-list> -> .<expression>,<param-list>, {')'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <function-call> -> ID(.), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {',', ')'}
+	 <function-call> -> ID(.<param-list>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', ')'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {',', '+', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {',', ')'}
+	 <factor> -> .<atom>, {'+', ',', ')', '-'} 
+
+5 	 <function-call> -> ID.(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <atom> -> ID., {'+', ',', '-', '*', '/', ')'}
+	 <function-call> -> ID.(), {'+', ',', '-', '*', '/', ')'} 
+
+6 	 <param-list> -> .<expression>, {')'}
+	 <param-list> -> .<expression>,<param-list>, {')'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {',', ')'}
+	 <function-call> -> ID(.), {'+', ',', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', ')'}
+	 <function-call> -> ID(.<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', ')'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {',', '+', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {',', ')'}
+	 <factor> -> .<atom>, {'+', ',', ')', '-'} 
+
+7 	 <atom> -> number., {'+', ',', '-', '*', '/', ')'} 
+
+8 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <atom> -> (.<aritmetic-operation>), {'+', ',', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+9 	 <function-call> -> ID.(<param-list>), {'+', '-', '*', '/', ')'}
+	 <function-call> -> ID.(), {'+', '-', '*', '/', ')'}
+	 <atom> -> ID., {'+', '-', '*', '/', ')'} 
+
+10 	 <param-list> -> .<expression>, {')'}
+	 <param-list> -> .<expression>,<param-list>, {')'}
+	 <function-call> -> ID(.), {'+', '-', '*', '/', ')'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', ')'}
+	 <function-call> -> ID(.<param-list>), {'+', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', ')'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {',', '+', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {',', ')'}
+	 <factor> -> .<atom>, {'+', ',', ')', '-'} 
+
+11 	 <function-call> -> ID()., {'+', '-', '*', '/', ')'} 
+
+12 	 <param-list> -> <expression>., {')'}
+	 <param-list> -> <expression>.,<param-list>, {')'} 
+
+13 	 <param-list> -> .<expression>, {')'}
+	 <param-list> -> .<expression>,<param-list>, {')'}
+	 <param-list> -> <expression>,.<param-list>, {')'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', ')'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {',', '+', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {',', ')'}
+	 <factor> -> .<atom>, {'+', ',', ')', '-'} 
+
+14 	 <expression> -> <aritmetic-operation>., {',', ')'} 
+
+15 	 <aritmetic-operation> -> <factor>.+<aritmetic-operation>, {',', ')'}
+	 <aritmetic-operation> -> <factor>., {',', ')'}
+	 <aritmetic-operation> -> <factor>.-<aritmetic-operation>, {',', ')'} 
+
+16 	 <aritmetic-operation> -> <factor>+.<aritmetic-operation>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', ')'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ',', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', ')'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <atom> -> .number, {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', ')'}
+	 <factor> -> .<atom>, {',', '+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>, {',', ')'} 
+
+17 	 <aritmetic-operation> -> <factor>+<aritmetic-operation>., {',', ')'} 
+
+18 	 <factor> -> <atom>., {'+', ',', ')', '-'}
+	 <factor> -> <atom>.*<factor>, {'+', ',', ')', '-'}
+	 <factor> -> <atom>./<factor>, {',', '+', ')', '-'} 
+
+19 	 <factor> -> <atom>*.<factor>, {'+', ',', ')', '-'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', ',', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {',', '+', '-', '*', '/', ')'}
+	 <atom> -> .number, {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', ')'}
+	 <factor> -> .<atom>, {'+', ',', ')', '-'} 
+
+20 	 <factor> -> <atom>*<factor>., {'+', ',', ')', '-'} 
+
+21 	 <atom> -> <function-call>., {',', '+', '-', '*', '/', ')'} 
+
+22 	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {',', '+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {',', '+', '-', '*', '/', ')'}
+	 <atom> -> .number, {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {',', '+', ')', '-'}
+	 <function-call> -> .ID(), {',', '+', '-', '*', '/', ')'}
+	 <factor> -> <atom>/.<factor>, {',', '+', ')', '-'}
+	 <factor> -> .<atom>, {',', '+', ')', '-'} 
+
+23 	 <factor> -> <atom>/<factor>., {',', '+', ')', '-'} 
+
+24 	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', ')'}
+	 <aritmetic-operation> -> <factor>-.<aritmetic-operation>, {',', ')'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ',', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', ')'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <atom> -> .number, {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', ')'}
+	 <factor> -> .<atom>, {',', '+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>, {',', ')'} 
+
+25 	 <aritmetic-operation> -> <factor>-<aritmetic-operation>., {',', ')'} 
+
+26 	 <param-list> -> <expression>,<param-list>., {')'} 
+
+27 	 <function-call> -> ID(<param-list>.), {'+', '-', '*', '/', ')'} 
+
+28 	 <function-call> -> ID(<param-list>)., {'+', '-', '*', '/', ')'} 
+
+29 	 <atom> -> number., {'+', '-', '*', '/', ')'} 
+
+30 	 <atom> -> (.<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+31 	 <atom> -> (<aritmetic-operation>.), {'+', '-', '*', '/', ')'} 
+
+32 	 <atom> -> (<aritmetic-operation>)., {'+', '-', '*', '/', ')'} 
+
+33 	 <aritmetic-operation> -> <factor>.+<aritmetic-operation>, {')'}
+	 <aritmetic-operation> -> <factor>., {')'}
+	 <aritmetic-operation> -> <factor>.-<aritmetic-operation>, {')'} 
+
+34 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <aritmetic-operation> -> <factor>+.<aritmetic-operation>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+35 	 <aritmetic-operation> -> <factor>+<aritmetic-operation>., {')'} 
+
+36 	 <factor> -> <atom>.*<factor>, {'+', ')', '-'}
+	 <factor> -> <atom>./<factor>, {'+', ')', '-'}
+	 <factor> -> <atom>., {'+', ')', '-'} 
+
+37 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <factor> -> <atom>*.<factor>, {'+', ')', '-'} 
+
+38 	 <factor> -> <atom>*<factor>., {'+', ')', '-'} 
+
+39 	 <atom> -> <function-call>., {'+', '-', '*', '/', ')'} 
+
+40 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <factor> -> <atom>/.<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'} 
+
+41 	 <factor> -> <atom>/<factor>., {'+', ')', '-'} 
+
+42 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> <factor>-.<aritmetic-operation>, {')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+43 	 <aritmetic-operation> -> <factor>-<aritmetic-operation>., {')'} 
+
+44 	 <atom> -> (<aritmetic-operation>.), {'+', ',', '-', '*', '/', ')'} 
+
+45 	 <atom> -> (<aritmetic-operation>)., {'+', ',', '-', '*', '/', ')'} 
+
+46 	 <function-call> -> ID()., {'+', ',', '-', '*', '/', ')'} 
+
+47 	 <function-call> -> ID(<param-list>.), {',', '+', '-', '*', '/', ')'} 
+
+48 	 <function-call> -> ID(<param-list>)., {',', '+', '-', '*', '/', ')'} 
+
+49 	 <function-call> -> ID()., {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='} 
+
+50 	 <function-call> -> ID(<param-list>.), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='} 
+
+51 	 <function-call> -> ID(<param-list>)., {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='} 
+
+52 	 <atom> -> number., {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='} 
+
+53 	 <condition> -> .<boolean-value>, {'|', '&', ')'}
+	 <expression> -> .<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <comparation> -> .<expression>=<<expression>, {'|', '&', ')'}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <conditional-expresssion> -> .<condition>|<conditional-expresssion>, {')'}
+	 <aritmetic-operation> -> .<factor>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <conditional-expresssion> -> .<condition>&<conditional-expresssion>, {')'}
+	 <condition> -> (.<conditional-expresssion>), {'|', '&', ')'}
+	 <boolean-value> -> .false, {'|', '&', ')'}
+	 <conditional-expresssion> -> .<condition>, {')'}
+	 <comparation> -> .<expression>!=<expression>, {'|', '&', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'>', '<', '!=', '>=', '=<', '==', ')'}
+	 <atom> -> (.<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <comparation> -> .<expression>>=<expression>, {'|', '&', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <condition> -> .<comparation>, {'|', '&', ')'}
+	 <comparation> -> .<expression>><expression>, {'|', '&', ')'}
+	 <boolean-value> -> .true, {'|', '&', ')'}
+	 <comparation> -> .<expression><<expression>, {'|', '&', ')'}
+	 <condition> -> .(<conditional-expresssion>), {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', ')', '==', '!='}
+	 <conditional-expresssion> -> .!<condition>, {')'}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <comparation> -> .<expression>==<expression>, {'|', '&', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'} 
+
+54 	 <function-call> -> ID.(), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <function-call> -> ID.(<param-list>), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <atom> -> ID., {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'} 
+
+55 	 <param-list> -> .<expression>, {')'}
+	 <param-list> -> .<expression>,<param-list>, {')'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', ')'}
+	 <function-call> -> ID(.), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', ')'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {',', '+', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', ')'}
+	 <function-call> -> ID(.<param-list>), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {',', ')'}
+	 <factor> -> .<atom>, {'+', ',', ')', '-'} 
+
+56 	 <function-call> -> ID()., {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'} 
+
+57 	 <function-call> -> ID(<param-list>.), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'} 
+
+58 	 <function-call> -> ID(<param-list>)., {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'} 
+
+59 	 <atom> -> number., {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'} 
+
+60 	 <condition> -> .<boolean-value>, {'|', '&', ')'}
+	 <expression> -> .<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <comparation> -> .<expression>=<<expression>, {'|', '&', ')'}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <conditional-expresssion> -> .<condition>|<conditional-expresssion>, {')'}
+	 <aritmetic-operation> -> .<factor>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <conditional-expresssion> -> .<condition>&<conditional-expresssion>, {')'}
+	 <atom> -> (.<aritmetic-operation>), {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <boolean-value> -> .false, {'|', '&', ')'}
+	 <condition> -> (.<conditional-expresssion>), {'|', '&', ')'}
+	 <conditional-expresssion> -> .<condition>, {')'}
+	 <comparation> -> .<expression>!=<expression>, {'|', '&', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'>', '<', '!=', '>=', '=<', '==', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <comparation> -> .<expression>>=<expression>, {'|', '&', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <condition> -> .<comparation>, {'|', '&', ')'}
+	 <comparation> -> .<expression>><expression>, {'|', '&', ')'}
+	 <boolean-value> -> .true, {'|', '&', ')'}
+	 <comparation> -> .<expression><<expression>, {'|', '&', ')'}
+	 <condition> -> .(<conditional-expresssion>), {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', ')', '==', '!='}
+	 <conditional-expresssion> -> .!<condition>, {')'}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <comparation> -> .<expression>==<expression>, {'|', '&', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'} 
+
+61 	 <expression> -> .<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <boolean-value> -> .false, {')'}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <comparation> -> .<expression>!=<expression>, {')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <comparation> -> .<expression>>=<expression>, {')'}
+	 <condition> -> .<comparation>, {')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>, {'>', '<', '>=', '=<', '==', '!='}
+	 <comparation> -> .<expression>><expression>, {')'}
+	 <boolean-value> -> .true, {')'}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <comparation> -> .<expression><<expression>, {')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <comparation> -> .<expression>=<<expression>, {')'}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <condition> -> .<boolean-value>, {')'}
+	 <comparation> -> .<expression>==<expression>, {')'}
+	 <condition> -> .(<conditional-expresssion>), {')'}
+	 <conditional-expresssion> -> !.<condition>, {')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='} 
+
+62 	 <condition> -> .<boolean-value>, {'|', '&', ')'}
+	 <expression> -> .<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <comparation> -> .<expression>=<<expression>, {'|', '&', ')'}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <conditional-expresssion> -> .<condition>|<conditional-expresssion>, {')'}
+	 <condition> -> (.<conditional-expresssion>), {')'}
+	 <aritmetic-operation> -> .<factor>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <conditional-expresssion> -> .<condition>&<conditional-expresssion>, {')'}
+	 <boolean-value> -> .false, {'|', '&', ')'}
+	 <conditional-expresssion> -> .<condition>, {')'}
+	 <comparation> -> .<expression>!=<expression>, {'|', '&', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'>', '<', '!=', '>=', '=<', '==', ')'}
+	 <atom> -> (.<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <comparation> -> .<expression>>=<expression>, {'|', '&', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <condition> -> .<comparation>, {'|', '&', ')'}
+	 <comparation> -> .<expression>><expression>, {'|', '&', ')'}
+	 <boolean-value> -> .true, {'|', '&', ')'}
+	 <comparation> -> .<expression><<expression>, {'|', '&', ')'}
+	 <condition> -> .(<conditional-expresssion>), {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', ')', '==', '!='}
+	 <conditional-expresssion> -> .!<condition>, {')'}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <comparation> -> .<expression>==<expression>, {'|', '&', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'} 
+
+63 	 <boolean-value> -> true., {'|', '&', ')'} 
+
+64 	 <boolean-value> -> false., {'|', '&', ')'} 
+
+65 	 <comparation> -> <expression>.==<expression>, {'|', '&', ')'}
+	 <comparation> -> <expression>.>=<expression>, {'|', '&', ')'}
+	 <comparation> -> <expression>.><expression>, {'|', '&', ')'}
+	 <comparation> -> <expression>.!=<expression>, {'|', '&', ')'}
+	 <comparation> -> <expression>.=<<expression>, {'|', '&', ')'}
+	 <comparation> -> <expression>.<<expression>, {'|', '&', ')'} 
+
+66 	 <function-call> -> .ID(), {'+', '-', '*', '/', '&', '|', ')'}
+	 <expression> -> .<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <comparation> -> <expression>>.<expression>, {'|', '&', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '&', '|', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '/', '&', '|', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> .<atom>, {'+', '-', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', '&', '|', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>, {'|', '&', ')'} 
+
+67 	 <function-call> -> ID.(), {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> ID., {'+', '-', '*', '/', '&', '|', ')'}
+	 <function-call> -> ID.(<param-list>), {'+', '-', '*', '/', '&', '|', ')'} 
+
+68 	 <param-list> -> .<expression>, {')'}
+	 <param-list> -> .<expression>,<param-list>, {')'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {',', ')'}
+	 <function-call> -> ID(.), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', ')'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', ')'}
+	 <function-call> -> ID(.<param-list>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <factor> -> .<atom>/<factor>, {',', '+', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {',', ')'}
+	 <factor> -> .<atom>, {'+', ',', ')', '-'} 
+
+69 	 <function-call> -> ID()., {'+', '-', '*', '/', '&', '|', ')'} 
+
+70 	 <function-call> -> ID(<param-list>.), {'+', '-', '*', '/', '&', '|', ')'} 
+
+71 	 <function-call> -> ID(<param-list>)., {'+', '-', '*', '/', '&', '|', ')'} 
+
+72 	 <atom> -> number., {'+', '-', '*', '/', '&', '|', ')'} 
+
+73 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <atom> -> (.<aritmetic-operation>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+74 	 <atom> -> (<aritmetic-operation>.), {'+', '-', '*', '/', '&', '|', ')'} 
+
+75 	 <atom> -> (<aritmetic-operation>)., {'+', '-', '*', '/', '&', '|', ')'} 
+
+76 	 <comparation> -> <expression>><expression>., {'|', '&', ')'} 
+
+77 	 <expression> -> <aritmetic-operation>., {'|', '&', ')'} 
+
+78 	 <aritmetic-operation> -> <factor>., {'|', '&', ')'}
+	 <aritmetic-operation> -> <factor>.-<aritmetic-operation>, {'|', '&', ')'}
+	 <aritmetic-operation> -> <factor>.+<aritmetic-operation>, {'|', '&', ')'} 
+
+79 	 <function-call> -> .ID(), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> <factor>+.<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '&', '|', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '/', '&', '|', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> .<atom>, {'+', '-', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', '&', '|', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>, {'|', '&', ')'} 
+
+80 	 <aritmetic-operation> -> <factor>+<aritmetic-operation>., {'|', '&', ')'} 
+
+81 	 <factor> -> <atom>.*<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> <atom>./<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> <atom>., {'+', '-', '&', '|', ')'} 
+
+82 	 <function-call> -> .ID(), {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', '&', '|', ')'}
+	 <factor> -> <atom>*.<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> .<atom>, {'+', '-', '&', '|', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', '&', '|', ')'} 
+
+83 	 <factor> -> <atom>*<factor>., {'+', '-', '&', '|', ')'} 
+
+84 	 <atom> -> <function-call>., {'+', '-', '*', '/', '&', '|', ')'} 
+
+85 	 <function-call> -> .ID(), {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', '&', '|', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> <atom>/.<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> .<atom>, {'+', '-', '&', '|', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', '&', '|', ')'} 
+
+86 	 <factor> -> <atom>/<factor>., {'+', '-', '&', '|', ')'} 
+
+87 	 <function-call> -> .ID(), {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '&', '|', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '/', '&', '|', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> .<atom>, {'+', '-', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', '&', '|', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> <factor>-.<aritmetic-operation>, {'|', '&', ')'}
+	 <aritmetic-operation> -> .<factor>, {'|', '&', ')'} 
+
+88 	 <aritmetic-operation> -> <factor>-<aritmetic-operation>., {'|', '&', ')'} 
+
+89 	 <function-call> -> .ID(), {'+', '-', '*', '/', '&', '|', ')'}
+	 <expression> -> .<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '&', '|', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '/', '&', '|', ')'}
+	 <comparation> -> <expression><.<expression>, {'|', '&', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> .<atom>, {'+', '-', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', '&', '|', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>, {'|', '&', ')'} 
+
+90 	 <comparation> -> <expression><<expression>., {'|', '&', ')'} 
+
+91 	 <function-call> -> .ID(), {'+', '-', '*', '/', '&', '|', ')'}
+	 <expression> -> .<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', '&', '|', ')'}
+	 <comparation> -> <expression>>=.<expression>, {'|', '&', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '&', '|', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '/', '&', '|', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> .<atom>, {'+', '-', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', '&', '|', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>, {'|', '&', ')'} 
+
+92 	 <comparation> -> <expression>>=<expression>., {'|', '&', ')'} 
+
+93 	 <function-call> -> .ID(), {'+', '-', '*', '/', '&', '|', ')'}
+	 <expression> -> .<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <comparation> -> <expression>=<.<expression>, {'|', '&', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '&', '|', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '/', '&', '|', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> .<atom>, {'+', '-', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', '&', '|', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>, {'|', '&', ')'} 
+
+94 	 <comparation> -> <expression>=<<expression>., {'|', '&', ')'} 
+
+95 	 <function-call> -> .ID(), {'+', '-', '*', '/', '&', '|', ')'}
+	 <expression> -> .<aritmetic-operation>, {'|', '&', ')'}
+	 <comparation> -> <expression>==.<expression>, {'|', '&', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '&', '|', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '/', '&', '|', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '&', '|', ')'}
+	 <factor> -> .<atom>, {'+', '-', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', '&', '|', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>, {'|', '&', ')'} 
+
+96 	 <comparation> -> <expression>==<expression>., {'|', '&', ')'} 
+
+97 	 <function-call> -> .ID(), {'+', '-', '*', '/', '&', '|', ')'}
+	 <expression> -> .<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', '&', '|', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '&', '|', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '/', '&', '|', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '&', '|', ')'}
+	 <comparation> -> <expression>!=.<expression>, {'|', '&', ')'}
+	 <factor> -> .<atom>, {'+', '-', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'|', '&', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', '&', '|', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', '&', '|', ')'}
+	 <aritmetic-operation> -> .<factor>, {'|', '&', ')'} 
+
+98 	 <comparation> -> <expression>!=<expression>., {'|', '&', ')'} 
+
+99 	 <atom> -> (<aritmetic-operation>.), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <expression> -> <aritmetic-operation>., {'>', '<', '>=', '=<', '==', '!='} 
+
+100 	 <atom> -> (<aritmetic-operation>)., {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='} 
+
+101 	 <aritmetic-operation> -> <factor>.+<aritmetic-operation>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <aritmetic-operation> -> <factor>., {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <aritmetic-operation> -> <factor>.-<aritmetic-operation>, {'>', '<', '>=', '=<', ')', '==', '!='} 
+
+102 	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <aritmetic-operation> -> .<factor>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <aritmetic-operation> -> <factor>+.<aritmetic-operation>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'} 
+
+103 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <atom> -> (.<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', ')', '==', '!='}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+104 	 <atom> -> (<aritmetic-operation>.), {'+', '-', '*', '>', '<', '>=', '/', '=<', ')', '==', '!='} 
+
+105 	 <atom> -> (<aritmetic-operation>)., {'+', '-', '*', '>', '<', '>=', '/', '=<', ')', '==', '!='} 
+
+106 	 <aritmetic-operation> -> <factor>+<aritmetic-operation>., {'>', '<', '>=', '=<', ')', '==', '!='} 
+
+107 	 <factor> -> <atom>./<factor>, {'+', '-', '>', '<', '>=', '=<', ')', '==', '!='}
+	 <factor> -> <atom>., {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <factor> -> <atom>.*<factor>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'} 
+
+108 	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '/', '>=', '=<', ')', '==', '!='}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <factor> -> <atom>*.<factor>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '/', '>=', '=<', ')', '==', '!='}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'} 
+
+109 	 <factor> -> <atom>*<factor>., {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'} 
+
+110 	 <atom> -> <function-call>., {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'} 
+
+111 	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '>=', '/', '=<', ')', '==', '!='}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '>=', '/', '=<', ')', '==', '!='}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '>=', '=<', ')', '==', '!='}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '>=', '=<', ')', '==', '!='}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', ')', '==', '!='}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '>=', '/', '=<', ')', '==', '!='}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <factor> -> <atom>/.<factor>, {'+', '-', '>', '<', '>=', '=<', ')', '==', '!='}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', ')', '==', '!='} 
+
+112 	 <factor> -> <atom>/<factor>., {'+', '-', '>', '<', '>=', '=<', ')', '==', '!='} 
+
+113 	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <aritmetic-operation> -> <factor>-.<aritmetic-operation>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'}
+	 <aritmetic-operation> -> .<factor>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'>', '<', '>=', '=<', ')', '==', '!='}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '!=', '>=', '=<', '==', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '!=', '>=', '/', '=<', '==', ')'} 
+
+114 	 <aritmetic-operation> -> <factor>-<aritmetic-operation>., {'>', '<', '>=', '=<', ')', '==', '!='} 
+
+115 	 <condition> -> (<conditional-expresssion>.), {')'} 
+
+116 	 <condition> -> (<conditional-expresssion>)., {')'} 
+
+117 	 <conditional-expresssion> -> <condition>., {')'}
+	 <conditional-expresssion> -> <condition>.&<conditional-expresssion>, {')'}
+	 <conditional-expresssion> -> <condition>.|<conditional-expresssion>, {')'} 
+
+118 	 <condition> -> .<boolean-value>, {'|', '&', ')'}
+	 <expression> -> .<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <comparation> -> .<expression>=<<expression>, {'|', '&', ')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <conditional-expresssion> -> .<condition>|<conditional-expresssion>, {')'}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <conditional-expresssion> -> .<condition>&<conditional-expresssion>, {')'}
+	 <boolean-value> -> .false, {'|', '&', ')'}
+	 <conditional-expresssion> -> .<condition>, {')'}
+	 <comparation> -> .<expression>!=<expression>, {'|', '&', ')'}
+	 <comparation> -> .<expression>>=<expression>, {'|', '&', ')'}
+	 <aritmetic-operation> -> .<factor>, {'>', '<', '>=', '=<', '==', '!='}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <conditional-expresssion> -> <condition>&.<conditional-expresssion>, {')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <condition> -> .<comparation>, {'|', '&', ')'}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <comparation> -> .<expression>><expression>, {'|', '&', ')'}
+	 <comparation> -> .<expression><<expression>, {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <boolean-value> -> .true, {'|', '&', ')'}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <conditional-expresssion> -> .!<condition>, {')'}
+	 <comparation> -> .<expression>==<expression>, {'|', '&', ')'}
+	 <condition> -> .(<conditional-expresssion>), {'|', '&', ')'} 
+
+119 	 <expression> -> <aritmetic-operation>., {'>', '<', '>=', '=<', '==', '!='} 
+
+120 	 <aritmetic-operation> -> <factor>., {'>', '<', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> <factor>.-<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> <factor>.+<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='} 
+
+121 	 <aritmetic-operation> -> <factor>+.<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>, {'>', '<', '>=', '=<', '==', '!='}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='} 
+
+122 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', ')'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <atom> -> (.<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+123 	 <atom> -> (<aritmetic-operation>.), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='} 
+
+124 	 <aritmetic-operation> -> <factor>+<aritmetic-operation>., {'>', '<', '>=', '=<', '==', '!='} 
+
+125 	 <factor> -> <atom>., {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <factor> -> <atom>.*<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <factor> -> <atom>./<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='} 
+
+126 	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <factor> -> <atom>*.<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='} 
+
+127 	 <factor> -> <atom>*<factor>., {'+', '-', '>', '<', '>=', '=<', '==', '!='} 
+
+128 	 <atom> -> <function-call>., {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='} 
+
+129 	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <factor> -> <atom>/.<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='} 
+
+130 	 <factor> -> <atom>/<factor>., {'+', '-', '>', '<', '>=', '=<', '==', '!='} 
+
+131 	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>, {'>', '<', '>=', '=<', '==', '!='}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> <factor>-.<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='} 
+
+132 	 <aritmetic-operation> -> <factor>-<aritmetic-operation>., {'>', '<', '>=', '=<', '==', '!='} 
+
+133 	 <conditional-expresssion> -> <condition>&<conditional-expresssion>., {')'} 
+
+134 	 <condition> -> <boolean-value>., {'|', '&', ')'} 
+
+135 	 <condition> -> <comparation>., {'|', '&', ')'} 
+
+136 	 <condition> -> .<boolean-value>, {'|', '&', ')'}
+	 <expression> -> .<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <comparation> -> .<expression>=<<expression>, {'|', '&', ')'}
+	 <conditional-expresssion> -> <condition>|.<conditional-expresssion>, {')'}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <conditional-expresssion> -> .<condition>|<conditional-expresssion>, {')'}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <conditional-expresssion> -> .<condition>&<conditional-expresssion>, {')'}
+	 <boolean-value> -> .false, {'|', '&', ')'}
+	 <conditional-expresssion> -> .<condition>, {')'}
+	 <comparation> -> .<expression>!=<expression>, {'|', '&', ')'}
+	 <comparation> -> .<expression>>=<expression>, {'|', '&', ')'}
+	 <aritmetic-operation> -> .<factor>, {'>', '<', '>=', '=<', '==', '!='}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <condition> -> .<comparation>, {'|', '&', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <comparation> -> .<expression>><expression>, {'|', '&', ')'}
+	 <comparation> -> .<expression><<expression>, {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <boolean-value> -> .true, {'|', '&', ')'}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <conditional-expresssion> -> .!<condition>, {')'}
+	 <comparation> -> .<expression>==<expression>, {'|', '&', ')'}
+	 <condition> -> .(<conditional-expresssion>), {'|', '&', ')'} 
+
+137 	 <conditional-expresssion> -> <condition>|<conditional-expresssion>., {')'} 
+
+138 	 <boolean-value> -> true., {')'} 
+
+139 	 <boolean-value> -> false., {')'} 
+
+140 	 <comparation> -> <expression>.<<expression>, {')'}
+	 <comparation> -> <expression>.>=<expression>, {')'}
+	 <comparation> -> <expression>.!=<expression>, {')'}
+	 <comparation> -> <expression>.=<<expression>, {')'}
+	 <comparation> -> <expression>.><expression>, {')'}
+	 <comparation> -> <expression>.==<expression>, {')'} 
+
+141 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <comparation> -> <expression>>.<expression>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+142 	 <comparation> -> <expression>><expression>., {')'} 
+
+143 	 <expression> -> <aritmetic-operation>., {')'} 
+
+144 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <comparation> -> <expression><.<expression>, {')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+145 	 <comparation> -> <expression><<expression>., {')'} 
+
+146 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <comparation> -> <expression>>=.<expression>, {')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+147 	 <comparation> -> <expression>>=<expression>., {')'} 
+
+148 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <comparation> -> <expression>=<.<expression>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+149 	 <comparation> -> <expression>=<<expression>., {')'} 
+
+150 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <comparation> -> <expression>==.<expression>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+151 	 <comparation> -> <expression>==<expression>., {')'} 
+
+152 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <comparation> -> <expression>!=.<expression>, {')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+153 	 <comparation> -> <expression>!=<expression>., {')'} 
+
+154 	 <conditional-expresssion> -> !<condition>., {')'} 
+
+155 	 <condition> -> <boolean-value>., {')'} 
+
+156 	 <condition> -> <comparation>., {')'} 
+
+157 	 <expression> -> <aritmetic-operation>., {'>', '<', '>=', '=<', '==', '!='}
+	 <atom> -> (<aritmetic-operation>.), {'+', '-', '*', '>', '<', '!=', '/', '>=', '=<', '==', ')'} 
+
+158 	 <condition> -> (<conditional-expresssion>.), {'|', '&', ')'} 
+
+159 	 <condition> -> (<conditional-expresssion>)., {'|', '&', ')'} 
+
+160 	 <while-loop> -> while(<conditional-expresssion>.)<scope>, {';'} 
+
+161 	 <scope> -> .{<inst-list>}, {';'}
+	 <while-loop> -> while(<conditional-expresssion>).<scope>, {';'}
+	 <scope> -> .{}, {';'} 
+
+162 	 <factor> -> .<atom>/<factor>, {';', '+', '-'}
+	 <scope> -> .{}, {';'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {';'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/'}
+	 <scope> -> .{<inst-list>}, {';'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {';'}
+	 <full-conditional> -> .if(<conditional-expresssion>){<inst-list>}, {';'}
+	 <inst-list> -> .<inst>;<inst-list>, {'}'}
+	 <inline-conditional> -> .if(<conditional-expresssion>)<expression>, {';'}
+	 <inst> -> .<flux-control>, {';'}
+	 <conditional> -> .<inline-conditional>, {';'}
+	 <var-dec> -> .let<vat-init-list>in<var-decl-expr>, {';'}
+	 <full-conditional> -> .if(<conditional-expresssion>){<inst-list>}<else-statement>, {';'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/'}
+	 <flux-control> -> .<conditional>, {';'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/'}
+	 <var-asign> -> .ID:=<expression>, {';'}
+	 <inst> -> .<var-asign>, {';'}
+	 <factor> -> .<atom>, {';', '+', '-'}
+	 <aritmetic-operation> -> .<factor>, {';'}
+	 <scope> -> {.}, {';'}
+	 <flux-control> -> .<while-loop>, {';'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/'}
+	 <inst> -> .<var-dec>, {';'}
+	 <atom> -> .number, {';', '+', '-', '*', '/'}
+	 <scope> -> {.<inst-list>}, {';'}
+	 <for-loop> -> .for(ID<iterable-expression>)<scope>, {';'}
+	 <while-loop> -> .while(<conditional-expresssion>)<scope>, {';'}
+	 <inline-conditional> -> .if(<conditional-expresssion>)<expression><else-statement>, {';'}
+	 <expression> -> .<aritmetic-operation>, {';'}
+	 <factor> -> .<atom>*<factor>, {';', '+', '-'}
+	 <inst> -> .<scope>, {';'}
+	 <conditional> -> .<full-conditional>, {';'}
+	 <inst-list> -> .<inst>;, {'}'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/'}
+	 <flux-control> -> .<for-loop>, {';'}
+	 <inst> -> .<expression>, {';'} 
+
+163 	 <for-loop> -> for.(ID<iterable-expression>)<scope>, {';'} 
+
+164 	 <for-loop> -> for(.ID<iterable-expression>)<scope>, {';'} 
+
+165 	 <for-loop> -> for(ID.<iterable-expression>)<scope>, {';'} 
+
+166 	 <for-loop> -> for(ID<iterable-expression>.)<scope>, {';'} 
+
+167 	 <scope> -> .{<inst-list>}, {';'}
+	 <for-loop> -> for(ID<iterable-expression>).<scope>, {';'}
+	 <scope> -> .{}, {';'} 
+
+168 	 <for-loop> -> for(ID<iterable-expression>)<scope>., {';'} 
+
+169 	 <scope> -> {}., {';'} 
+
+170 	 <var-init> -> .<identifier>=<expression>, {',', 'in'}
+	 <identifier> -> .ID, {'='}
+	 <identifier> -> .ID<type-anotation>, {'='}
+	 <vat-init-list> -> .<var-init>,<vat-init-list>, {'in'}
+	 <var-init> -> .ID=<var-asign>, {',', 'in'}
+	 <vat-init-list> -> .<var-init>, {'in'}
+	 <var-dec> -> let.<vat-init-list>in<var-decl-expr>, {';'} 
+
+171 	 <identifier> -> ID., {'='}
+	 <type-anotation> -> .:Number, {'='}
+	 <identifier> -> ID.<type-anotation>, {'='}
+	 <var-init> -> ID.=<var-asign>, {',', 'in'} 
+
+172 	 <var-asign> -> .ID:=<expression>, {',', 'in'}
+	 <var-init> -> ID=.<var-asign>, {',', 'in'} 
+
+173 	 <var-asign> -> ID.:=<expression>, {',', 'in'} 
+
+174 	 <aritmetic-operation> -> .<factor>, {',', 'in'}
+	 <factor> -> .<atom>/<factor>, {',', '+', 'in', '-'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', 'in'}
+	 <factor> -> .<atom>, {'+', ',', 'in', '-'}
+	 <expression> -> .<aritmetic-operation>, {',', 'in'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', 'in', '-'}
+	 <var-asign> -> ID:=.<expression>, {',', 'in'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', 'in'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', 'in'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', 'in'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', 'in'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', 'in'} 
+
+175 	 <function-call> -> ID.(<param-list>), {',', '+', '-', '*', '/', 'in'}
+	 <function-call> -> ID.(), {'+', ',', '-', '*', '/', 'in'}
+	 <atom> -> ID., {'+', ',', '-', '*', '/', 'in'} 
+
+176 	 <param-list> -> .<expression>, {')'}
+	 <param-list> -> .<expression>,<param-list>, {')'}
+	 <function-call> -> ID(.<param-list>), {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', ')'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {',', '+', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {',', ')'}
+	 <factor> -> .<atom>, {'+', ',', ')', '-'}
+	 <function-call> -> ID(.), {'+', ',', '-', '*', '/', 'in'} 
+
+177 	 <function-call> -> ID()., {'+', ',', '-', '*', '/', 'in'} 
+
+178 	 <function-call> -> ID(<param-list>.), {',', '+', '-', '*', '/', 'in'} 
+
+179 	 <function-call> -> ID(<param-list>)., {',', '+', '-', '*', '/', 'in'} 
+
+180 	 <atom> -> number., {'+', ',', '-', '*', '/', 'in'} 
+
+181 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <atom> -> (.<aritmetic-operation>), {'+', ',', '-', '*', '/', 'in'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+182 	 <atom> -> (<aritmetic-operation>.), {'+', ',', '-', '*', '/', 'in'} 
+
+183 	 <atom> -> (<aritmetic-operation>)., {'+', ',', '-', '*', '/', 'in'} 
+
+184 	 <var-asign> -> ID:=<expression>., {',', 'in'} 
+
+185 	 <expression> -> <aritmetic-operation>., {',', 'in'} 
+
+186 	 <aritmetic-operation> -> <factor>.+<aritmetic-operation>, {',', 'in'}
+	 <aritmetic-operation> -> <factor>., {',', 'in'}
+	 <aritmetic-operation> -> <factor>.-<aritmetic-operation>, {',', 'in'} 
+
+187 	 <aritmetic-operation> -> .<factor>, {',', 'in'}
+	 <factor> -> .<atom>/<factor>, {',', '+', 'in', '-'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', 'in'}
+	 <factor> -> .<atom>, {'+', ',', 'in', '-'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', 'in', '-'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', 'in'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', 'in'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', 'in'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', 'in'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', 'in'}
+	 <aritmetic-operation> -> <factor>+.<aritmetic-operation>, {',', 'in'} 
+
+188 	 <aritmetic-operation> -> <factor>+<aritmetic-operation>., {',', 'in'} 
+
+189 	 <factor> -> <atom>./<factor>, {',', '+', 'in', '-'}
+	 <factor> -> <atom>., {'+', ',', 'in', '-'}
+	 <factor> -> <atom>.*<factor>, {'+', ',', 'in', '-'} 
+
+190 	 <factor> -> <atom>*.<factor>, {'+', ',', 'in', '-'}
+	 <factor> -> .<atom>/<factor>, {'+', ',', 'in', '-'}
+	 <factor> -> .<atom>, {'+', ',', 'in', '-'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', 'in', '-'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .ID, {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .(<aritmetic-operation>), {',', '+', '-', '*', '/', 'in'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', 'in'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', 'in'}
+	 <atom> -> .number, {',', '+', '-', '*', '/', 'in'} 
+
+191 	 <factor> -> <atom>*<factor>., {'+', ',', 'in', '-'} 
+
+192 	 <atom> -> <function-call>., {',', '+', '-', '*', '/', 'in'} 
+
+193 	 <factor> -> .<atom>/<factor>, {',', '+', 'in', '-'}
+	 <factor> -> .<atom>, {',', '+', 'in', '-'}
+	 <factor> -> .<atom>*<factor>, {',', '+', 'in', '-'}
+	 <factor> -> <atom>/.<factor>, {',', '+', 'in', '-'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .ID, {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .(<aritmetic-operation>), {',', '+', '-', '*', '/', 'in'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', 'in'}
+	 <function-call> -> .ID(), {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .number, {',', '+', '-', '*', '/', 'in'} 
+
+194 	 <factor> -> <atom>/<factor>., {',', '+', 'in', '-'} 
+
+195 	 <aritmetic-operation> -> .<factor>, {',', 'in'}
+	 <factor> -> .<atom>/<factor>, {',', '+', 'in', '-'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', 'in'}
+	 <factor> -> .<atom>, {'+', ',', 'in', '-'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', 'in', '-'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', 'in'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', 'in'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', 'in'}
+	 <aritmetic-operation> -> <factor>-.<aritmetic-operation>, {',', 'in'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', 'in'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', 'in'} 
+
+196 	 <aritmetic-operation> -> <factor>-<aritmetic-operation>., {',', 'in'} 
+
+197 	 <var-init> -> ID=<var-asign>., {',', 'in'} 
+
+198 	 <type-anotation> -> :.Number, {'='} 
+
+199 	 <type-anotation> -> :Number., {'='} 
+
+200 	 <identifier> -> ID<type-anotation>., {'='} 
+
+201 	 <vat-init-list> -> <var-init>., {'in'}
+	 <vat-init-list> -> <var-init>.,<vat-init-list>, {'in'} 
+
+202 	 <var-init> -> .<identifier>=<expression>, {',', 'in'}
+	 <identifier> -> .ID, {'='}
+	 <identifier> -> .ID<type-anotation>, {'='}
+	 <vat-init-list> -> .<var-init>,<vat-init-list>, {'in'}
+	 <var-init> -> .ID=<var-asign>, {',', 'in'}
+	 <vat-init-list> -> <var-init>,.<vat-init-list>, {'in'}
+	 <vat-init-list> -> .<var-init>, {'in'} 
+
+203 	 <vat-init-list> -> <var-init>,<vat-init-list>., {'in'} 
+
+204 	 <var-init> -> <identifier>.=<expression>, {',', 'in'} 
+
+205 	 <aritmetic-operation> -> .<factor>, {',', 'in'}
+	 <factor> -> .<atom>/<factor>, {',', '+', 'in', '-'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', 'in'}
+	 <factor> -> .<atom>, {'+', ',', 'in', '-'}
+	 <expression> -> .<aritmetic-operation>, {',', 'in'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', 'in', '-'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', 'in'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', 'in'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', 'in'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', 'in'}
+	 <var-init> -> <identifier>=.<expression>, {',', 'in'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', 'in'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', 'in'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', 'in'} 
+
+206 	 <var-init> -> <identifier>=<expression>., {',', 'in'} 
+
+207 	 <var-dec> -> let<vat-init-list>.in<var-decl-expr>, {';'} 
+
+208 	 <factor> -> .<atom>/<factor>, {';', '+', '-'}
+	 <scope> -> .{}, {';'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {';'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/'}
+	 <var-decl-expr> -> .<scope>, {';'}
+	 <scope> -> .{<inst-list>}, {';'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {';'}
+	 <var-decl-expr> -> .<flux-control>, {';'}
+	 <full-conditional> -> .if(<conditional-expresssion>){<inst-list>}, {';'}
+	 <inline-conditional> -> .if(<conditional-expresssion>)<expression>, {';'}
+	 <conditional> -> .<inline-conditional>, {';'}
+	 <var-dec> -> .let<vat-init-list>in<var-decl-expr>, {';'}
+	 <full-conditional> -> .if(<conditional-expresssion>){<inst-list>}<else-statement>, {';'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/'}
+	 <var-decl-expr> -> .<var-dec>, {';'}
+	 <flux-control> -> .<conditional>, {';'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/'}
+	 <factor> -> .<atom>, {';', '+', '-'}
+	 <aritmetic-operation> -> .<factor>, {';'}
+	 <flux-control> -> .<while-loop>, {';'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/'}
+	 <atom> -> .number, {';', '+', '-', '*', '/'}
+	 <var-decl-expr> -> .<expression>, {';'}
+	 <for-loop> -> .for(ID<iterable-expression>)<scope>, {';'}
+	 <while-loop> -> .while(<conditional-expresssion>)<scope>, {';'}
+	 <inline-conditional> -> .if(<conditional-expresssion>)<expression><else-statement>, {';'}
+	 <expression> -> .<aritmetic-operation>, {';'}
+	 <factor> -> .<atom>*<factor>, {';', '+', '-'}
+	 <conditional> -> .<full-conditional>, {';'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/'}
+	 <flux-control> -> .<for-loop>, {';'}
+	 <var-dec> -> let<vat-init-list>in.<var-decl-expr>, {';'} 
+
+209 	 <atom> -> ID., {';', '+', '-', '*', '/'}
+	 <function-call> -> ID.(), {';', '+', '-', '*', '/'}
+	 <function-call> -> ID.(<param-list>), {';', '+', '-', '*', '/'} 
+
+210 	 <param-list> -> .<expression>, {')'}
+	 <function-call> -> ID(.<param-list>), {';', '+', '-', '*', '/'}
+	 <param-list> -> .<expression>,<param-list>, {')'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', ')'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {',', '+', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', ')'}
+	 <function-call> -> ID(.), {';', '+', '-', '*', '/'}
+	 <expression> -> .<aritmetic-operation>, {',', ')'}
+	 <factor> -> .<atom>, {'+', ',', ')', '-'} 
+
+211 	 <function-call> -> ID()., {';', '+', '-', '*', '/'} 
+
+212 	 <function-call> -> ID(<param-list>.), {';', '+', '-', '*', '/'} 
+
+213 	 <function-call> -> ID(<param-list>)., {';', '+', '-', '*', '/'} 
+
+214 	 <atom> -> number., {';', '+', '-', '*', '/'} 
+
+215 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <atom> -> (.<aritmetic-operation>), {';', '+', '-', '*', '/'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+216 	 <atom> -> (<aritmetic-operation>.), {';', '+', '-', '*', '/'} 
+
+217 	 <atom> -> (<aritmetic-operation>)., {';', '+', '-', '*', '/'} 
+
+218 	 <full-conditional> -> if.(<conditional-expresssion>){<inst-list>}<else-statement>, {';'}
+	 <inline-conditional> -> if.(<conditional-expresssion>)<expression>, {';'}
+	 <full-conditional> -> if.(<conditional-expresssion>){<inst-list>}, {';'}
+	 <inline-conditional> -> if.(<conditional-expresssion>)<expression><else-statement>, {';'} 
+
+219 	 <condition> -> .<boolean-value>, {'|', '&', ')'}
+	 <conditional-expresssion> -> .<condition>|<conditional-expresssion>, {')'}
+	 <factor> -> .<atom>*<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <boolean-value> -> .false, {'|', '&', ')'}
+	 <aritmetic-operation> -> .<factor>, {'>', '<', '>=', '=<', '==', '!='}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <full-conditional> -> if(.<conditional-expresssion>){<inst-list>}<else-statement>, {';'}
+	 <comparation> -> .<expression>><expression>, {'|', '&', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <conditional-expresssion> -> .!<condition>, {')'}
+	 <inline-conditional> -> if(.<conditional-expresssion>)<expression>, {';'}
+	 <comparation> -> .<expression>==<expression>, {'|', '&', ')'}
+	 <full-conditional> -> if(.<conditional-expresssion>){<inst-list>}, {';'}
+	 <expression> -> .<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <comparation> -> .<expression>=<<expression>, {'|', '&', ')'}
+	 <function-call> -> .ID(), {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <conditional-expresssion> -> .<condition>&<conditional-expresssion>, {')'}
+	 <conditional-expresssion> -> .<condition>, {')'}
+	 <comparation> -> .<expression>!=<expression>, {'|', '&', ')'}
+	 <inline-conditional> -> if(.<conditional-expresssion>)<expression><else-statement>, {';'}
+	 <comparation> -> .<expression>>=<expression>, {'|', '&', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '>', '<', '>=', '/', '=<', '==', '!='}
+	 <condition> -> .<comparation>, {'|', '&', ')'}
+	 <atom> -> .number, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <comparation> -> .<expression><<expression>, {'|', '&', ')'}
+	 <condition> -> .(<conditional-expresssion>), {'|', '&', ')'}
+	 <boolean-value> -> .true, {'|', '&', ')'}
+	 <factor> -> .<atom>, {'+', '-', '>', '<', '>=', '=<', '==', '!='}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {'>', '<', '>=', '=<', '==', '!='}
+	 <atom> -> .<function-call>, {'+', '-', '*', '>', '<', '/', '>=', '=<', '==', '!='} 
+
+220 	 <full-conditional> -> if(<conditional-expresssion>.){<inst-list>}, {';'}
+	 <inline-conditional> -> if(<conditional-expresssion>.)<expression><else-statement>, {';'}
+	 <inline-conditional> -> if(<conditional-expresssion>.)<expression>, {';'}
+	 <full-conditional> -> if(<conditional-expresssion>.){<inst-list>}<else-statement>, {';'} 
+
+221 	 <factor> -> .<atom>*<factor>, {';', '+', 'else', '-'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/', 'else'}
+	 <inline-conditional> -> if(<conditional-expresssion>).<expression>, {';'}
+	 <aritmetic-operation> -> .<factor>, {';', 'else'}
+	 <full-conditional> -> if(<conditional-expresssion>).{<inst-list>}<else-statement>, {';'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/', 'else'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {';', 'else'}
+	 <full-conditional> -> if(<conditional-expresssion>).{<inst-list>}, {';'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {';', 'else'}
+	 <factor> -> .<atom>/<factor>, {';', '+', 'else', '-'}
+	 <expression> -> .<aritmetic-operation>, {';', 'else'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/', 'else'}
+	 <factor> -> .<atom>, {';', '+', 'else', '-'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/', 'else'}
+	 <atom> -> .number, {';', '+', '-', '*', '/', 'else'}
+	 <inline-conditional> -> if(<conditional-expresssion>).<expression><else-statement>, {';'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/', 'else'} 
+
+222 	 <factor> -> .<atom>/<factor>, {';', '+', '-'}
+	 <scope> -> .{}, {';'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {';'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/'}
+	 <scope> -> .{<inst-list>}, {';'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {';'}
+	 <full-conditional> -> .if(<conditional-expresssion>){<inst-list>}, {';'}
+	 <inst-list> -> .<inst>;<inst-list>, {'}'}
+	 <inline-conditional> -> .if(<conditional-expresssion>)<expression>, {';'}
+	 <inst> -> .<flux-control>, {';'}
+	 <conditional> -> .<inline-conditional>, {';'}
+	 <var-dec> -> .let<vat-init-list>in<var-decl-expr>, {';'}
+	 <full-conditional> -> .if(<conditional-expresssion>){<inst-list>}<else-statement>, {';'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/'}
+	 <flux-control> -> .<conditional>, {';'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/'}
+	 <var-asign> -> .ID:=<expression>, {';'}
+	 <inst> -> .<var-asign>, {';'}
+	 <factor> -> .<atom>, {';', '+', '-'}
+	 <aritmetic-operation> -> .<factor>, {';'}
+	 <flux-control> -> .<while-loop>, {';'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/'}
+	 <inst> -> .<var-dec>, {';'}
+	 <atom> -> .number, {';', '+', '-', '*', '/'}
+	 <for-loop> -> .for(ID<iterable-expression>)<scope>, {';'}
+	 <while-loop> -> .while(<conditional-expresssion>)<scope>, {';'}
+	 <inline-conditional> -> .if(<conditional-expresssion>)<expression><else-statement>, {';'}
+	 <expression> -> .<aritmetic-operation>, {';'}
+	 <factor> -> .<atom>*<factor>, {';', '+', '-'}
+	 <inst> -> .<scope>, {';'}
+	 <conditional> -> .<full-conditional>, {';'}
+	 <inst-list> -> .<inst>;, {'}'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/'}
+	 <flux-control> -> .<for-loop>, {';'}
+	 <full-conditional> -> if(<conditional-expresssion>){.<inst-list>}<else-statement>, {';'}
+	 <inst> -> .<expression>, {';'}
+	 <full-conditional> -> if(<conditional-expresssion>){.<inst-list>}, {';'} 
+
+223 	 <function-call> -> ID.(), {';', '+', '-', '*', '/'}
+	 <atom> -> ID., {';', '+', '-', '*', '/'}
+	 <function-call> -> ID.(<param-list>), {';', '+', '-', '*', '/'}
+	 <var-asign> -> ID.:=<expression>, {';'} 
+
+224 	 <factor> -> .<atom>/<factor>, {';', '+', '-'}
+	 <expression> -> .<aritmetic-operation>, {';'}
+	 <factor> -> .<atom>, {';', '+', '-'}
+	 <aritmetic-operation> -> .<factor>, {';'}
+	 <factor> -> .<atom>*<factor>, {';', '+', '-'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {';'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/'}
+	 <atom> -> .number, {';', '+', '-', '*', '/'}
+	 <var-asign> -> ID:=.<expression>, {';'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {';'} 
+
+225 	 <var-asign> -> ID:=<expression>., {';'} 
+
+226 	 <expression> -> <aritmetic-operation>., {';'} 
+
+227 	 <aritmetic-operation> -> <factor>.-<aritmetic-operation>, {';'}
+	 <aritmetic-operation> -> <factor>.+<aritmetic-operation>, {';'}
+	 <aritmetic-operation> -> <factor>., {';'} 
+
+228 	 <factor> -> .<atom>/<factor>, {';', '+', '-'}
+	 <factor> -> .<atom>, {';', '+', '-'}
+	 <aritmetic-operation> -> <factor>+.<aritmetic-operation>, {';'}
+	 <aritmetic-operation> -> .<factor>, {';'}
+	 <factor> -> .<atom>*<factor>, {';', '+', '-'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {';'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/'}
+	 <atom> -> .number, {';', '+', '-', '*', '/'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {';'} 
+
+229 	 <aritmetic-operation> -> <factor>+<aritmetic-operation>., {';'} 
+
+230 	 <factor> -> <atom>.*<factor>, {';', '+', '-'}
+	 <factor> -> <atom>./<factor>, {';', '+', '-'}
+	 <factor> -> <atom>., {';', '+', '-'} 
+
+231 	 <factor> -> .<atom>/<factor>, {';', '+', '-'}
+	 <factor> -> .<atom>, {';', '+', '-'}
+	 <factor> -> .<atom>*<factor>, {';', '+', '-'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/'}
+	 <atom> -> .number, {';', '+', '-', '*', '/'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/'}
+	 <factor> -> <atom>*.<factor>, {';', '+', '-'} 
+
+232 	 <factor> -> <atom>*<factor>., {';', '+', '-'} 
+
+233 	 <atom> -> <function-call>., {';', '+', '-', '*', '/'} 
+
+234 	 <factor> -> .<atom>/<factor>, {';', '+', '-'}
+	 <factor> -> .<atom>, {';', '+', '-'}
+	 <factor> -> <atom>/.<factor>, {';', '+', '-'}
+	 <factor> -> .<atom>*<factor>, {';', '+', '-'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/'}
+	 <atom> -> .number, {';', '+', '-', '*', '/'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/'} 
+
+235 	 <factor> -> <atom>/<factor>., {';', '+', '-'} 
+
+236 	 <factor> -> .<atom>/<factor>, {';', '+', '-'}
+	 <factor> -> .<atom>, {';', '+', '-'}
+	 <aritmetic-operation> -> .<factor>, {';'}
+	 <factor> -> .<atom>*<factor>, {';', '+', '-'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {';'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/'}
+	 <atom> -> .number, {';', '+', '-', '*', '/'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {';'}
+	 <aritmetic-operation> -> <factor>-.<aritmetic-operation>, {';'} 
+
+237 	 <aritmetic-operation> -> <factor>-<aritmetic-operation>., {';'} 
+
+238 	 <full-conditional> -> if(<conditional-expresssion>){<inst-list>.}, {';'}
+	 <full-conditional> -> if(<conditional-expresssion>){<inst-list>.}<else-statement>, {';'} 
+
+239 	 <full-conditional> -> if(<conditional-expresssion>){<inst-list>}.<else-statement>, {';'}
+	 <else-statement> -> .else<full-else>, {';'}
+	 <else-statement> -> .else<inline-else>, {';'}
+	 <full-conditional> -> if(<conditional-expresssion>){<inst-list>}., {';'} 
+
+240 	 <else-statement> -> else.<full-else>, {';'}
+	 <else-statement> -> else.<inline-else>, {';'} 
+
+241 	 <else-statement> -> else<inline-else>., {';'} 
+
+242 	 <else-statement> -> else<full-else>., {';'} 
+
+243 	 <full-conditional> -> if(<conditional-expresssion>){<inst-list>}<else-statement>., {';'} 
+
+244 	 <inst-list> -> <inst>.;, {'}'}
+	 <inst-list> -> <inst>.;<inst-list>, {'}'} 
+
+245 	 <factor> -> .<atom>/<factor>, {';', '+', '-'}
+	 <scope> -> .{}, {';'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {';'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/'}
+	 <scope> -> .{<inst-list>}, {';'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {';'}
+	 <full-conditional> -> .if(<conditional-expresssion>){<inst-list>}, {';'}
+	 <inst-list> -> .<inst>;<inst-list>, {'}'}
+	 <inline-conditional> -> .if(<conditional-expresssion>)<expression>, {';'}
+	 <inst> -> .<flux-control>, {';'}
+	 <conditional> -> .<inline-conditional>, {';'}
+	 <var-dec> -> .let<vat-init-list>in<var-decl-expr>, {';'}
+	 <full-conditional> -> .if(<conditional-expresssion>){<inst-list>}<else-statement>, {';'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/'}
+	 <flux-control> -> .<conditional>, {';'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/'}
+	 <inst-list> -> <inst>;.<inst-list>, {'}'}
+	 <var-asign> -> .ID:=<expression>, {';'}
+	 <inst> -> .<var-asign>, {';'}
+	 <factor> -> .<atom>, {';', '+', '-'}
+	 <aritmetic-operation> -> .<factor>, {';'}
+	 <flux-control> -> .<while-loop>, {';'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/'}
+	 <inst> -> .<var-dec>, {';'}
+	 <atom> -> .number, {';', '+', '-', '*', '/'}
+	 <for-loop> -> .for(ID<iterable-expression>)<scope>, {';'}
+	 <while-loop> -> .while(<conditional-expresssion>)<scope>, {';'}
+	 <inline-conditional> -> .if(<conditional-expresssion>)<expression><else-statement>, {';'}
+	 <expression> -> .<aritmetic-operation>, {';'}
+	 <factor> -> .<atom>*<factor>, {';', '+', '-'}
+	 <inst> -> .<scope>, {';'}
+	 <conditional> -> .<full-conditional>, {';'}
+	 <inst-list> -> .<inst>;, {'}'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/'}
+	 <inst-list> -> <inst>;., {'}'}
+	 <flux-control> -> .<for-loop>, {';'}
+	 <inst> -> .<expression>, {';'} 
+
+246 	 <inst-list> -> <inst>;<inst-list>., {'}'} 
+
+247 	 <inst> -> <var-dec>., {';'} 
+
+248 	 <inst> -> <expression>., {';'} 
+
+249 	 <inst> -> <flux-control>., {';'} 
+
+250 	 <inst> -> <scope>., {';'} 
+
+251 	 <inst> -> <var-asign>., {';'} 
+
+252 	 <flux-control> -> <conditional>., {';'} 
+
+253 	 <conditional> -> <inline-conditional>., {';'} 
+
+254 	 <conditional> -> <full-conditional>., {';'} 
+
+255 	 <flux-control> -> <while-loop>., {';'} 
+
+256 	 <flux-control> -> <for-loop>., {';'} 
+
+257 	 <function-call> -> ID.(), {';', '+', '-', '*', '/', 'else'}
+	 <function-call> -> ID.(<param-list>), {';', '+', '-', '*', '/', 'else'}
+	 <atom> -> ID., {';', '+', '-', '*', '/', 'else'} 
+
+258 	 <param-list> -> .<expression>, {')'}
+	 <param-list> -> .<expression>,<param-list>, {')'}
+	 <atom> -> .<function-call>, {',', '+', '-', '*', '/', ')'}
+	 <function-call> -> ID(.), {';', '+', '-', '*', '/', 'else'}
+	 <function-call> -> .ID(<param-list>), {',', '+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ',', ')', '-'}
+	 <function-call> -> .ID(), {'+', ',', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {',', ')'}
+	 <function-call> -> ID(.<param-list>), {';', '+', '-', '*', '/', 'else'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {',', ')'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {',', ')'}
+	 <atom> -> .ID, {'+', ',', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {',', '+', ')', '-'}
+	 <atom> -> .(<aritmetic-operation>), {'+', ',', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', ',', '-', '*', '/', ')'}
+	 <expression> -> .<aritmetic-operation>, {',', ')'}
+	 <factor> -> .<atom>, {'+', ',', ')', '-'} 
+
+259 	 <function-call> -> ID()., {';', '+', '-', '*', '/', 'else'} 
+
+260 	 <function-call> -> ID(<param-list>.), {';', '+', '-', '*', '/', 'else'} 
+
+261 	 <function-call> -> ID(<param-list>)., {';', '+', '-', '*', '/', 'else'} 
+
+262 	 <atom> -> number., {';', '+', '-', '*', '/', 'else'} 
+
+263 	 <atom> -> .<function-call>, {'+', '-', '*', '/', ')'}
+	 <atom> -> .ID, {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>/<factor>, {'+', ')', '-'}
+	 <function-call> -> .ID(<param-list>), {'+', '-', '*', '/', ')'}
+	 <atom> -> .(<aritmetic-operation>), {'+', '-', '*', '/', ')'}
+	 <factor> -> .<atom>*<factor>, {'+', ')', '-'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {')'}
+	 <factor> -> .<atom>, {'+', ')', '-'}
+	 <function-call> -> .ID(), {'+', '-', '*', '/', ')'}
+	 <atom> -> .number, {'+', '-', '*', '/', ')'}
+	 <aritmetic-operation> -> .<factor>, {')'}
+	 <atom> -> (.<aritmetic-operation>), {';', '+', '-', '*', '/', 'else'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {')'} 
+
+264 	 <atom> -> (<aritmetic-operation>.), {';', '+', '-', '*', '/', 'else'} 
+
+265 	 <atom> -> (<aritmetic-operation>)., {';', '+', '-', '*', '/', 'else'} 
+
+266 	 <inline-conditional> -> if(<conditional-expresssion>)<expression>.<else-statement>, {';'}
+	 <else-statement> -> .else<inline-else>, {';'}
+	 <else-statement> -> .else<full-else>, {';'}
+	 <inline-conditional> -> if(<conditional-expresssion>)<expression>., {';'} 
+
+267 	 <inline-conditional> -> if(<conditional-expresssion>)<expression><else-statement>., {';'} 
+
+268 	 <expression> -> <aritmetic-operation>., {';', 'else'} 
+
+269 	 <aritmetic-operation> -> <factor>.+<aritmetic-operation>, {';', 'else'}
+	 <aritmetic-operation> -> <factor>., {';', 'else'}
+	 <aritmetic-operation> -> <factor>.-<aritmetic-operation>, {';', 'else'} 
+
+270 	 <factor> -> .<atom>*<factor>, {';', '+', 'else', '-'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/', 'else'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/', 'else'}
+	 <factor> -> .<atom>, {';', '+', 'else', '-'}
+	 <aritmetic-operation> -> .<factor>, {';', 'else'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/', 'else'}
+	 <atom> -> .number, {';', '+', '-', '*', '/', 'else'}
+	 <aritmetic-operation> -> <factor>+.<aritmetic-operation>, {';', 'else'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/', 'else'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {';', 'else'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {';', 'else'}
+	 <factor> -> .<atom>/<factor>, {';', '+', 'else', '-'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/', 'else'} 
+
+271 	 <aritmetic-operation> -> <factor>+<aritmetic-operation>., {';', 'else'} 
+
+272 	 <factor> -> <atom>., {';', '+', 'else', '-'}
+	 <factor> -> <atom>.*<factor>, {';', '+', 'else', '-'}
+	 <factor> -> <atom>./<factor>, {';', '+', 'else', '-'} 
+
+273 	 <factor> -> .<atom>*<factor>, {';', '+', 'else', '-'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/', 'else'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/', 'else'}
+	 <factor> -> .<atom>, {';', '+', 'else', '-'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/', 'else'}
+	 <atom> -> .number, {';', '+', '-', '*', '/', 'else'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/', 'else'}
+	 <factor> -> <atom>*.<factor>, {';', '+', 'else', '-'}
+	 <factor> -> .<atom>/<factor>, {';', '+', 'else', '-'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/', 'else'} 
+
+274 	 <factor> -> <atom>*<factor>., {';', '+', 'else', '-'} 
+
+275 	 <atom> -> <function-call>., {';', '+', '-', '*', '/', 'else'} 
+
+276 	 <factor> -> .<atom>*<factor>, {';', '+', 'else', '-'}
+	 <factor> -> <atom>/.<factor>, {';', '+', 'else', '-'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/', 'else'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/', 'else'}
+	 <factor> -> .<atom>, {';', '+', 'else', '-'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/', 'else'}
+	 <atom> -> .number, {';', '+', '-', '*', '/', 'else'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/', 'else'}
+	 <factor> -> .<atom>/<factor>, {';', '+', 'else', '-'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/', 'else'} 
+
+277 	 <factor> -> <atom>/<factor>., {';', '+', 'else', '-'} 
+
+278 	 <factor> -> .<atom>*<factor>, {';', '+', 'else', '-'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/', 'else'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/', 'else'}
+	 <factor> -> .<atom>, {';', '+', 'else', '-'}
+	 <aritmetic-operation> -> .<factor>, {';', 'else'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/', 'else'}
+	 <atom> -> .number, {';', '+', '-', '*', '/', 'else'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/', 'else'}
+	 <aritmetic-operation> -> <factor>-.<aritmetic-operation>, {';', 'else'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {';', 'else'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {';', 'else'}
+	 <factor> -> .<atom>/<factor>, {';', '+', 'else', '-'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/', 'else'} 
+
+279 	 <aritmetic-operation> -> <factor>-<aritmetic-operation>., {';', 'else'} 
+
+280 	 <var-decl-expr> -> <var-dec>., {';'} 
+
+281 	 <var-decl-expr> -> <expression>., {';'} 
+
+282 	 <var-decl-expr> -> <flux-control>., {';'} 
+
+283 	 <var-decl-expr> -> <scope>., {';'} 
+
+284 	 <var-dec> -> let<vat-init-list>in<var-decl-expr>., {';'} 
+
+285 	 <scope> -> {<inst-list>.}, {';'} 
+
+286 	 <scope> -> {<inst-list>}., {';'} 
+
+287 	 <while-loop> -> while(<conditional-expresssion>)<scope>., {';'} 
+
+288 	 S' -> <program>., {'$'} 
+
+289 	 <program> -> <inst-list>., {'$'} 
+
+290 	 <inst-list> -> <inst>.;, {'$'}
+	 <inst-list> -> <inst>.;<inst-list>, {'$'} 
+
+291 	 <factor> -> .<atom>/<factor>, {';', '+', '-'}
+	 <scope> -> .{}, {';'}
+	 <aritmetic-operation> -> .<factor>+<aritmetic-operation>, {';'}
+	 <atom> -> .(<aritmetic-operation>), {';', '+', '-', '*', '/'}
+	 <scope> -> .{<inst-list>}, {';'}
+	 <aritmetic-operation> -> .<factor>-<aritmetic-operation>, {';'}
+	 <inst-list> -> .<inst>;, {'$'}
+	 <full-conditional> -> .if(<conditional-expresssion>){<inst-list>}, {';'}
+	 <inst-list> -> <inst>;., {'$'}
+	 <inline-conditional> -> .if(<conditional-expresssion>)<expression>, {';'}
+	 <inst> -> .<flux-control>, {';'}
+	 <conditional> -> .<inline-conditional>, {';'}
+	 <var-dec> -> .let<vat-init-list>in<var-decl-expr>, {';'}
+	 <full-conditional> -> .if(<conditional-expresssion>){<inst-list>}<else-statement>, {';'}
+	 <function-call> -> .ID(<param-list>), {';', '+', '-', '*', '/'}
+	 <flux-control> -> .<conditional>, {';'}
+	 <function-call> -> .ID(), {';', '+', '-', '*', '/'}
+	 <var-asign> -> .ID:=<expression>, {';'}
+	 <inst> -> .<var-asign>, {';'}
+	 <factor> -> .<atom>, {';', '+', '-'}
+	 <aritmetic-operation> -> .<factor>, {';'}
+	 <flux-control> -> .<while-loop>, {';'}
+	 <atom> -> .ID, {';', '+', '-', '*', '/'}
+	 <inst> -> .<var-dec>, {';'}
+	 <atom> -> .number, {';', '+', '-', '*', '/'}
+	 <inst-list> -> .<inst>;<inst-list>, {'$'}
+	 <for-loop> -> .for(ID<iterable-expression>)<scope>, {';'}
+	 <while-loop> -> .while(<conditional-expresssion>)<scope>, {';'}
+	 <inline-conditional> -> .if(<conditional-expresssion>)<expression><else-statement>, {';'}
+	 <expression> -> .<aritmetic-operation>, {';'}
+	 <factor> -> .<atom>*<factor>, {';', '+', '-'}
+	 <inst> -> .<scope>, {';'}
+	 <conditional> -> .<full-conditional>, {';'}
+	 <atom> -> .<function-call>, {';', '+', '-', '*', '/'}
+	 <inst-list> -> <inst>;.<inst-list>, {'$'}
+	 <flux-control> -> .<for-loop>, {';'}
+	 <inst> -> .<expression>, {';'} 
+
+292 	 <inst-list> -> <inst>;<inst-list>., {'$'} 
+
+(0, '<atom>') 230
+(0, '{') ('SHIFT', 162)
+(0, '<factor>') 227
+(0, '(') ('SHIFT', 215)
+(0, '{') ('SHIFT', 162)
+(0, '<factor>') 227
+(0, '<inst>') 290
+(0, 'if') ('SHIFT', 218)
+(0, 'if') ('SHIFT', 218)
+(0, '<flux-control>') 249
+(0, '<inline-conditional>') 253
+(0, 'let') ('SHIFT', 170)
+(0, 'if') ('SHIFT', 218)
+(0, 'ID') ('SHIFT', 223)
+(0, '<conditional>') 252
+(0, 'ID') ('SHIFT', 223)
+(0, 'ID') ('SHIFT', 223)
+(0, '<var-asign>') 251
+(0, '<atom>') 230
+(0, '<factor>') 227
+(0, '<while-loop>') 255
+(0, 'ID') ('SHIFT', 223)
+(0, '<var-dec>') 247
+(0, 'number') ('SHIFT', 214)
+(0, '<inst>') 290
+(0, 'for') ('SHIFT', 163)
+(0, 'while') ('SHIFT', 1)
+(0, 'if') ('SHIFT', 218)
+(0, '<aritmetic-operation>') 226
+(0, '<atom>') 230
+(0, '<scope>') 250
+(0, '<full-conditional>') 254
+(0, '<program>') 288
+(0, '<function-call>') 233
+(0, '<inst-list>') 289
+(0, '<for-loop>') 256
+(0, '<expression>') 248
+(1, '(') ('SHIFT', 2)
+(2, '<boolean-value>') 134
+(2, '<aritmetic-operation>') 119
+(2, 'ID') ('SHIFT', 3)
+(2, '<expression>') 65
+(2, '<function-call>') 128
+(2, '<condition>') 117
+(2, 'ID') ('SHIFT', 3)
+(2, '<atom>') 125
+(2, '<condition>') 117
+(2, 'false') ('SHIFT', 64)
+(2, '<condition>') 117
+(2, '<expression>') 65
+(2, '<conditional-expresssion>') 160
+(2, '<expression>') 65
+(2, '<factor>') 120
+(2, 'ID') ('SHIFT', 3)
+(2, '<comparation>') 135
+(2, '(') ('SHIFT', 53)
+(2, 'number') ('SHIFT', 52)
+(2, '<factor>') 120
+(2, '<expression>') 65
+(2, '<expression>') 65
+(2, '<atom>') 125
+(2, 'true') ('SHIFT', 63)
+(2, '<atom>') 125
+(2, '<factor>') 120
+(2, '!') ('SHIFT', 61)
+(2, '<expression>') 65
+(2, '(') ('SHIFT', 53)
+(3, '+') ('REDUCE', <atom> -> ID)
+(3, '-') ('REDUCE', <atom> -> ID)
+(3, '*') ('REDUCE', <atom> -> ID)
+(3, '>') ('REDUCE', <atom> -> ID)
+(3, '<') ('REDUCE', <atom> -> ID)
+(3, '>=') ('REDUCE', <atom> -> ID)
+(3, '/') ('REDUCE', <atom> -> ID)
+(3, '=<') ('REDUCE', <atom> -> ID)
+(3, '==') ('REDUCE', <atom> -> ID)
+(3, '!=') ('REDUCE', <atom> -> ID)
+(3, '(') ('SHIFT', 4)
+(3, '(') ('SHIFT', 4)
+(4, '<expression>') 12
+(4, '<expression>') 12
+(4, '<function-call>') 21
+(4, ')') ('SHIFT', 49)
+(4, 'ID') ('SHIFT', 5)
+(4, '<atom>') 18
+(4, 'ID') ('SHIFT', 5)
+(4, '<factor>') 15
+(4, '<param-list>') 50
+(4, '<factor>') 15
+(4, '<factor>') 15
+(4, 'ID') ('SHIFT', 5)
+(4, '<atom>') 18
+(4, '(') ('SHIFT', 8)
+(4, 'number') ('SHIFT', 7)
+(4, '<aritmetic-operation>') 14
+(4, '<atom>') 18
+(5, '(') ('SHIFT', 6)
+(5, '+') ('REDUCE', <atom> -> ID)
+(5, ',') ('REDUCE', <atom> -> ID)
+(5, '-') ('REDUCE', <atom> -> ID)
+(5, '*') ('REDUCE', <atom> -> ID)
+(5, '/') ('REDUCE', <atom> -> ID)
+(5, ')') ('REDUCE', <atom> -> ID)
+(5, '(') ('SHIFT', 6)
+(6, '<expression>') 12
+(6, '<expression>') 12
+(6, '<function-call>') 21
+(6, 'ID') ('SHIFT', 5)
+(6, '<atom>') 18
+(6, 'ID') ('SHIFT', 5)
+(6, '<factor>') 15
+(6, ')') ('SHIFT', 46)
+(6, '<factor>') 15
+(6, '<param-list>') 47
+(6, '<factor>') 15
+(6, 'ID') ('SHIFT', 5)
+(6, '<atom>') 18
+(6, '(') ('SHIFT', 8)
+(6, 'number') ('SHIFT', 7)
+(6, '<aritmetic-operation>') 14
+(6, '<atom>') 18
+(7, '+') ('REDUCE', <atom> -> number)
+(7, ',') ('REDUCE', <atom> -> number)
+(7, '-') ('REDUCE', <atom> -> number)
+(7, '*') ('REDUCE', <atom> -> number)
+(7, '/') ('REDUCE', <atom> -> number)
+(7, ')') ('REDUCE', <atom> -> number)
+(8, '<function-call>') 39
+(8, 'ID') ('SHIFT', 9)
+(8, '<atom>') 36
+(8, 'ID') ('SHIFT', 9)
+(8, '(') ('SHIFT', 30)
+(8, '<atom>') 36
+(8, '<aritmetic-operation>') 44
+(8, '<factor>') 33
+(8, '<atom>') 36
+(8, 'ID') ('SHIFT', 9)
+(8, 'number') ('SHIFT', 29)
+(8, '<factor>') 33
+(8, '<factor>') 33
+(9, '(') ('SHIFT', 10)
+(9, '(') ('SHIFT', 10)
+(9, '+') ('REDUCE', <atom> -> ID)
+(9, '-') ('REDUCE', <atom> -> ID)
+(9, '*') ('REDUCE', <atom> -> ID)
+(9, '/') ('REDUCE', <atom> -> ID)
+(9, ')') ('REDUCE', <atom> -> ID)
+(10, '<expression>') 12
+(10, '<expression>') 12
+(10, ')') ('SHIFT', 11)
+(10, '<function-call>') 21
+(10, 'ID') ('SHIFT', 5)
+(10, '<atom>') 18
+(10, 'ID') ('SHIFT', 5)
+(10, '<param-list>') 27
+(10, '<factor>') 15
+(10, '<factor>') 15
+(10, '<factor>') 15
+(10, 'ID') ('SHIFT', 5)
+(10, '<atom>') 18
+(10, '(') ('SHIFT', 8)
+(10, 'number') ('SHIFT', 7)
+(10, '<aritmetic-operation>') 14
+(10, '<atom>') 18
+(11, '+') ('REDUCE', <function-call> -> ID ( ))
+(11, '-') ('REDUCE', <function-call> -> ID ( ))
+(11, '*') ('REDUCE', <function-call> -> ID ( ))
+(11, '/') ('REDUCE', <function-call> -> ID ( ))
+(11, ')') ('REDUCE', <function-call> -> ID ( ))
+(12, ')') ('REDUCE', <param-list> -> <expression>)
+(12, ',') ('SHIFT', 13)
+(13, '<expression>') 12
+(13, '<expression>') 12
+(13, '<param-list>') 26
+(13, '<function-call>') 21
+(13, 'ID') ('SHIFT', 5)
+(13, '<atom>') 18
+(13, 'ID') ('SHIFT', 5)
+(13, '<factor>') 15
+(13, '<factor>') 15
+(13, '<factor>') 15
+(13, 'ID') ('SHIFT', 5)
+(13, '<atom>') 18
+(13, '(') ('SHIFT', 8)
+(13, 'number') ('SHIFT', 7)
+(13, '<aritmetic-operation>') 14
+(13, '<atom>') 18
+(14, ',') ('REDUCE', <expression> -> <aritmetic-operation>)
+(14, ')') ('REDUCE', <expression> -> <aritmetic-operation>)
+(15, '+') ('SHIFT', 16)
+(15, ',') ('REDUCE', <aritmetic-operation> -> <factor>)
+(15, ')') ('REDUCE', <aritmetic-operation> -> <factor>)
+(15, '-') ('SHIFT', 24)
+(16, '<aritmetic-operation>') 17
+(16, '<factor>') 15
+(16, '<function-call>') 21
+(16, 'ID') ('SHIFT', 5)
+(16, '<factor>') 15
+(16, '<atom>') 18
+(16, '(') ('SHIFT', 8)
+(16, 'ID') ('SHIFT', 5)
+(16, 'number') ('SHIFT', 7)
+(16, '<atom>') 18
+(16, 'ID') ('SHIFT', 5)
+(16, '<atom>') 18
+(16, '<factor>') 15
+(17, ',') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(17, ')') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(18, '+') ('REDUCE', <factor> -> <atom>)
+(18, ',') ('REDUCE', <factor> -> <atom>)
+(18, ')') ('REDUCE', <factor> -> <atom>)
+(18, '-') ('REDUCE', <factor> -> <atom>)
+(18, '*') ('SHIFT', 19)
+(18, '/') ('SHIFT', 22)
+(19, '<factor>') 20
+(19, '<function-call>') 21
+(19, 'ID') ('SHIFT', 5)
+(19, '<atom>') 18
+(19, 'ID') ('SHIFT', 5)
+(19, '(') ('SHIFT', 8)
+(19, 'number') ('SHIFT', 7)
+(19, '<atom>') 18
+(19, 'ID') ('SHIFT', 5)
+(19, '<atom>') 18
+(20, '+') ('REDUCE', <factor> -> <atom> * <factor>)
+(20, ',') ('REDUCE', <factor> -> <atom> * <factor>)
+(20, ')') ('REDUCE', <factor> -> <atom> * <factor>)
+(20, '-') ('REDUCE', <factor> -> <atom> * <factor>)
+(21, ',') ('REDUCE', <atom> -> <function-call>)
+(21, '+') ('REDUCE', <atom> -> <function-call>)
+(21, '-') ('REDUCE', <atom> -> <function-call>)
+(21, '*') ('REDUCE', <atom> -> <function-call>)
+(21, '/') ('REDUCE', <atom> -> <function-call>)
+(21, ')') ('REDUCE', <atom> -> <function-call>)
+(22, '<function-call>') 21
+(22, 'ID') ('SHIFT', 5)
+(22, '<atom>') 18
+(22, 'ID') ('SHIFT', 5)
+(22, '(') ('SHIFT', 8)
+(22, 'number') ('SHIFT', 7)
+(22, '<atom>') 18
+(22, 'ID') ('SHIFT', 5)
+(22, '<factor>') 23
+(22, '<atom>') 18
+(23, ',') ('REDUCE', <factor> -> <atom> / <factor>)
+(23, '+') ('REDUCE', <factor> -> <atom> / <factor>)
+(23, ')') ('REDUCE', <factor> -> <atom> / <factor>)
+(23, '-') ('REDUCE', <factor> -> <atom> / <factor>)
+(24, '<factor>') 15
+(24, '<aritmetic-operation>') 25
+(24, '<function-call>') 21
+(24, 'ID') ('SHIFT', 5)
+(24, '<factor>') 15
+(24, '<atom>') 18
+(24, '(') ('SHIFT', 8)
+(24, 'ID') ('SHIFT', 5)
+(24, 'number') ('SHIFT', 7)
+(24, '<atom>') 18
+(24, 'ID') ('SHIFT', 5)
+(24, '<atom>') 18
+(24, '<factor>') 15
+(25, ',') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(25, ')') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(26, ')') ('REDUCE', <param-list> -> <expression> , <param-list>)
+(27, ')') ('SHIFT', 28)
+(28, '+') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(28, '-') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(28, '*') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(28, '/') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(28, ')') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(29, '+') ('REDUCE', <atom> -> number)
+(29, '-') ('REDUCE', <atom> -> number)
+(29, '*') ('REDUCE', <atom> -> number)
+(29, '/') ('REDUCE', <atom> -> number)
+(29, ')') ('REDUCE', <atom> -> number)
+(30, '<aritmetic-operation>') 31
+(30, '<function-call>') 39
+(30, 'ID') ('SHIFT', 9)
+(30, '<atom>') 36
+(30, 'ID') ('SHIFT', 9)
+(30, '(') ('SHIFT', 30)
+(30, '<atom>') 36
+(30, '<factor>') 33
+(30, '<atom>') 36
+(30, 'ID') ('SHIFT', 9)
+(30, 'number') ('SHIFT', 29)
+(30, '<factor>') 33
+(30, '<factor>') 33
+(31, ')') ('SHIFT', 32)
+(32, '+') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(32, '-') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(32, '*') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(32, '/') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(32, ')') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(33, '+') ('SHIFT', 34)
+(33, ')') ('REDUCE', <aritmetic-operation> -> <factor>)
+(33, '-') ('SHIFT', 42)
+(34, '<function-call>') 39
+(34, 'ID') ('SHIFT', 9)
+(34, '<atom>') 36
+(34, 'ID') ('SHIFT', 9)
+(34, '(') ('SHIFT', 30)
+(34, '<atom>') 36
+(34, '<factor>') 33
+(34, '<atom>') 36
+(34, 'ID') ('SHIFT', 9)
+(34, 'number') ('SHIFT', 29)
+(34, '<factor>') 33
+(34, '<aritmetic-operation>') 35
+(34, '<factor>') 33
+(35, ')') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(36, '*') ('SHIFT', 37)
+(36, '/') ('SHIFT', 40)
+(36, '+') ('REDUCE', <factor> -> <atom>)
+(36, ')') ('REDUCE', <factor> -> <atom>)
+(36, '-') ('REDUCE', <factor> -> <atom>)
+(37, '<function-call>') 39
+(37, 'ID') ('SHIFT', 9)
+(37, '<atom>') 36
+(37, '(') ('SHIFT', 30)
+(37, 'ID') ('SHIFT', 9)
+(37, '<atom>') 36
+(37, 'ID') ('SHIFT', 9)
+(37, '<atom>') 36
+(37, 'number') ('SHIFT', 29)
+(37, '<factor>') 38
+(38, '+') ('REDUCE', <factor> -> <atom> * <factor>)
+(38, ')') ('REDUCE', <factor> -> <atom> * <factor>)
+(38, '-') ('REDUCE', <factor> -> <atom> * <factor>)
+(39, '+') ('REDUCE', <atom> -> <function-call>)
+(39, '-') ('REDUCE', <atom> -> <function-call>)
+(39, '*') ('REDUCE', <atom> -> <function-call>)
+(39, '/') ('REDUCE', <atom> -> <function-call>)
+(39, ')') ('REDUCE', <atom> -> <function-call>)
+(40, '<function-call>') 39
+(40, 'ID') ('SHIFT', 9)
+(40, '<atom>') 36
+(40, '(') ('SHIFT', 30)
+(40, 'ID') ('SHIFT', 9)
+(40, '<atom>') 36
+(40, '<factor>') 41
+(40, 'ID') ('SHIFT', 9)
+(40, '<atom>') 36
+(40, 'number') ('SHIFT', 29)
+(41, '+') ('REDUCE', <factor> -> <atom> / <factor>)
+(41, ')') ('REDUCE', <factor> -> <atom> / <factor>)
+(41, '-') ('REDUCE', <factor> -> <atom> / <factor>)
+(42, '<function-call>') 39
+(42, 'ID') ('SHIFT', 9)
+(42, '<atom>') 36
+(42, 'ID') ('SHIFT', 9)
+(42, '(') ('SHIFT', 30)
+(42, '<atom>') 36
+(42, '<factor>') 33
+(42, '<atom>') 36
+(42, 'ID') ('SHIFT', 9)
+(42, 'number') ('SHIFT', 29)
+(42, '<aritmetic-operation>') 43
+(42, '<factor>') 33
+(42, '<factor>') 33
+(43, ')') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(44, ')') ('SHIFT', 45)
+(45, '+') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(45, ',') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(45, '-') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(45, '*') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(45, '/') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(45, ')') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(46, '+') ('REDUCE', <function-call> -> ID ( ))
+(46, ',') ('REDUCE', <function-call> -> ID ( ))
+(46, '-') ('REDUCE', <function-call> -> ID ( ))
+(46, '*') ('REDUCE', <function-call> -> ID ( ))
+(46, '/') ('REDUCE', <function-call> -> ID ( ))
+(46, ')') ('REDUCE', <function-call> -> ID ( ))
+(47, ')') ('SHIFT', 48)
+(48, ',') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(48, '+') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(48, '-') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(48, '*') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(48, '/') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(48, ')') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(49, '+') ('REDUCE', <function-call> -> ID ( ))
+(49, '-') ('REDUCE', <function-call> -> ID ( ))
+(49, '*') ('REDUCE', <function-call> -> ID ( ))
+(49, '>') ('REDUCE', <function-call> -> ID ( ))
+(49, '<') ('REDUCE', <function-call> -> ID ( ))
+(49, '>=') ('REDUCE', <function-call> -> ID ( ))
+(49, '/') ('REDUCE', <function-call> -> ID ( ))
+(49, '=<') ('REDUCE', <function-call> -> ID ( ))
+(49, '==') ('REDUCE', <function-call> -> ID ( ))
+(49, '!=') ('REDUCE', <function-call> -> ID ( ))
+(50, ')') ('SHIFT', 51)
+(51, '+') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(51, '-') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(51, '*') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(51, '>') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(51, '<') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(51, '>=') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(51, '/') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(51, '=<') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(51, '==') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(51, '!=') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(52, '+') ('REDUCE', <atom> -> number)
+(52, '-') ('REDUCE', <atom> -> number)
+(52, '*') ('REDUCE', <atom> -> number)
+(52, '>') ('REDUCE', <atom> -> number)
+(52, '<') ('REDUCE', <atom> -> number)
+(52, '/') ('REDUCE', <atom> -> number)
+(52, '>=') ('REDUCE', <atom> -> number)
+(52, '=<') ('REDUCE', <atom> -> number)
+(52, '==') ('REDUCE', <atom> -> number)
+(52, '!=') ('REDUCE', <atom> -> number)
+(53, '<boolean-value>') 134
+(53, '<aritmetic-operation>') 99
+(53, '<expression>') 65
+(53, 'number') ('SHIFT', 59)
+(53, '<condition>') 117
+(53, '<factor>') 101
+(53, '<condition>') 117
+(53, '<conditional-expresssion>') 158
+(53, 'false') ('SHIFT', 64)
+(53, '<condition>') 117
+(53, '<expression>') 65
+(53, '<factor>') 101
+(53, '<aritmetic-operation>') 99
+(53, '<function-call>') 110
+(53, '<atom>') 107
+(53, '<expression>') 65
+(53, 'ID') ('SHIFT', 54)
+(53, '<atom>') 107
+(53, '<factor>') 101
+(53, 'ID') ('SHIFT', 54)
+(53, '<comparation>') 135
+(53, '<expression>') 65
+(53, 'true') ('SHIFT', 63)
+(53, '<expression>') 65
+(53, '(') ('SHIFT', 60)
+(53, '<atom>') 107
+(53, '!') ('SHIFT', 61)
+(53, 'ID') ('SHIFT', 54)
+(53, '<expression>') 65
+(53, '(') ('SHIFT', 60)
+(54, '(') ('SHIFT', 55)
+(54, '(') ('SHIFT', 55)
+(54, '+') ('REDUCE', <atom> -> ID)
+(54, '-') ('REDUCE', <atom> -> ID)
+(54, '*') ('REDUCE', <atom> -> ID)
+(54, '>') ('REDUCE', <atom> -> ID)
+(54, '<') ('REDUCE', <atom> -> ID)
+(54, '!=') ('REDUCE', <atom> -> ID)
+(54, '>=') ('REDUCE', <atom> -> ID)
+(54, '/') ('REDUCE', <atom> -> ID)
+(54, '=<') ('REDUCE', <atom> -> ID)
+(54, '==') ('REDUCE', <atom> -> ID)
+(54, ')') ('REDUCE', <atom> -> ID)
+(55, '<expression>') 12
+(55, '<expression>') 12
+(55, '<function-call>') 21
+(55, 'ID') ('SHIFT', 5)
+(55, '<atom>') 18
+(55, 'ID') ('SHIFT', 5)
+(55, '<factor>') 15
+(55, '<factor>') 15
+(55, ')') ('SHIFT', 56)
+(55, '<factor>') 15
+(55, 'ID') ('SHIFT', 5)
+(55, '<atom>') 18
+(55, '(') ('SHIFT', 8)
+(55, '<param-list>') 57
+(55, 'number') ('SHIFT', 7)
+(55, '<aritmetic-operation>') 14
+(55, '<atom>') 18
+(56, '+') ('REDUCE', <function-call> -> ID ( ))
+(56, '-') ('REDUCE', <function-call> -> ID ( ))
+(56, '*') ('REDUCE', <function-call> -> ID ( ))
+(56, '>') ('REDUCE', <function-call> -> ID ( ))
+(56, '<') ('REDUCE', <function-call> -> ID ( ))
+(56, '!=') ('REDUCE', <function-call> -> ID ( ))
+(56, '>=') ('REDUCE', <function-call> -> ID ( ))
+(56, '/') ('REDUCE', <function-call> -> ID ( ))
+(56, '=<') ('REDUCE', <function-call> -> ID ( ))
+(56, '==') ('REDUCE', <function-call> -> ID ( ))
+(56, ')') ('REDUCE', <function-call> -> ID ( ))
+(57, ')') ('SHIFT', 58)
+(58, '+') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(58, '-') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(58, '*') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(58, '>') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(58, '<') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(58, '!=') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(58, '>=') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(58, '/') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(58, '=<') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(58, '==') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(58, ')') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(59, '+') ('REDUCE', <atom> -> number)
+(59, '-') ('REDUCE', <atom> -> number)
+(59, '*') ('REDUCE', <atom> -> number)
+(59, '>') ('REDUCE', <atom> -> number)
+(59, '<') ('REDUCE', <atom> -> number)
+(59, '!=') ('REDUCE', <atom> -> number)
+(59, '/') ('REDUCE', <atom> -> number)
+(59, '>=') ('REDUCE', <atom> -> number)
+(59, '=<') ('REDUCE', <atom> -> number)
+(59, '==') ('REDUCE', <atom> -> number)
+(59, ')') ('REDUCE', <atom> -> number)
+(60, '<boolean-value>') 134
+(60, '<aritmetic-operation>') 157
+(60, '<expression>') 65
+(60, 'number') ('SHIFT', 59)
+(60, '<condition>') 117
+(60, '<factor>') 101
+(60, '<condition>') 117
+(60, '<aritmetic-operation>') 157
+(60, 'false') ('SHIFT', 64)
+(60, '<conditional-expresssion>') 158
+(60, '<condition>') 117
+(60, '<expression>') 65
+(60, '<factor>') 101
+(60, '<function-call>') 110
+(60, '<atom>') 107
+(60, '<expression>') 65
+(60, 'ID') ('SHIFT', 54)
+(60, '<atom>') 107
+(60, '<factor>') 101
+(60, 'ID') ('SHIFT', 54)
+(60, '<comparation>') 135
+(60, '<expression>') 65
+(60, 'true') ('SHIFT', 63)
+(60, '<expression>') 65
+(60, '(') ('SHIFT', 60)
+(60, '<atom>') 107
+(60, '!') ('SHIFT', 61)
+(60, 'ID') ('SHIFT', 54)
+(60, '<expression>') 65
+(60, '(') ('SHIFT', 60)
+(61, '<aritmetic-operation>') 119
+(61, 'ID') ('SHIFT', 3)
+(61, 'false') ('SHIFT', 139)
+(61, 'ID') ('SHIFT', 3)
+(61, '<expression>') 140
+(61, '<atom>') 125
+(61, '<expression>') 140
+(61, '<comparation>') 156
+(61, '<factor>') 120
+(61, '<factor>') 120
+(61, '<expression>') 140
+(61, 'true') ('SHIFT', 138)
+(61, 'ID') ('SHIFT', 3)
+(61, '(') ('SHIFT', 62)
+(61, 'number') ('SHIFT', 52)
+(61, '<factor>') 120
+(61, '<expression>') 140
+(61, '<atom>') 125
+(61, '<expression>') 140
+(61, '<atom>') 125
+(61, '<boolean-value>') 155
+(61, '<expression>') 140
+(61, '(') ('SHIFT', 62)
+(61, '<condition>') 154
+(61, '<function-call>') 128
+(62, '<boolean-value>') 134
+(62, '<aritmetic-operation>') 99
+(62, '<expression>') 65
+(62, 'number') ('SHIFT', 59)
+(62, '<condition>') 117
+(62, '<conditional-expresssion>') 115
+(62, '<factor>') 101
+(62, '<condition>') 117
+(62, 'false') ('SHIFT', 64)
+(62, '<condition>') 117
+(62, '<expression>') 65
+(62, '<factor>') 101
+(62, '<aritmetic-operation>') 99
+(62, '<function-call>') 110
+(62, '<atom>') 107
+(62, '<expression>') 65
+(62, 'ID') ('SHIFT', 54)
+(62, '<atom>') 107
+(62, '<factor>') 101
+(62, 'ID') ('SHIFT', 54)
+(62, '<comparation>') 135
+(62, '<expression>') 65
+(62, 'true') ('SHIFT', 63)
+(62, '<expression>') 65
+(62, '(') ('SHIFT', 60)
+(62, '<atom>') 107
+(62, '!') ('SHIFT', 61)
+(62, 'ID') ('SHIFT', 54)
+(62, '<expression>') 65
+(62, '(') ('SHIFT', 60)
+(63, '|') ('REDUCE', <boolean-value> -> true)
+(63, '&') ('REDUCE', <boolean-value> -> true)
+(63, ')') ('REDUCE', <boolean-value> -> true)
+(64, '|') ('REDUCE', <boolean-value> -> false)
+(64, '&') ('REDUCE', <boolean-value> -> false)
+(64, ')') ('REDUCE', <boolean-value> -> false)
+(65, '==') ('SHIFT', 95)
+(65, '>=') ('SHIFT', 91)
+(65, '>') ('SHIFT', 66)
+(65, '!=') ('SHIFT', 97)
+(65, '=<') ('SHIFT', 93)
+(65, '<') ('SHIFT', 89)
+(66, 'ID') ('SHIFT', 67)
+(66, '<aritmetic-operation>') 77
+(66, 'number') ('SHIFT', 72)
+(66, '(') ('SHIFT', 73)
+(66, '<expression>') 76
+(66, '<factor>') 78
+(66, '<atom>') 81
+(66, '<function-call>') 84
+(66, '<atom>') 81
+(66, '<atom>') 81
+(66, '<factor>') 78
+(66, 'ID') ('SHIFT', 67)
+(66, 'ID') ('SHIFT', 67)
+(66, '<factor>') 78
+(67, '(') ('SHIFT', 68)
+(67, '+') ('REDUCE', <atom> -> ID)
+(67, '-') ('REDUCE', <atom> -> ID)
+(67, '*') ('REDUCE', <atom> -> ID)
+(67, '/') ('REDUCE', <atom> -> ID)
+(67, '&') ('REDUCE', <atom> -> ID)
+(67, '|') ('REDUCE', <atom> -> ID)
+(67, ')') ('REDUCE', <atom> -> ID)
+(67, '(') ('SHIFT', 68)
+(68, '<expression>') 12
+(68, '<expression>') 12
+(68, '<function-call>') 21
+(68, 'ID') ('SHIFT', 5)
+(68, '<atom>') 18
+(68, 'ID') ('SHIFT', 5)
+(68, '<factor>') 15
+(68, ')') ('SHIFT', 69)
+(68, '<factor>') 15
+(68, '<factor>') 15
+(68, 'ID') ('SHIFT', 5)
+(68, '<param-list>') 70
+(68, '<atom>') 18
+(68, '(') ('SHIFT', 8)
+(68, 'number') ('SHIFT', 7)
+(68, '<aritmetic-operation>') 14
+(68, '<atom>') 18
+(69, '+') ('REDUCE', <function-call> -> ID ( ))
+(69, '-') ('REDUCE', <function-call> -> ID ( ))
+(69, '*') ('REDUCE', <function-call> -> ID ( ))
+(69, '/') ('REDUCE', <function-call> -> ID ( ))
+(69, '&') ('REDUCE', <function-call> -> ID ( ))
+(69, '|') ('REDUCE', <function-call> -> ID ( ))
+(69, ')') ('REDUCE', <function-call> -> ID ( ))
+(70, ')') ('SHIFT', 71)
+(71, '+') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(71, '-') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(71, '*') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(71, '/') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(71, '&') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(71, '|') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(71, ')') ('REDUCE', <function-call> -> ID ( <param-list> ))
+(72, '+') ('REDUCE', <atom> -> number)
+(72, '-') ('REDUCE', <atom> -> number)
+(72, '*') ('REDUCE', <atom> -> number)
+(72, '/') ('REDUCE', <atom> -> number)
+(72, '&') ('REDUCE', <atom> -> number)
+(72, '|') ('REDUCE', <atom> -> number)
+(72, ')') ('REDUCE', <atom> -> number)
+(73, '<function-call>') 39
+(73, 'ID') ('SHIFT', 9)
+(73, '<atom>') 36
+(73, 'ID') ('SHIFT', 9)
+(73, '(') ('SHIFT', 30)
+(73, '<atom>') 36
+(73, '<factor>') 33
+(73, '<atom>') 36
+(73, 'ID') ('SHIFT', 9)
+(73, 'number') ('SHIFT', 29)
+(73, '<aritmetic-operation>') 74
+(73, '<factor>') 33
+(73, '<factor>') 33
+(74, ')') ('SHIFT', 75)
+(75, '+') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(75, '-') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(75, '*') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(75, '/') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(75, '&') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(75, '|') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(75, ')') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(76, '|') ('REDUCE', <comparation> -> <expression> > <expression>)
+(76, '&') ('REDUCE', <comparation> -> <expression> > <expression>)
+(76, ')') ('REDUCE', <comparation> -> <expression> > <expression>)
+(77, '|') ('REDUCE', <expression> -> <aritmetic-operation>)
+(77, '&') ('REDUCE', <expression> -> <aritmetic-operation>)
+(77, ')') ('REDUCE', <expression> -> <aritmetic-operation>)
+(78, '|') ('REDUCE', <aritmetic-operation> -> <factor>)
+(78, '&') ('REDUCE', <aritmetic-operation> -> <factor>)
+(78, ')') ('REDUCE', <aritmetic-operation> -> <factor>)
+(78, '-') ('SHIFT', 87)
+(78, '+') ('SHIFT', 79)
+(79, 'ID') ('SHIFT', 67)
+(79, '<aritmetic-operation>') 80
+(79, 'number') ('SHIFT', 72)
+(79, '(') ('SHIFT', 73)
+(79, '<factor>') 78
+(79, '<atom>') 81
+(79, '<function-call>') 84
+(79, '<atom>') 81
+(79, '<atom>') 81
+(79, '<factor>') 78
+(79, 'ID') ('SHIFT', 67)
+(79, 'ID') ('SHIFT', 67)
+(79, '<factor>') 78
+(80, '|') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(80, '&') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(80, ')') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(81, '*') ('SHIFT', 82)
+(81, '/') ('SHIFT', 85)
+(81, '+') ('REDUCE', <factor> -> <atom>)
+(81, '-') ('REDUCE', <factor> -> <atom>)
+(81, '&') ('REDUCE', <factor> -> <atom>)
+(81, '|') ('REDUCE', <factor> -> <atom>)
+(81, ')') ('REDUCE', <factor> -> <atom>)
+(82, 'ID') ('SHIFT', 67)
+(82, 'number') ('SHIFT', 72)
+(82, '<factor>') 83
+(82, '<atom>') 81
+(82, '<atom>') 81
+(82, '<atom>') 81
+(82, '<function-call>') 84
+(82, 'ID') ('SHIFT', 67)
+(82, '(') ('SHIFT', 73)
+(82, 'ID') ('SHIFT', 67)
+(83, '+') ('REDUCE', <factor> -> <atom> * <factor>)
+(83, '-') ('REDUCE', <factor> -> <atom> * <factor>)
+(83, '&') ('REDUCE', <factor> -> <atom> * <factor>)
+(83, '|') ('REDUCE', <factor> -> <atom> * <factor>)
+(83, ')') ('REDUCE', <factor> -> <atom> * <factor>)
+(84, '+') ('REDUCE', <atom> -> <function-call>)
+(84, '-') ('REDUCE', <atom> -> <function-call>)
+(84, '*') ('REDUCE', <atom> -> <function-call>)
+(84, '/') ('REDUCE', <atom> -> <function-call>)
+(84, '&') ('REDUCE', <atom> -> <function-call>)
+(84, '|') ('REDUCE', <atom> -> <function-call>)
+(84, ')') ('REDUCE', <atom> -> <function-call>)
+(85, 'ID') ('SHIFT', 67)
+(85, 'number') ('SHIFT', 72)
+(85, '<atom>') 81
+(85, '<factor>') 86
+(85, '<atom>') 81
+(85, '<atom>') 81
+(85, '<function-call>') 84
+(85, 'ID') ('SHIFT', 67)
+(85, '(') ('SHIFT', 73)
+(85, 'ID') ('SHIFT', 67)
+(86, '+') ('REDUCE', <factor> -> <atom> / <factor>)
+(86, '-') ('REDUCE', <factor> -> <atom> / <factor>)
+(86, '&') ('REDUCE', <factor> -> <atom> / <factor>)
+(86, '|') ('REDUCE', <factor> -> <atom> / <factor>)
+(86, ')') ('REDUCE', <factor> -> <atom> / <factor>)
+(87, 'ID') ('SHIFT', 67)
+(87, 'number') ('SHIFT', 72)
+(87, '(') ('SHIFT', 73)
+(87, '<factor>') 78
+(87, '<atom>') 81
+(87, '<function-call>') 84
+(87, '<atom>') 81
+(87, '<atom>') 81
+(87, '<factor>') 78
+(87, 'ID') ('SHIFT', 67)
+(87, 'ID') ('SHIFT', 67)
+(87, '<aritmetic-operation>') 88
+(87, '<factor>') 78
+(88, '|') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(88, '&') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(88, ')') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(89, 'ID') ('SHIFT', 67)
+(89, '<aritmetic-operation>') 77
+(89, 'number') ('SHIFT', 72)
+(89, '(') ('SHIFT', 73)
+(89, '<factor>') 78
+(89, '<atom>') 81
+(89, '<function-call>') 84
+(89, '<expression>') 90
+(89, '<atom>') 81
+(89, '<atom>') 81
+(89, '<factor>') 78
+(89, 'ID') ('SHIFT', 67)
+(89, 'ID') ('SHIFT', 67)
+(89, '<factor>') 78
+(90, '|') ('REDUCE', <comparation> -> <expression> < <expression>)
+(90, '&') ('REDUCE', <comparation> -> <expression> < <expression>)
+(90, ')') ('REDUCE', <comparation> -> <expression> < <expression>)
+(91, 'ID') ('SHIFT', 67)
+(91, '<aritmetic-operation>') 77
+(91, 'number') ('SHIFT', 72)
+(91, '<expression>') 92
+(91, '(') ('SHIFT', 73)
+(91, '<factor>') 78
+(91, '<atom>') 81
+(91, '<function-call>') 84
+(91, '<atom>') 81
+(91, '<atom>') 81
+(91, '<factor>') 78
+(91, 'ID') ('SHIFT', 67)
+(91, 'ID') ('SHIFT', 67)
+(91, '<factor>') 78
+(92, '|') ('REDUCE', <comparation> -> <expression> >= <expression>)
+(92, '&') ('REDUCE', <comparation> -> <expression> >= <expression>)
+(92, ')') ('REDUCE', <comparation> -> <expression> >= <expression>)
+(93, 'ID') ('SHIFT', 67)
+(93, '<aritmetic-operation>') 77
+(93, 'number') ('SHIFT', 72)
+(93, '(') ('SHIFT', 73)
+(93, '<expression>') 94
+(93, '<factor>') 78
+(93, '<atom>') 81
+(93, '<function-call>') 84
+(93, '<atom>') 81
+(93, '<atom>') 81
+(93, '<factor>') 78
+(93, 'ID') ('SHIFT', 67)
+(93, 'ID') ('SHIFT', 67)
+(93, '<factor>') 78
+(94, '|') ('REDUCE', <comparation> -> <expression> =< <expression>)
+(94, '&') ('REDUCE', <comparation> -> <expression> =< <expression>)
+(94, ')') ('REDUCE', <comparation> -> <expression> =< <expression>)
+(95, 'ID') ('SHIFT', 67)
+(95, '<aritmetic-operation>') 77
+(95, '<expression>') 96
+(95, 'number') ('SHIFT', 72)
+(95, '(') ('SHIFT', 73)
+(95, '<factor>') 78
+(95, '<atom>') 81
+(95, '<function-call>') 84
+(95, '<atom>') 81
+(95, '<atom>') 81
+(95, '<factor>') 78
+(95, 'ID') ('SHIFT', 67)
+(95, 'ID') ('SHIFT', 67)
+(95, '<factor>') 78
+(96, '|') ('REDUCE', <comparation> -> <expression> == <expression>)
+(96, '&') ('REDUCE', <comparation> -> <expression> == <expression>)
+(96, ')') ('REDUCE', <comparation> -> <expression> == <expression>)
+(97, 'ID') ('SHIFT', 67)
+(97, '<aritmetic-operation>') 77
+(97, 'number') ('SHIFT', 72)
+(97, '(') ('SHIFT', 73)
+(97, '<factor>') 78
+(97, '<atom>') 81
+(97, '<function-call>') 84
+(97, '<atom>') 81
+(97, '<expression>') 98
+(97, '<atom>') 81
+(97, '<factor>') 78
+(97, 'ID') ('SHIFT', 67)
+(97, 'ID') ('SHIFT', 67)
+(97, '<factor>') 78
+(98, '|') ('REDUCE', <comparation> -> <expression> != <expression>)
+(98, '&') ('REDUCE', <comparation> -> <expression> != <expression>)
+(98, ')') ('REDUCE', <comparation> -> <expression> != <expression>)
+(99, ')') ('SHIFT', 100)
+(99, '>') ('REDUCE', <expression> -> <aritmetic-operation>)
+(99, '<') ('REDUCE', <expression> -> <aritmetic-operation>)
+(99, '>=') ('REDUCE', <expression> -> <aritmetic-operation>)
+(99, '=<') ('REDUCE', <expression> -> <aritmetic-operation>)
+(99, '==') ('REDUCE', <expression> -> <aritmetic-operation>)
+(99, '!=') ('REDUCE', <expression> -> <aritmetic-operation>)
+(100, '+') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(100, '-') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(100, '*') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(100, '>') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(100, '<') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(100, '>=') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(100, '/') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(100, '=<') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(100, '==') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(100, '!=') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(101, '+') ('SHIFT', 102)
+(101, '>') ('REDUCE', <aritmetic-operation> -> <factor>)
+(101, '<') ('REDUCE', <aritmetic-operation> -> <factor>)
+(101, '>=') ('REDUCE', <aritmetic-operation> -> <factor>)
+(101, '=<') ('REDUCE', <aritmetic-operation> -> <factor>)
+(101, ')') ('REDUCE', <aritmetic-operation> -> <factor>)
+(101, '==') ('REDUCE', <aritmetic-operation> -> <factor>)
+(101, '!=') ('REDUCE', <aritmetic-operation> -> <factor>)
+(101, '-') ('SHIFT', 113)
+(102, '<function-call>') 110
+(102, '<factor>') 101
+(102, 'ID') ('SHIFT', 54)
+(102, 'number') ('SHIFT', 59)
+(102, 'ID') ('SHIFT', 54)
+(102, '<factor>') 101
+(102, '<atom>') 107
+(102, '<aritmetic-operation>') 106
+(102, '<atom>') 107
+(102, '<factor>') 101
+(102, '<atom>') 107
+(102, 'ID') ('SHIFT', 54)
+(102, '(') ('SHIFT', 103)
+(103, '<function-call>') 39
+(103, 'ID') ('SHIFT', 9)
+(103, '<atom>') 36
+(103, 'ID') ('SHIFT', 9)
+(103, '(') ('SHIFT', 30)
+(103, '<atom>') 36
+(103, '<factor>') 33
+(103, '<atom>') 36
+(103, 'ID') ('SHIFT', 9)
+(103, 'number') ('SHIFT', 29)
+(103, '<aritmetic-operation>') 104
+(103, '<factor>') 33
+(103, '<factor>') 33
+(104, ')') ('SHIFT', 105)
+(105, '+') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(105, '-') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(105, '*') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(105, '>') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(105, '<') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(105, '>=') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(105, '/') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(105, '=<') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(105, ')') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(105, '==') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(105, '!=') ('REDUCE', <atom> -> ( <aritmetic-operation> ))
+(106, '>') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(106, '<') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(106, '>=') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(106, '=<') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(106, ')') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(106, '==') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(106, '!=') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(107, '/') ('SHIFT', 111)
+(107, '+') ('REDUCE', <factor> -> <atom>)
+(107, '-') ('REDUCE', <factor> -> <atom>)
+(107, '>') ('REDUCE', <factor> -> <atom>)
+(107, '<') ('REDUCE', <factor> -> <atom>)
+(107, '!=') ('REDUCE', <factor> -> <atom>)
+(107, '>=') ('REDUCE', <factor> -> <atom>)
+(107, '=<') ('REDUCE', <factor> -> <atom>)
+(107, '==') ('REDUCE', <factor> -> <atom>)
+(107, ')') ('REDUCE', <factor> -> <atom>)
+(107, '*') ('SHIFT', 108)
+(108, 'ID') ('SHIFT', 54)
+(108, 'number') ('SHIFT', 59)
+(108, 'ID') ('SHIFT', 54)
+(108, '<factor>') 109
+(108, '<atom>') 107
+(108, '<atom>') 107
+(108, '<atom>') 107
+(108, '<function-call>') 110
+(108, 'ID') ('SHIFT', 54)
+(108, '(') ('SHIFT', 103)
+(109, '+') ('REDUCE', <factor> -> <atom> * <factor>)
+(109, '-') ('REDUCE', <factor> -> <atom> * <factor>)
+(109, '>') ('REDUCE', <factor> -> <atom> * <factor>)
+(109, '<') ('REDUCE', <factor> -> <atom> * <factor>)
+(109, '!=') ('REDUCE', <factor> -> <atom> * <factor>)
+(109, '>=') ('REDUCE', <factor> -> <atom> * <factor>)
+(109, '=<') ('REDUCE', <factor> -> <atom> * <factor>)
+(109, '==') ('REDUCE', <factor> -> <atom> * <factor>)
+(109, ')') ('REDUCE', <factor> -> <atom> * <factor>)
+(110, '+') ('REDUCE', <atom> -> <function-call>)
+(110, '-') ('REDUCE', <atom> -> <function-call>)
+(110, '*') ('REDUCE', <atom> -> <function-call>)
+(110, '>') ('REDUCE', <atom> -> <function-call>)
+(110, '<') ('REDUCE', <atom> -> <function-call>)
+(110, '!=') ('REDUCE', <atom> -> <function-call>)
+(110, '/') ('REDUCE', <atom> -> <function-call>)
+(110, '>=') ('REDUCE', <atom> -> <function-call>)
+(110, '=<') ('REDUCE', <atom> -> <function-call>)
+(110, '==') ('REDUCE', <atom> -> <function-call>)
+(110, ')') ('REDUCE', <atom> -> <function-call>)
+(111, 'ID') ('SHIFT', 54)
+(111, 'number') ('SHIFT', 59)
+(111, 'ID') ('SHIFT', 54)
+(111, '<atom>') 107
+(111, '<atom>') 107
+(111, '<atom>') 107
+(111, '<function-call>') 110
+(111, 'ID') ('SHIFT', 54)
+(111, '<factor>') 112
+(111, '(') ('SHIFT', 103)
+(112, '+') ('REDUCE', <factor> -> <atom> / <factor>)
+(112, '-') ('REDUCE', <factor> -> <atom> / <factor>)
+(112, '>') ('REDUCE', <factor> -> <atom> / <factor>)
+(112, '<') ('REDUCE', <factor> -> <atom> / <factor>)
+(112, '>=') ('REDUCE', <factor> -> <atom> / <factor>)
+(112, '=<') ('REDUCE', <factor> -> <atom> / <factor>)
+(112, ')') ('REDUCE', <factor> -> <atom> / <factor>)
+(112, '==') ('REDUCE', <factor> -> <atom> / <factor>)
+(112, '!=') ('REDUCE', <factor> -> <atom> / <factor>)
+(113, '<function-call>') 110
+(113, '<factor>') 101
+(113, 'ID') ('SHIFT', 54)
+(113, 'number') ('SHIFT', 59)
+(113, '<aritmetic-operation>') 114
+(113, 'ID') ('SHIFT', 54)
+(113, '<factor>') 101
+(113, '<atom>') 107
+(113, '<atom>') 107
+(113, '<factor>') 101
+(113, '<atom>') 107
+(113, 'ID') ('SHIFT', 54)
+(113, '(') ('SHIFT', 103)
+(114, '>') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(114, '<') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(114, '>=') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(114, '=<') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(114, ')') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(114, '==') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(114, '!=') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(115, ')') ('SHIFT', 116)
+(116, ')') ('REDUCE', <condition> -> ( <conditional-expresssion> ))
+(117, ')') ('REDUCE', <conditional-expresssion> -> <condition>)
+(117, '&') ('SHIFT', 118)
+(117, '|') ('SHIFT', 136)
+(118, '<boolean-value>') 134
+(118, '<aritmetic-operation>') 119
+(118, 'ID') ('SHIFT', 3)
+(118, '<expression>') 65
+(118, '<function-call>') 128
+(118, '<condition>') 117
+(118, 'ID') ('SHIFT', 3)
+(118, '<atom>') 125
+(118, '<condition>') 117
+(118, 'false') ('SHIFT', 64)
+(118, '<condition>') 117
+(118, '<expression>') 65
+(118, '<expression>') 65
+(118, '<factor>') 120
+(118, 'ID') ('SHIFT', 3)
+(118, '<conditional-expresssion>') 133
+(118, '(') ('SHIFT', 53)
+(118, '<comparation>') 135
+(118, 'number') ('SHIFT', 52)
+(118, '<factor>') 120
+(118, '<expression>') 65
+(118, '<expression>') 65
+(118, '<atom>') 125
+(118, 'true') ('SHIFT', 63)
+(118, '<atom>') 125
+(118, '<factor>') 120
+(118, '!') ('SHIFT', 61)
+(118, '<expression>') 65
+(118, '(') ('SHIFT', 53)
+(119, '>') ('REDUCE', <expression> -> <aritmetic-operation>)
+(119, '<') ('REDUCE', <expression> -> <aritmetic-operation>)
+(119, '>=') ('REDUCE', <expression> -> <aritmetic-operation>)
+(119, '=<') ('REDUCE', <expression> -> <aritmetic-operation>)
+(119, '==') ('REDUCE', <expression> -> <aritmetic-operation>)
+(119, '!=') ('REDUCE', <expression> -> <aritmetic-operation>)
+(120, '>') ('REDUCE', <aritmetic-operation> -> <factor>)
+(120, '<') ('REDUCE', <aritmetic-operation> -> <factor>)
+(120, '>=') ('REDUCE', <aritmetic-operation> -> <factor>)
+(120, '=<') ('REDUCE', <aritmetic-operation> -> <factor>)
+(120, '==') ('REDUCE', <aritmetic-operation> -> <factor>)
+(120, '!=') ('REDUCE', <aritmetic-operation> -> <factor>)
+(120, '-') ('SHIFT', 131)
+(120, '+') ('SHIFT', 121)
+(121, '<aritmetic-operation>') 124
+(121, 'ID') ('SHIFT', 3)
+(121, '<factor>') 120
+(121, 'ID') ('SHIFT', 3)
+(121, '(') ('SHIFT', 122)
+(121, 'number') ('SHIFT', 52)
+(121, '<factor>') 120
+(121, 'ID') ('SHIFT', 3)
+(121, '<atom>') 125
+(121, '<atom>') 125
+(121, '<atom>') 125
+(121, '<factor>') 120
+(121, '<function-call>') 128
+(122, '<function-call>') 39
+(122, 'ID') ('SHIFT', 9)
+(122, '<atom>') 36
+(122, 'ID') ('SHIFT', 9)
+(122, '(') ('SHIFT', 30)
+(122, '<atom>') 36
+(122, '<factor>') 33
+(122, '<atom>') 36
+(122, 'ID') ('SHIFT', 9)
+(122, 'number') ('SHIFT', 29)
+(122, '<factor>') 33
+(122, '<aritmetic-operation>') 123
+(122, '<factor>') 33
+(123, ')') ('SHIFT', 100)
+(124, '>') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(124, '<') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(124, '>=') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(124, '=<') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(124, '==') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(124, '!=') ('REDUCE', <aritmetic-operation> -> <factor> + <aritmetic-operation>)
+(125, '+') ('REDUCE', <factor> -> <atom>)
+(125, '-') ('REDUCE', <factor> -> <atom>)
+(125, '>') ('REDUCE', <factor> -> <atom>)
+(125, '<') ('REDUCE', <factor> -> <atom>)
+(125, '>=') ('REDUCE', <factor> -> <atom>)
+(125, '=<') ('REDUCE', <factor> -> <atom>)
+(125, '==') ('REDUCE', <factor> -> <atom>)
+(125, '!=') ('REDUCE', <factor> -> <atom>)
+(125, '*') ('SHIFT', 126)
+(125, '/') ('SHIFT', 129)
+(126, 'ID') ('SHIFT', 3)
+(126, 'ID') ('SHIFT', 3)
+(126, '(') ('SHIFT', 122)
+(126, 'number') ('SHIFT', 52)
+(126, 'ID') ('SHIFT', 3)
+(126, '<factor>') 127
+(126, '<atom>') 125
+(126, '<atom>') 125
+(126, '<atom>') 125
+(126, '<function-call>') 128
+(127, '+') ('REDUCE', <factor> -> <atom> * <factor>)
+(127, '-') ('REDUCE', <factor> -> <atom> * <factor>)
+(127, '>') ('REDUCE', <factor> -> <atom> * <factor>)
+(127, '<') ('REDUCE', <factor> -> <atom> * <factor>)
+(127, '>=') ('REDUCE', <factor> -> <atom> * <factor>)
+(127, '=<') ('REDUCE', <factor> -> <atom> * <factor>)
+(127, '==') ('REDUCE', <factor> -> <atom> * <factor>)
+(127, '!=') ('REDUCE', <factor> -> <atom> * <factor>)
+(128, '+') ('REDUCE', <atom> -> <function-call>)
+(128, '-') ('REDUCE', <atom> -> <function-call>)
+(128, '*') ('REDUCE', <atom> -> <function-call>)
+(128, '>') ('REDUCE', <atom> -> <function-call>)
+(128, '<') ('REDUCE', <atom> -> <function-call>)
+(128, '/') ('REDUCE', <atom> -> <function-call>)
+(128, '>=') ('REDUCE', <atom> -> <function-call>)
+(128, '=<') ('REDUCE', <atom> -> <function-call>)
+(128, '==') ('REDUCE', <atom> -> <function-call>)
+(128, '!=') ('REDUCE', <atom> -> <function-call>)
+(129, 'ID') ('SHIFT', 3)
+(129, 'ID') ('SHIFT', 3)
+(129, '(') ('SHIFT', 122)
+(129, 'number') ('SHIFT', 52)
+(129, 'ID') ('SHIFT', 3)
+(129, '<atom>') 125
+(129, '<factor>') 130
+(129, '<atom>') 125
+(129, '<atom>') 125
+(129, '<function-call>') 128
+(130, '+') ('REDUCE', <factor> -> <atom> / <factor>)
+(130, '-') ('REDUCE', <factor> -> <atom> / <factor>)
+(130, '>') ('REDUCE', <factor> -> <atom> / <factor>)
+(130, '<') ('REDUCE', <factor> -> <atom> / <factor>)
+(130, '>=') ('REDUCE', <factor> -> <atom> / <factor>)
+(130, '=<') ('REDUCE', <factor> -> <atom> / <factor>)
+(130, '==') ('REDUCE', <factor> -> <atom> / <factor>)
+(130, '!=') ('REDUCE', <factor> -> <atom> / <factor>)
+(131, 'ID') ('SHIFT', 3)
+(131, '<factor>') 120
+(131, 'ID') ('SHIFT', 3)
+(131, '(') ('SHIFT', 122)
+(131, 'number') ('SHIFT', 52)
+(131, '<factor>') 120
+(131, 'ID') ('SHIFT', 3)
+(131, '<atom>') 125
+(131, '<atom>') 125
+(131, '<atom>') 125
+(131, '<factor>') 120
+(131, '<aritmetic-operation>') 132
+(131, '<function-call>') 128
+(132, '>') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(132, '<') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(132, '>=') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(132, '=<') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(132, '==') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(132, '!=') ('REDUCE', <aritmetic-operation> -> <factor> - <aritmetic-operation>)
+(133, ')') ('REDUCE', <conditional-expresssion> -> <condition> & <conditional-expresssion>)
+(134, '|') ('REDUCE', <condition> -> <boolean-value>)
+(134, '&') ('REDUCE', <condition> -> <boolean-value>)
+(134, ')') ('REDUCE', <condition> -> <boolean-value>)
+(135, '|') ('REDUCE', <condition> -> <comparation>)
+(135, '&') ('REDUCE', <condition> -> <comparation>)
+(135, ')') ('REDUCE', <condition> -> <comparation>)
+(136, '<boolean-value>') 134
+(136, '<aritmetic-operation>') 119
+(136, 'ID') ('SHIFT', 3)
+(136, '<expression>') 65
+(136, '<conditional-expresssion>') 137
+(136, '<function-call>') 128
+(136, '<condition>') 117
+(136, 'ID') ('SHIFT', 3)
+(136, '<atom>') 125
+(136, '<condition>') 117
+(136, 'false') ('SHIFT', 64)
+(136, '<condition>') 117
+(136, '<expression>') 65
+(136, '<expression>') 65
+(136, '<factor>') 120
+(136, 'ID') ('SHIFT', 3)
+(136, '<comparation>') 135
+(136, '(') ('SHIFT', 53)
+(136, 'number') ('SHIFT', 52)
+(136, '<factor>') 120
+(136, '<expression>') 65
+(136, '<expression>') 65
+(136, '<atom>') 125
+(136, 'true') ('SHIFT', 63)
+(136, '<atom>') 125
+(136, '<factor>') 120
+(136, '!') ('SHIFT', 61)
+(136, '<expression>') 65
+(136, '(') ('SHIFT', 53)
+(137, ')') ('REDUCE', <conditional-expresssion> -> <condition> | <conditional-expresssion>)
+(138, ')') ('REDUCE', <boolean-value> -> true)
+(139, ')') ('REDUCE', <boolean-value> -> false)
+(140, '<') ('SHIFT', 144)
+(140, '>=') ('SHIFT', 146)
+(140, '!=') ('SHIFT', 152)
+(140, '=<') ('SHIFT', 148)
+(140, '>') ('SHIFT', 141)
+(140, '==') ('SHIFT', 150)
+(141, '<function-call>') 39
+(141, 'ID') ('SHIFT', 9)
+(141, '<atom>') 36
+(141, 'ID') ('SHIFT', 9)
+(141, '(') ('SHIFT', 30)
+(141, '<atom>') 36
+(141, '<factor>') 33
+(141, '<atom>') 36
+(141, 'ID') ('SHIFT', 9)
+(141, 'number') ('SHIFT', 29)
+(141, '<aritmetic-operation>') 143
+(141, '<factor>') 33
+(141, '<expression>') 142
+(141, '<factor>') 33
+(142, ')') ('REDUCE', <comparation> -> <expression> > <expression>)
+(143, ')') ('REDUCE', <expression> -> <aritmetic-operation>)
+(144, '<function-call>') 39
+(144, 'ID') ('SHIFT', 9)
+(144, '<expression>') 145
+(144, '<atom>') 36
+(144, 'ID') ('SHIFT', 9)
+(144, '(') ('SHIFT', 30)
+(144, '<atom>') 36
+(144, '<factor>') 33
+(144, '<atom>') 36
+(144, 'ID') ('SHIFT', 9)
+(144, 'number') ('SHIFT', 29)
+(144, '<aritmetic-operation>') 143
+(144, '<factor>') 33
+(144, '<factor>') 33
+(145, ')') ('REDUCE', <comparation> -> <expression> < <expression>)
+(146, '<function-call>') 39
+(146, 'ID') ('SHIFT', 9)
+(146, '<atom>') 36
+(146, 'ID') ('SHIFT', 9)
+(146, '(') ('SHIFT', 30)
+(146, '<atom>') 36
+(146, '<factor>') 33
+(146, '<atom>') 36
+(146, 'ID') ('SHIFT', 9)
+(146, '<expression>') 147
+(146, 'number') ('SHIFT', 29)
+(146, '<aritmetic-operation>') 143
+(146, '<factor>') 33
+(146, '<factor>') 33
+(147, ')') ('REDUCE', <comparation> -> <expression> >= <expression>)
+(148, '<function-call>') 39
+(148, 'ID') ('SHIFT', 9)
+(148, '<atom>') 36
+(148, 'ID') ('SHIFT', 9)
+(148, '(') ('SHIFT', 30)
+(148, '<atom>') 36
+(148, '<factor>') 33
+(148, '<atom>') 36
+(148, 'ID') ('SHIFT', 9)
+(148, 'number') ('SHIFT', 29)
+(148, '<aritmetic-operation>') 143
+(148, '<factor>') 33
+(148, '<expression>') 149
+(148, '<factor>') 33
+(149, ')') ('REDUCE', <comparation> -> <expression> =< <expression>)
+(150, '<function-call>') 39
+(150, 'ID') ('SHIFT', 9)
+(150, '<atom>') 36
+(150, 'ID') ('SHIFT', 9)
+(150, '(') ('SHIFT', 30)
+(150, '<atom>') 36
+(150, '<factor>') 33
+(150, '<atom>') 36
+(150, 'ID') ('SHIFT', 9)
+(150, 'number') ('SHIFT', 29)
+(150, '<aritmetic-operation>') 143
+(150, '<factor>') 33
+(150, '<expression>') 151
+(150, '<factor>') 33
+(151, ')') ('REDUCE', <comparation> -> <expression> == <expression>)
+(152, '<function-call>') 39
+(152, 'ID') ('SHIFT', 9)
+(152, '<atom>') 36
+(152, 'ID') ('SHIFT', 9)
+(152, '(') ('SHIFT', 30)
+(152, '<atom>') 36
+(152, '<expression>') 153
+(152, '<factor>') 33
+(152, '<atom>') 36
+(152, 'ID') ('SHIFT', 9)
+(152, 'number') ('SHIFT', 29)
+(152, '<aritmetic-operation>') 143
+(152, '<factor>') 33
+(152, '<factor>') 33
+(153, ')') ('REDUCE', <comparation> -> <expression> != <expression>)
+(154, ')') ('REDUCE', <conditional-expresssion> -> ! <condition>)
+(155, ')') ('REDUCE', <condition> -> <boolean-value>)
+(156, ')') ('REDUCE', <condition> -> <comparation>)
+(157, '>') ('REDUCE', <expression> -> <aritmetic-operation>)
+(157, '<') ('REDUCE', <expression> -> <aritmetic-operation>)
+(157, '>=') ('REDUCE', <expression> -> <aritmetic-operation>)
+(157, '=<') ('REDUCE', <expression> -> <aritmetic-operation>)
+(157, '==') ('REDUCE', <expression> -> <aritmetic-operation>)
+(157, '!=') ('REDUCE', <expression> -> <aritmetic-operation>)
+(157, ')') ('SHIFT', 105)
+(158, ')') ('SHIFT', 159)
+(159, '|') ('REDUCE', <condition> -> ( <conditional-expresssion> ))
+(159, '&') ('REDUCE', <condition> -> ( <conditional-expresssion> ))
+(159, ')') ('REDUCE', <condition> -> ( <conditional-expresssion> ))
+(160, ')') ('SHIFT', 161)
+(161, '{') ('SHIFT', 162)
+(161, '<scope>') 287
+(161, '{') ('SHIFT', 162)
+(162, '<atom>') 230
+(162, '{') ('SHIFT', 162)
+(162, '<factor>') 227
+(162, '(') ('SHIFT', 215)
+(162, '{') ('SHIFT', 162)
+(162, '<factor>') 227
+(162, 'if') ('SHIFT', 218)
+(162, '<inst>') 244
+(162, 'if') ('SHIFT', 218)
+(162, '<flux-control>') 249
+(162, '<inline-conditional>') 253
+(162, 'let') ('SHIFT', 170)
+(162, 'if') ('SHIFT', 218)
+(162, 'ID') ('SHIFT', 223)
+(162, '<conditional>') 252
+(162, 'ID') ('SHIFT', 223)
+(162, 'ID') ('SHIFT', 223)
+(162, '<var-asign>') 251
+(162, '<atom>') 230
+(162, '<factor>') 227
+(162, '}') ('SHIFT', 169)
+(162, '<while-loop>') 255
+(162, 'ID') ('SHIFT', 223)
+(162, '<var-dec>') 247
+(162, 'number') ('SHIFT', 214)
+(162, '<inst-list>') 285
+(162, 'for') ('SHIFT', 163)
+(162, 'while') ('SHIFT', 1)
+(162, 'if') ('SHIFT', 218)
+(162, '<aritmetic-operation>') 226
+(162, '<atom>') 230
+(162, '<scope>') 250
+(162, '<full-conditional>') 254
+(162, '<inst>') 244
+(162, '<function-call>') 233
+(162, '<for-loop>') 256
+(162, '<expression>') 248
+(163, '(') ('SHIFT', 164)
+(164, 'ID') ('SHIFT', 165)
+(165, '<iterable-expression>') 166
+(166, ')') ('SHIFT', 167)
+(167, '{') ('SHIFT', 162)
+(167, '<scope>') 168
+(167, '{') ('SHIFT', 162)
+(168, ';') ('REDUCE', <for-loop> -> for ( ID <iterable-expression> ) <scope>)
+(169, ';') ('REDUCE', <scope> -> { })
+(170, '<identifier>') 204
+(170, 'ID') ('SHIFT', 171)
+(170, 'ID') ('SHIFT', 171)
+(170, '<var-init>') 201
+(170, 'ID') ('SHIFT', 171)
+(170, '<var-init>') 201
+(170, '<vat-init-list>') 207
+(171, '=') ('REDUCE', <identifier> -> ID)
+(171, ':') ('SHIFT', 198)
+(171, '<type-anotation>') 200
+(171, '=') ('SHIFT', 172)

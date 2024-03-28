@@ -77,6 +77,7 @@ class LR1Parser(ShiftReduceParser):
         closure = ContainerSet(*items)
         
         changed = True
+
         while changed:
             changed = False
             
@@ -98,9 +99,8 @@ class LR1Parser(ShiftReduceParser):
         
         firsts = compute_firsts(G)
         firsts[G.EOF] = ContainerSet(G.EOF)
-        
         start_production = G.startSymbol.productions[0]
-        start_item = Item(start_production, 0, lookaheads=(G.EOF,))
+        start_item = Item(start_production, 0, lookaheads=[G.EOF])
         start = frozenset([start_item])
         
         closure = self.closure_lr1(start, firsts)
