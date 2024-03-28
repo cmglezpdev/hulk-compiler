@@ -10,7 +10,7 @@ instr = G.NonTerminal('<inst>')
 var_dec = G.NonTerminal('<var-dec>')
 expression = G.NonTerminal('<expression>')
 flux_control = G.NonTerminal('<flux-control>')
-scope = G.NonTerminal('<scope>')
+instr_block = G.NonTerminal('<scope>')
 function_declaration = G.NonTerminal('<function-declaration>')
 function_call = G.NonTerminal('<function-call>')
 type_declaration = G.NonTerminal('<type-declaration>')
@@ -108,11 +108,11 @@ program %= instr_list
 #program %= number
 
 #intruction list
-#<instr-list> -> <instr>; | <instr>; <instr-list>
+#<instr-list> -> <instr> | <instr>; | <instr>; <instr-list>
+instr_list %= instr_block
 instr_list %=  instr + semicolon
-instr_list %= instr + semicolon + instr_list
+instr_list %=  instr + semicolon + instr_list
 # instr_list %= instr + instr_list
-# instr_list %= instr
 
 #instruction
 #<instr> -> <var-dec> | <func-call> | <func-dec> | <type-dec> | <scope> | <flux-control> | <var-asign> | <expression>
@@ -120,7 +120,6 @@ instr_list %= instr + semicolon + instr_list
 # instr %= function_declaration
 # instr %= type_declaration
 instr %= var_dec
-instr %= scope
 instr %= flux_control
 instr %= var_asignation
 instr %= expression
@@ -129,10 +128,10 @@ instr %= expression
 var_dec %= let + var_inicialization_list + in_ + var_decl_expression
 
 #var declaration expression <var-decl-expression> -> <scope> | <flux-control> | <var-decl> | <expression> | (<var-dec>)
-var_decl_expression %= scope
+var_decl_expression %= instr_block
 var_decl_expression %= flux_control
 var_decl_expression %= expression
-# var_decl_expression %= open_curly_braket + var_dec + closed_curly_braket
+var_decl_expression %= open_curly_braket + var_dec + closed_curly_braket
 var_decl_expression %= var_dec
 
 # #var-inicialization-list <var-init-list> -> <var-init> | <var-init> , <var-init-list>
@@ -144,19 +143,19 @@ var_initialization %= identifier + inicialization + expression
 var_initialization %= identifier + inicialization  + var_asignation #TODO desambiguar let a = b=c =4 y let a = c:=4
 
 # #id list <id-list> -> <identifier> | <identifier>, <id-list>
-# id_list %= identifier
-# id_list %= identifier + comma + id_list
+id_list %= identifier
+id_list %= identifier + comma + id_list
 
 # #identifier <identifier> -> ID | ID <type-anotation>
 identifier %= ID
-# identifier %= ID + type_anotation
+identifier %= ID + type_anotation
 
 # #type anotation <type-anotation> -> : Number
-# type_anotation %= type_asignator + number_type
+type_anotation %= type_asignator + number_type
 
-# #scopes <scope> -> { <inst-list> } | {}
-scope%=open_bracket+instr_list+closed_bracket
-scope%=open_bracket+closed_bracket
+# #scopes <scope> -> { <inst-list> }
+instr_block%=open_bracket+instr_list+closed_bracket
+# scope%=open_bracket+closed_bracket
 
 #expressions <expresion> -> <aritmetic-op> | <type-instanciation> | <string-operation>
 expression %= aritmetic_operation
@@ -204,8 +203,8 @@ function_declaration %= function_inline_declaration
 function_declaration %= function_full_declaration 
 
 #function full declaration <function-full-declaration> -> function ID(<id-list>)<scope> | function ID()<scope>
-function_full_declaration %= function + ID + open_curly_braket + id_list + closed_curly_braket + scope
-function_full_declaration %= function + ID + open_curly_braket + closed_curly_braket + scope
+function_full_declaration %= function + ID + open_curly_braket + id_list + closed_curly_braket + instr_block
+function_full_declaration %= function + ID + open_curly_braket + closed_curly_braket + instr_block
 #function inline declaration <function-inline-declaration> -> function ID (<id-list> ) => <expression> | function ID () => <expression>
 function_inline_declaration %= function + ID + open_curly_braket + id_list + closed_curly_braket + func_arrow + expression
 function_inline_declaration %= function + ID + open_curly_braket + closed_curly_braket + func_arrow + expression
@@ -227,10 +226,10 @@ else_statement %= else_ + inline_else
 else_statement %= else_ + full_else
 
 #while instruction <while-loop> -> while (<condition-expression>) <scope>
-while_loop %= while_ + open_curly_braket + conditional_expression + closed_curly_braket + scope
+while_loop %= while_ + open_curly_braket + conditional_expression + closed_curly_braket + instr_block
 
 #for instruction <for-loop> -> for ( Id in <iterable-expression>) <scope> 
-for_loop %= for_ + open_curly_braket + ID + iterable_expression + closed_curly_braket + scope
+for_loop %= for_ + open_curly_braket + ID + iterable_expression + closed_curly_braket + instr_block
 
 #conditional expression <conditional-expression> -> <condition> & <conditiona-expression> | <condition> '|' <conditiona-expression> | !<condition> | <condition>
 conditional_expression %= condition + and_ + conditional_expression
