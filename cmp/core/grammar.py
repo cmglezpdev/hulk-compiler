@@ -117,16 +117,16 @@ instr_list %= instr + semicolon + instr_list
 #instruction
 #<instr> -> <var-dec> | <func-call> | <func-dec> | <type-dec> | <scope> | <flux-control> | <var-asign> | <expression>
 
-instr %= var_dec
 # instr %= function_declaration
 # instr %= type_declaration
+instr %= var_dec
 instr %= scope
 instr %= flux_control
 instr %= var_asignation
 instr %= expression
 
 # #var declaration <var-dec> -> let <var-init-list> in <var-decl-expression> 
-# var_dec %= let + var_inicialization_list + in_ + var_decl_expression
+var_dec %= let + var_inicialization_list + in_ + var_decl_expression
 
 #var declaration expression <var-decl-expression> -> <scope> | <flux-control> | <var-decl> | <expression> | (<var-dec>)
 var_decl_expression %= scope
@@ -136,8 +136,8 @@ var_decl_expression %= expression
 var_decl_expression %= var_dec
 
 # #var-inicialization-list <var-init-list> -> <var-init> | <var-init> , <var-init-list>
-# var_inicialization_list %= var_initialization
-# var_inicialization_list %= var_initialization + comma + var_inicialization_list
+var_inicialization_list %= var_initialization
+var_inicialization_list %= var_initialization + comma + var_inicialization_list
 
 #var initialization <var-init> -> ID = <expression> | ID = <var-asign>
 var_initialization %= identifier + inicialization + expression
@@ -148,15 +148,15 @@ var_initialization %= identifier + inicialization  + var_asignation #TODO desamb
 # id_list %= identifier + comma + id_list
 
 # #identifier <identifier> -> ID | ID <type-anotation>
-# identifier %= ID
+identifier %= ID
 # identifier %= ID + type_anotation
 
 # #type anotation <type-anotation> -> : Number
 # type_anotation %= type_asignator + number_type
 
 # #scopes <scope> -> { <inst-list> } | {}
-# scope%=open_bracket+instr_list+closed_bracket
-# scope%=open_bracket+closed_bracket
+scope%=open_bracket+instr_list+closed_bracket
+scope%=open_bracket+closed_bracket
 
 #expressions <expresion> -> <aritmetic-op> | <type-instanciation> | <string-operation>
 expression %= aritmetic_operation
@@ -173,13 +173,11 @@ aritmetic_operation %= factor
 
 factor %= atom + multiplication + factor
 factor %= atom + division + factor
-
 factor %= atom
 
 # #atom <atom> -> (<expression>) | number | <function-call> | id
 atom %= open_curly_braket + aritmetic_operation + closed_curly_braket
 atom %= number
-
 atom %= function_call
 atom %= ID
 # atom %= variable_atribute
