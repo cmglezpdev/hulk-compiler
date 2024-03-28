@@ -1,5 +1,5 @@
 from cmp.pycompiler import Grammar
-from cmp.tools.ast import ConstantNode, DivNode, MinusNode, PlusNode, StarNode, VariableNode
+#from cmp.ast import ConstantNode, DivNode, MinusNode, PlusNode, StarNode, VariableNode
 
 G = Grammar()
 program = G.NonTerminal('<program>', True)
@@ -96,7 +96,7 @@ eq = G.Terminal('==')
 neq = G.Terminal('!=')
 
 new = G.Terminal('new')
-new = G.Terminal('type')
+type = G.Terminal('type')
 dot = G.Terminal('.')
 
 number_type = G.Terminal('Number')

@@ -24,7 +24,7 @@ KEYWORDS = [
     'type', 'inherit', 
     'if','else', 
     'function', 'while', 'for', 
-    'let', 'in','new','Number'
+    'let', 'in','is','new','Number'
 ]
 
 TYPE_ANOTATIONS =":( )*Number"

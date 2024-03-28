@@ -506,6 +506,7 @@ class Item:
 
     def Preview(self, skip=1):
         unseen = self.production.Right[self.pos+skip:]
+        print(unseen)
         return [ unseen + (lookahead,) for lookahead in self.lookaheads ]
 
     def Center(self):

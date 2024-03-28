@@ -42,6 +42,7 @@ class LR1Parser(ShiftReduceParser):
         table[key] = value
 
     def expand(self, item: Item, firsts):
+        print('entra al expand')
         G = self.G
         next_symbol = item.NextSymbol
         if next_symbol is None or not next_symbol.IsNonTerminal:
@@ -49,10 +50,14 @@ class LR1Parser(ShiftReduceParser):
         
         lookaheads = ContainerSet()
         # (Compute lookahead for child items)
+        print(item)
+        print(item.Preview())
         for sentence in item.Preview():
+            print(sentence)
             local_firsts = compute_local_first(firsts, sentence)
             lookaheads.update(local_firsts)
         
+        print('primer for')
         assert not lookaheads.contains_epsilon
         # (Build and return child items)
         children = []
@@ -60,6 +65,7 @@ class LR1Parser(ShiftReduceParser):
             if prod.Left == next_symbol:
                 children.append(Item(prod, 0, lookaheads))
         
+        print('sale del expand')
         return children
 
     def compress(self, items: list[Item]):
@@ -77,17 +83,23 @@ class LR1Parser(ShiftReduceParser):
 
     def closure_lr1(self, items: list[Item], firsts: dict[Symbol, ContainerSet]):
         closure = ContainerSet(*items)
+        print('ejaqui la cosa')
+        print(items)
         
         changed = True
+
         while changed:
             changed = False
             
             new_items = ContainerSet()
             for item in closure:
+                print('elitem',item)
                 new_items.extend(self.expand(item, firsts))
+                print('bien')
 
             changed = closure.update(new_items)
             
+        print('salio del while')
         return self.compress(closure)
 
     def goto_lr1(self, items: list[Item], symbol: Symbol, firsts=None, just_kernel=False):
@@ -100,14 +112,17 @@ class LR1Parser(ShiftReduceParser):
         
         firsts = compute_firsts(G)
         firsts[G.EOF] = ContainerSet(G.EOF)
-        
+        print('no se parte aqui') 
         start_production = G.startSymbol.productions[0]
-        start_item = Item(start_production, 0, lookaheads=(G.EOF,))
+        start_item = Item(start_production, 0, lookaheads=[G.EOF])
         start = frozenset([start_item])
         
+        print('no se parte aqui') 
         closure = self.closure_lr1(start, firsts)
+        print('no se parte aqui') 
         automaton = State(frozenset(closure), True)
         
+        print('no se parte aqui') 
         pending = [ start ]
         visited = { start: automaton }
         
