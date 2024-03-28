@@ -8,7 +8,7 @@ def compute_local_first(firsts: dict[Symbol, ContainerSet], alpha: Sentence) -> 
 
     try:
         alpha_is_epsilon = alpha.IsEpsilon
-    except KeyError:
+    except AttributeError:
         alpha_is_epsilon = False
     
     if alpha_is_epsilon:
