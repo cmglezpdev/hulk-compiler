@@ -96,7 +96,7 @@ eq = G.Terminal('==')
 neq = G.Terminal('!=')
 
 new = G.Terminal('new')
-new = G.Terminal('type')
+type = G.Terminal('type')
 dot = G.Terminal('.')
 
 number_type = G.Terminal('Number')
@@ -124,7 +124,7 @@ instr %= var_asignation
 instr %= expression
 
 #var declaration <var-dec> -> let <var-init-list> in <var-decl-expression> 
-var_dec %= let + var_inicialization_list+ in_ + var_decl_expression
+var_dec %= let + var_inicialization_list + in_ + var_decl_expression
 
 #var declaration expression <var-decl-expression> -> <scope> | <flux-control> | <var-decl> | <expression> | (<var-dec>)
 var_decl_expression %= scope
@@ -164,13 +164,13 @@ expression %= string_operation
 
 #artimetic expresssion <aritmetic-expresion> -> <factor> + <aritmetic-expression> | <factor> - <aritmetic-expression> | <factor>
 
-aritmetic_operation %= factor +plus_operator+ aritmetic_operation
-aritmetic_operation %= factor + minus_operator + aritmetic_operation
+aritmetic_operation %= aritmetic_operation + plus_operator + factor
+aritmetic_operation %= aritmetic_operation + minus_operator + factor
 aritmetic_operation %= factor
 
-#factor <factor> -> <atom> * <aritmetic-expresion> | <atom> / <aritmetic-expresion> | <atom>
-factor %= atom + multiplication + aritmetic_operation
-factor %= atom + division + aritmetic_operation
+#factor <factor> -> <atom> * <factor> | <atom> / <factor> | <atom>
+factor %= factor + multiplication + atom
+factor %= factor + division + atom
 factor %= atom
 
 #atom <atom> -> (<expression>) | number | <function-call> | id
@@ -182,9 +182,9 @@ atom %= variable_atribute
 atom %= variable_method
 
 #string operation <string-operation> -> <string-atom> @ <string-operation> | <string-atom>
+string_operation %= string_operation + string_operator + string_atom
+string_operation %= string_operation + string_operator_space + string_atom
 string_operation %= string_atom
-string_operation %= string_atom + string_operator + string_operation
-string_operation %= string_atom + string_operator_space + string_operation
 
 #string atom <string-atom> -> string | <function-call> | ID
 string_atom %= string
