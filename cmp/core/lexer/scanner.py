@@ -1,6 +1,7 @@
 from cmp.tools.regex import EPSILON
 from cmp.utils import Token
 from .lexer import Lexer
+from cmp.core.grammar import *
 import string
 
 digits = '|'.join(str(i) for i in range(0, 10))
@@ -31,36 +32,29 @@ TYPE_ANOTATIONS =":( )*Number"
 
 TRUE = 'true'
 FALSE = 'false'
-# STRING = f'"[{symbols}|{escaped_symbol}|\\"|\\\n]^"'
 ID = f'({uppers}|{lowers}|_)({uppers}|{lowers}|{digits}|_)*'
 
-EOF = '\0'
 # COMMENT = f'[--[{symbol}|\\|"|\t]^\n]|[(*[{symbol}|\\|"|{SPACE}]^*)]'  # TODO: Check nested comments
+
 
 def build_lexer():
     
     table = []
-    #table.append(('string',STRINGS_VALUES))
-    table.append(('space', SPACE))
-    for sb in SYMBOLS:
-        table.append((sb.replace("\\",""), sb))
-    table.append(('number', INTEGER))
-    table.append(('type-anotation', TYPE_ANOTATIONS))
-    for kw in KEYWORDS:
-        table.append((kw, kw))
-
-
-    
     # table.append(('string',STRINGS_VALUES))
-    table.append(('true', TRUE))
-    table.append(('false', FALSE))
+    # for sb in SYMBOLS:
+    #     table.append((sb.replace("\\",""), sb))
+    table.append((multiplication,r'\*'))
+    table.append((plus_operator,'+'))
+    table.append((number, INTEGER))
+    table.append((semicolon,';'))
+    table.append((open_curly_braket,r'\('))
+    table.append((closed_curly_braket,r'\)'))
+    table.append((minus_operator,'-'))
+    table.append((division,'/'))
 
-    
-    
-    table.append(('ID', ID))
 
     print('>>> Building Lexer...')
-    return Lexer(table,EOF)
+    return Lexer(table,G.EOF)
 
 
 def cleaner(tokens: list[Token]):

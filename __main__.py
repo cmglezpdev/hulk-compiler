@@ -12,12 +12,13 @@ if __name__ == '__main__':
        # let x: Number in (let y = 5 in x + y);
        # let x = 1 > 3, y = 7 < 8 in (x & y == (true | false)); 
        # """,
-       "45;",
+       "(4*5)/3+9*8;",
     lexer=lexer)
+
     print([t.lex for t in code_tokens])
     print([t.token_type for t in code_tokens])
 
-    parse(code_tokens)
+    parse([t.token_type for t in code_tokens])
 
 
 

@@ -39,8 +39,10 @@ class ShiftReduceParser(Parser, ABC):
                 
             # (Detect error)
             if (state, lookahead) not in self.action:
+                print(self.action)
                 print((state, lookahead))
                 print('Error, Aborting...')
+
                 return None
             
             action, tag = self.action[state, lookahead]
@@ -55,8 +57,9 @@ class ShiftReduceParser(Parser, ABC):
                 output.append(tag) # tag is a production
                 head, body = tag
                 for symbol in reversed(body):
-                    stack.pop() # remove tag(id)
-                    assert stack.pop() == symbol # remove symbol(lookahead)
+                    stack.pop()
+                    pop=stack.pop() # remove tag(id)
+                    assert pop == symbol # remove symbol(lookahead)
                 # transition with symbol(head)
                 state=stack[-1]
                 goto=self.goto[state,head]
@@ -64,7 +67,8 @@ class ShiftReduceParser(Parser, ABC):
             # (OK case)
             elif action == self.OK:
                 stack.pop()
-                assert stack.pop() == self.G.startSymbol
+                pop = stack.pop()
+                assert pop == self.G.startSymbol
                 assert len(stack) == 1 # initial number 0
                 return output if not get_shift_reduce else (output, operations)
             else:
