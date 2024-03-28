@@ -140,7 +140,7 @@ var_inicialization_list %= var_initialization + comma + var_inicialization_list
 
 #var initialization <var-init> -> ID = <expression> | ID = <var-asign>
 var_initialization %= identifier + inicialization + expression
-var_initialization %= identifier + inicialization  + var_asignation
+var_initialization %= identifier + inicialization  + var_asignation #TODO desambiguar let a = b=c =4 y let a = c:=4
 
 #id list <id-list> -> <identifier> | <identifier>, <id-list>
 id_list %= identifier
