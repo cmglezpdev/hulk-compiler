@@ -18,7 +18,7 @@ symbols = '|'.join([digits, lowers, uppers,
     '|'.join(SYMBOLS)                   
 ])
 printables = '|'.join([printable for printable in string.printable])
-STRINGS_VALUES = f'{symbols}*'
+STRINGS_VALUES = f'"({symbols})*"'
 INTEGER = f'({digits})(.|{EPSILON})({digits})*'
 SPACE = '(\n|\t|\f|\r|\v| )(\n|\t|\f|\r|\v| )*'
 KEYWORDS = [
@@ -32,7 +32,8 @@ TYPE_ANOTATIONS =":( )*Number"
 
 TRUE = 'true'
 FALSE = 'false'
-ID = f'({uppers}|{lowers}|_)({uppers}|{lowers}|{digits}|_)*'
+identifier = f'({uppers}|{lowers}|_)({uppers}|{lowers}|{digits}|_)*'
+
 
 # COMMENT = f'[--[{symbol}|\\|"|\t]^\n]|[(*[{symbol}|\\|"|{SPACE}]^*)]'  # TODO: Check nested comments
 
@@ -40,18 +41,53 @@ ID = f'({uppers}|{lowers}|_)({uppers}|{lowers}|{digits}|_)*'
 def build_lexer():
     
     table = []
-    # table.append(('string',STRINGS_VALUES))
-    # for sb in SYMBOLS:
-    #     table.append((sb.replace("\\",""), sb))
+    table.append(('space',SPACE))
+
     table.append((multiplication,r'\*'))
     table.append((plus_operator,'+'))
-    table.append((number, INTEGER))
-    table.append((semicolon,';'))
     table.append((open_curly_braket,r'\('))
     table.append((closed_curly_braket,r'\)'))
+    table.append((semicolon,';'))
     table.append((minus_operator,'-'))
     table.append((division,'/'))
+    table.append((open_bracket,'{'))
+    table.append((closed_bracket,'}'))
+    table.append((and_,'&'))
+    table.append((or_,r'\|'))
+    table.append((not_,'!'))
+    table.append((gt,'>'))
+    table.append((lt,'<'))
+    table.append((lte,'=<'))
+    table.append((gte,'>='))
+    table.append((eq,'=='))
+    table.append((neq,'!='))
+    table.append((string_operator_space,'@@'))
+    table.append((string_operator,'@'))
+    table.append((asignation,':='))
+    table.append((inicialization,'='))
+    table.append((comma,','))
+    table.append((module_operation,'%'))
+    table.append((func_arrow,'=>'))
+    table.append((type_asignator,':'))
+    table.append((dot,'.'))
 
+    table.append((number, INTEGER))
+
+    table.append((while_,'while'))
+    table.append((for_,'for'))
+    table.append((let,'let'))
+    table.append((in_,'in'))
+    table.append((function,'function'))
+    table.append((if_,'if'))
+    table.append((else_,'else'))
+    table.append((true,'true'))
+    table.append((false,'false'))
+    table.append((new,'new'))
+    table.append((type,'type'))
+    table.append((number_type,'Number'))
+
+    table.append((string,STRINGS_VALUES))
+    table.append((ID,identifier))
 
     print('>>> Building Lexer...')
     return Lexer(table,G.EOF)
