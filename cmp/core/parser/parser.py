@@ -5,8 +5,8 @@ from cmp.core.grammar import G
 
 def parse(tokens: list[Token]):
     print('>>> Parsing...')
-    parse = LR1Parser(G, verbose=True)
-    result = parse(tokens,True)
+    parse = LR1Parser(G)
+    result = parse(tokens, get_shift_reduce=True)
 
     right_parse, operations = result
 

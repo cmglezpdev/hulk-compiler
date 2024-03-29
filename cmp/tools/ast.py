@@ -65,36 +65,7 @@ class CallNode(ExpressionNode):
         self.args = args
         self.type = typex
 
-
-
-
-class SqrtNode(StatementNode):
-    def __init__(self, expr) -> None:
-        self.expr = expr
-
-class SinNode(StatementNode):
-    def __init__(self, expr) -> None:
-        self.expr = expr
-
-class CosNode(StatementNode):
-    def __init__(self, expr) -> None:
-        self.expr = expr
-
-class ExpNode(StatementNode):
-    def __init__(self, expr) -> None:
-        self.expr = expr
-
-class RandNode(AtomicNode):
-    pass
-
-class LogNode(StatementNode):
-    def __init__(self, base_exp, exp_expr) -> None:
-        self.base_expr = base_exp
-        self.exp_expr = exp_expr
-   
-        
-    
-        
+  
 class ConstantNode(AtomicNode):
     pass
 
