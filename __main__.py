@@ -12,11 +12,8 @@ if __name__ == '__main__':
        # let x: Number in (let y = 5 in x + y);
        # let x = 1 > 3, y = 7 < 8 in (x & y == (true | false)); 
        # """,
-       """ let a = 0, c = 2 in
-                let b = 1 , x =2+5-(3*9) in {
-                    print(a);
-                    print(b);
-                };
+       """
+       print("hello world");
        """,
     lexer=lexer)
 

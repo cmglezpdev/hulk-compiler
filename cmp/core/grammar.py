@@ -6,6 +6,10 @@ program = G.NonTerminal('<program>', True)
 
 #non terminals
 instr_list = G.NonTerminal('<inst-list>')
+param = G.NonTerminal('<param>')
+program_level_decl_list = G.NonTerminal('<program-decl-list>')
+program_level_decl = G.NonTerminal('<program-level-decl>')
+instr_wrapper = G.NonTerminal('<inst-wrapper>')
 instr = G.NonTerminal('<inst>')
 var_dec = G.NonTerminal('<var-dec>')
 expression = G.NonTerminal('<expression>')
@@ -73,7 +77,7 @@ minus_operator = G.Terminal('-')
 multiplication = G.Terminal('*')
 division = G.Terminal('/')
 module_operation = G.Terminal('%')
-string = G.Terminal('string')
+string_= G.Terminal('string')
 string_operator = G.Terminal('@')
 string_operator_space = G.Terminal('@@')
 function = G.Terminal('function')
@@ -104,16 +108,21 @@ type_asignator = G.Terminal(':')
 
 #entry point
 #<program> -> <instr-list>
-program %= instr_list
-#program %= number
+program %= instr_wrapper
+program %= program_level_decl_list
+
+program_level_decl_list%= program_level_decl
+program_level_decl %= program_level_decl
+
+program_level_decl %= type_declaration
+program_level_decl %= function_declaration
 
 #intruction list
 #<instr-list> -> <instr>; | <instr>; <instr-list>
-instr_list %=  instr + semicolon
-instr_list %= instr + semicolon + instr_list
-# instr_list %= instr + instr_list
-# instr_list %= instr
+instr_list %= instr + semicolon
 
+instr_wrapper %= instr
+instr_wrapper %= instr + semicolon
 #instruction
 #<instr> -> <var-dec> | <func-call> | <func-dec> | <type-dec> | <scope> | <flux-control> | <var-asign> | <expression>
 instr %= var_dec
@@ -131,7 +140,7 @@ var_dec %= let + var_inicialization_list+ in_ + var_decl_expression
 var_decl_expression %= scope
 var_decl_expression %= flux_control
 var_decl_expression %= expression
-# var_decl_expression %= open_curly_braket + var_dec + closed_curly_braket
+var_decl_expression %= open_curly_braket + var_dec + closed_curly_braket
 var_decl_expression %= var_dec
 
 #var-inicialization-list <var-init-list> -> <var-init> | <var-init> , <var-init-list>
@@ -181,18 +190,18 @@ atom %= ID
 # atom %= variable_atribute
 # atom %= variable_method
 
-#string operation <string-operation> -> <string-atom> @ <string-operation> | <string-atom>
+#string_operation <string-operation> -> <string-atom> @ <string-operation> | <string-atom>
 string_operation %= string_atom
-# string_operation %= string_atom + string_operator + string_operation
-string_operation %= string_atom + string_operator_space + string_operation
+string_operation %= string_atom + string_operator + string_operation
+# string_operation %= string_atom + string_operator_space + string_operation
 
-#string atom <string-atom> -> string | <function-call> | ID
-string_atom %= string
-# string_atom %= function_call
-# string_atom %= ID
-# string_atom %= variable_atribute
-# # string_atom %= variable_method
-# string_atom %= open_curly_braket + string_operation + closed_curly_braket
+#string_atom <string-atom> -> string_| <function-call> | ID
+string_atom %= string_
+string_atom %= function_call
+string_atom %= ID
+string_atom %= variable_atribute
+string_atom %= variable_method
+string_atom %= open_curly_braket + string_operation + closed_curly_braket
 
 #variable asignation <var-asignation> -> let id
 var_asignation %= ID + asignation + expression
@@ -286,8 +295,11 @@ type_instanciation %= new + ID + open_curly_braket + param_list + closed_curly_b
 type_instanciation %= new + ID + open_curly_braket + closed_curly_braket
 
 #param list <param-list> -> <expression> | <expression> , <param-list>
-param_list %= expression
-param_list %= expression + comma + param_list
+param_list %= param
+param_list %= param + comma + param_list
+
+param%=expression
+param%=string_operation
 
 #variable atribute use <var-atrr>-> ID.ID
 variable_atribute %= ID + dot + ID

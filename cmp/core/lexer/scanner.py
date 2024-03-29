@@ -17,8 +17,19 @@ SYMBOLS = [
 symbols = '|'.join([digits, lowers, uppers,
     '|'.join(SYMBOLS)                   
 ])
-printables = '|'.join([printable for printable in string.printable])
-STRINGS_VALUES = f'"({symbols})*"'
+def mapping(string):
+    if string == '|':
+        return r'\|'
+    if string == '*':
+        return r'\*'
+    if string == '(':
+        return r'\('
+    if string == ')':
+        return r'\)'           
+    else:
+        return string
+printables = '|'.join([printable for printable in list(map(mapping,string.printable))])
+STRINGS_VALUES = f'(\")({printables})*(\")'
 INTEGER = f'({digits})(.|{EPSILON})({digits})*'
 SPACE = '(\n|\t|\f|\r|\v| )(\n|\t|\f|\r|\v| )*'
 KEYWORDS = [
@@ -85,8 +96,7 @@ def build_lexer():
     table.append((new,'new'))
     table.append((type,'type'))
     table.append((number_type,'Number'))
-
-    table.append((string,STRINGS_VALUES))
+    table.append((string_,STRINGS_VALUES))
     table.append((ID,identifier))
 
     print('>>> Building Lexer...')
