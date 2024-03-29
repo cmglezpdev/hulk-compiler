@@ -1,5 +1,5 @@
 from cmp.pycompiler import Grammar
-#from cmp.ast import ConstantNode, DivNode, MinusNode, PlusNode, StarNode, VariableNode
+from cmp.tools.ast import *
 
 G = Grammar()
 program = G.NonTerminal('<program>', True)
@@ -125,7 +125,7 @@ instr_wrapper %= instr
 instr_wrapper %= instr + semicolon
 #instruction
 #<instr> -> <var-dec> | <func-call> | <func-dec> | <type-dec> | <scope> | <flux-control> | <var-asign> | <expression>
-instr %= var_dec
+
 # instr %= function_declaration
 # instr %= type_declaration
 instr %= scope
@@ -151,16 +151,16 @@ var_inicialization_list %= var_initialization + comma + var_inicialization_list
 var_initialization %= identifier + inicialization + expression
 var_initialization %= identifier + inicialization  + var_asignation #TODO desambiguar let a = b=c =4 y let a = c:=4
 
-#id list <id-list> -> <identifier> | <identifier>, <id-list>
-id_list %= identifier
-id_list %= identifier + comma + id_list
+# #id list <id-list> -> <identifier> | <identifier>, <id-list>
+# id_list %= identifier
+# id_list %= identifier + comma + id_list
 
 #identifier <identifier> -> ID | ID <type-anotation>
 identifier %= ID
 identifier %= ID + type_anotation
 
-#type anotation <type-anotation> -> : Number
-type_anotation %= type_asignator + number_type
+# #type anotation <type-anotation> -> : Number
+# type_anotation %= type_asignator + number_type
 
 #scopes <scope> -> { <inst-list> } | {}
 scope%=open_bracket+instr_list+closed_bracket

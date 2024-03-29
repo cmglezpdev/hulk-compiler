@@ -3,17 +3,28 @@ from cmp.utils import Token
 from .lexer import Lexer
 from cmp.core.grammar import *
 import string
+from cmp.core.grammar import G, plus_operator, minus_operator, multiplication, division, open_curly_braket, closed_curly_braket, number
 
 digits = '|'.join(str(i) for i in range(0, 10))
 nonzerodigits = '|'.join(str(i) for i  in range(1, 10))
 lowers = '|'.join(chr(i) for i in range(ord('a'), ord('z') + 1))
 uppers = '|'.join(chr(i) for i in range(ord('A'), ord('Z') + 1))
-SYMBOLS = [
-    '&', '!', r'\|', # logics 
-    '+', '-', r'\*', '/', '%', # arithmetics 
-    '<', '>', '>=', '<=', '==', '!=', # comparations
-    '@', r'\(', r'\)', '{', '}', '=', '.', ':', ';', ',', '?', # others 
-]
+# SYMBOLS = [
+#     '&', '!', r'\|', # logics 
+#     '+', '-', r'\*', '/', '%', # arithmetics 
+#     '<', '>', '>=', '<=', '==', '!=', # comparations
+#     '@', r'\(', r'\)', '{', '}', '=', '.', ':', ';', ',', '?', # others 
+# ]
+SYMBOLS = {
+    '+': plus_operator,
+    '-': minus_operator,
+    r'\*': multiplication,
+    '/': division,
+    r'\(': open_curly_braket,
+    r'\)': closed_curly_braket
+    
+}
+
 symbols = '|'.join([digits, lowers, uppers,
     '|'.join(SYMBOLS)                   
 ])
@@ -52,6 +63,7 @@ identifier = f'({uppers}|{lowers}|_)({uppers}|{lowers}|{digits}|_)*'
 def build_lexer():
     
     table = []
+
     table.append(('space',SPACE))
 
     table.append((multiplication,r'\*'))
