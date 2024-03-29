@@ -2,6 +2,13 @@ from cmp.core.lexer.scanner import build_lexer, tokenizer
 from cmp.core.parser.parser import parse
 
 tests = [
+    #"""
+    # let a = 6, b = a * 7 in print(b);
+    # let a = 5, b = 10, c = 20 in {
+    # print(a+b);
+    # print(b*c);
+    # print(c/a);
+    # }
     """
     function tan(x) => sin(x) / cos(x) ;
     function cot(x) => 1 / tan(x);
@@ -13,6 +20,12 @@ tests = [
     print(x * y);
     print(x / y);
 }
+     function operate(x, y) {
+    print(x + y);
+    print(x - y);
+    print(x * y);
+    print(x / y);
+};
     type Point {
     x = 0;
     y = 0;
@@ -87,6 +100,11 @@ type Knight inherits Person {
 }
     """,
     """
+type Knight inherits Person {
+    name() => "Sir" @@ base();
+};
+    """,
+    """
 type Person(firstname, lastname) {
     firstname = firstname;
     lastname = lastname;
@@ -103,6 +121,9 @@ type PolarPoint(phi, rho) inherits Point(rho * sin(phi), rho * cos(phi)) {
 protocol Hashable {
     hash(): Number;
 }
+protocol Hashable {
+    hash(): Number;
+};
 """,
 """
 protocol Equatable extends Hashable {
