@@ -25,7 +25,7 @@ tests = [
         while (o.length() < 5){
           o := o+1;
           for (a in iterable){
-              if ((a<o) | ((o.x-8)>=5 & o.length()+2 <= 3 ) & !a ==40 ){
+              if ((a<o) | ((o.x^8)>=5 & o.length()+2 <= 3 ) & !a ==40 ){
                 o:=0;
               };
               o := a - o;
@@ -69,11 +69,44 @@ let pt = new Point() in
     getX() => self.x;
     getY() => self.y;
 
-    setX(x) => self.x := x;
-    setY(y) => self.y := y;
+    setX(x) => self.x[0] := x;
+    setY(y) => self.y[int(sin(self.y))] := y;
 }
 
+    """,
     """
+type Knight inherits Person {
+    name() => "Sir" @@ base();
+}
+    """,
+    """
+type Person(firstname, lastname) {
+    firstname = firstname;
+    lastname = lastname;
+
+    name() => self.firstname @@ self.lastname;
+}
+    """,
+    """
+type PolarPoint(phi, rho) inherits Point(rho * sin(phi), rho * cos(phi)) {
+    length()=> phi*rho + (cos(rho))/(sen(phi));
+}
+""",
+"""
+protocol Hashable {
+    hash(): Number;
+}
+""",
+"""
+protocol Equatable extends Hashable {
+    equals(other: Object): Boolean;
+}
+""",
+"""
+let a = [1,2,3,4] in for (x in a ){
+  print(a);
+}
+"""
 
     # """
     # (5.5 + 0.5) * 2 - 34 /2;

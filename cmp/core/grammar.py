@@ -14,6 +14,7 @@ instr = G.NonTerminal('<inst>')
 var_dec = G.NonTerminal('<var-dec>')
 expression = G.NonTerminal('<expression>')
 flux_control = G.NonTerminal('<flux-control>')
+base_exponent = G.NonTerminal('<base-exponent>')
 scope = G.NonTerminal('<scope>')
 function_declaration = G.NonTerminal('<function-declaration>')
 function_call = G.NonTerminal('<function-call>')
@@ -23,6 +24,7 @@ type_instanciation = G.NonTerminal('<type-instanciation>')
 var_asignation = G.NonTerminal('<var-asign>')
 aritmetic_operation = G.NonTerminal('<aritmetic-operation>')
 factor = G.NonTerminal('<factor>')
+term = G.NonTerminal('<term>')
 atom = G.NonTerminal('<atom>')
 var_initialization = G.NonTerminal('<var-init>')
 var_inicialization_list = G.NonTerminal('<vat-init-list>')
@@ -48,6 +50,7 @@ comparation = G.NonTerminal('<comparation>')
 decl_body = G.NonTerminal('<decl-body>')
 decl_list = G.NonTerminal('<decl-list>')
 declaration = G.NonTerminal('<decl>')
+constructor = G.NonTerminal('<constructor>')
 atribute_declaration = G.NonTerminal('<atribute-declaration>')
 method_declaration = G.NonTerminal('<method-declaration>')
 function_call = G.NonTerminal('<function-call>')
@@ -56,10 +59,21 @@ variable_atribute = G.NonTerminal('<var-attr>')
 variable_method = G.NonTerminal('<var-method>')
 identifier = G.NonTerminal('<identifier>')
 type_anotation = G.NonTerminal('<type-anotation>')
+protocol_declaration =G.NonTerminal('<protocol-declaration>')
 var_use = G.NonTerminal('<var-use>')
+protocol_body = G.NonTerminal('<protocol-body>')
+protocol_definer = G.NonTerminal('<protocol-definer>')
+virtual_method_list = G.NonTerminal('<virtual-method-list>')
+virtual_method = G.NonTerminal('<virtual-method>')
+fully_typed_params = G.NonTerminal('<fully-typed-params>')
+fully_typed_param = G.NonTerminal('<fully-typed-param>')
+vector = G.NonTerminal('<vector>')
+vector_decl = G.NonTerminal('<vector-decl>')
+generation_pattern = G.NonTerminal('<generation-pattern>')
 
 #terminals
 semicolon = G.Terminal(';')
+gen_pattern_symbol = G.Terminal('||')
 while_ = G.Terminal('while')
 for_ = G.Terminal('for')
 open_bracket = G.Terminal('{')
@@ -69,6 +83,7 @@ ID = G.Terminal('ID')
 asignation = G.Terminal(':=')
 inicialization = G.Terminal('=')
 in_ = G.Terminal('in')
+inherits = G.Terminal('inherits')
 comma = G.Terminal(',')
 number = G.Terminal('number')
 open_curly_braket = G.Terminal('(')
@@ -103,8 +118,14 @@ new = G.Terminal('new')
 type = G.Terminal('type')
 dot = G.Terminal('.')
 
-number_type = G.Terminal('Number')
 type_asignator = G.Terminal(':')
+exponentiation = G.Terminal('^')
+
+protocol = G.Terminal('protocol')
+extends = G.Terminal('extends')
+
+open_square_braket = G.Terminal('[')
+close_square_braket = G.Terminal(']')
 #productions
 
 #entry point
@@ -119,6 +140,7 @@ program_level_decl_list %= program_level_decl + program_level_decl_list
 
 program_level_decl %= type_declaration
 program_level_decl %= function_declaration
+program_level_decl %= protocol_declaration
 
 #intruction list
 #<instr-list> -> <instr>; | <instr>; <instr-list>
@@ -162,7 +184,10 @@ id_list %= identifier + comma + id_list
 
 #identifier <identifier> -> ID | ID <type-anotation>
 identifier %= ID
-identifier %= ID + type_anotation
+identifier %= fully_typed_param
+
+#fullt typed param 
+fully_typed_param %= ID + type_anotation
 
 # #type anotation <type-anotation> -> : Number
 type_anotation %= type_asignator + ID
@@ -180,21 +205,28 @@ expression %= atom + string_operator_space + expression
 
 #artimetic expresssion <aritmetic-expresion> -> <factor> + <aritmetic-expression> | <factor> - <aritmetic-expression> | <factor>
 
-aritmetic_operation %= factor +plus_operator+ aritmetic_operation
-aritmetic_operation %= factor + minus_operator + aritmetic_operation
-aritmetic_operation %= factor
+aritmetic_operation %= term +plus_operator+ aritmetic_operation
+aritmetic_operation %= term + minus_operator + aritmetic_operation
+aritmetic_operation %= term
 
 #factor <factor> -> <atom> * <factor> | <atom> / <factor> | <atom>
-factor %= atom + multiplication + factor
-factor %= atom + division + factor
-factor %= atom
+term %= factor + multiplication + term
+term %= factor + division + term
+term %= factor
+
+factor %= factor + exponentiation + base_exponent
+factor %= base_exponent
+
+base_exponent %= atom
+base_exponent %= open_curly_braket + aritmetic_operation + closed_curly_braket
+
+#base exponent <base exponent>
 
 #atom <atom> -> (<expression>) | number | <function-call> | id
-atom %= open_curly_braket + expression + closed_curly_braket
 atom %= number
 atom %= function_call
 atom %= var_use
-# atom %= variable_atribute
+atom %= vector
 atom %= variable_method
 atom %= string_
 atom %= type_instanciation
@@ -274,10 +306,13 @@ comparation %= expression + neq + expression
 boolean_value %= true
 boolean_value %= false
 
-#type declaration <type-declaration> -> type ID <decl-body> | type ID () <decl-body> | type ID (<id-list>) <declaration-body>
-type_declaration %= type + ID + decl_body
-type_declaration %= type + ID +open_curly_braket+closed_curly_braket+ decl_body
-type_declaration %= type + ID +open_curly_braket+id_list+closed_curly_braket+ decl_body
+#type declaration <type-declaration> -> <type-declaration> -> type + <constructor> + <decl-body> | type<constructor>inherits <constructor><decl-body>
+type_declaration %= type + constructor + decl_body
+type_declaration %= type + constructor +inherits+ constructor + decl_body
+#constructor <constructor> -> ID | ID()
+constructor %= ID
+constructor %= function_call
+
 
 #declaration body <decl-body> -> {<decl-list>} | {}
 decl_body %= open_bracket+closed_bracket
@@ -301,6 +336,8 @@ method_declaration %= ID + open_curly_braket + id_list + closed_curly_braket + f
 method_declaration %= ID + open_curly_braket + closed_curly_braket + function_inline_declaration
 method_declaration %= ID + open_curly_braket + closed_curly_braket + function_full_declaration
 
+
+
 #function call <func-call> -> ID(<param-list>) | ID()
 function_call %= ID + open_curly_braket + param_list + closed_curly_braket
 function_call %= ID + open_curly_braket + closed_curly_braket
@@ -318,6 +355,7 @@ param%=expression
 
 #var use <var-use> -> Id | <variable-atribute>
 var_use %= ID
+var_use %= atom+open_square_braket+atom+close_square_braket
 var_use %= variable_atribute
 #variable atribute use <var-atrr>-> ID.ID
 variable_atribute %= ID + dot + ID
@@ -332,6 +370,35 @@ flux_control %= while_loop
 flux_control %= conditional
 flux_control %= for_loop
 
+#protocol declaration <protocol-declaration> -> protocol <protocol-definer> <protocol-body>
+
+protocol_declaration  %= protocol + protocol_definer + protocol_body
+
+#protocol definer <protocol-definer> -> ID | ID extends
+
+protocol_definer %= ID
+protocol_definer %= ID + extends + protocol_definer
+
+#protocol body (type decl body with full typing) <protocol-body> -> {<virtual-method-list>}
+protocol_body %= open_bracket+virtual_method_list+closed_bracket
+
+#virtual method list <virtual-method-list> -> <virtual-method>;|<virtual-method>;<virtual-method-list>
+virtual_method_list %= virtual_method + semicolon
+virtual_method_list %= virtual_method + semicolon + virtual_method_list
+
+#virtual method <virtual-method> -> ID():ID | ID(param_list_typed):ID
+virtual_method %= ID + open_curly_braket+closed_curly_braket + type_anotation
+virtual_method %= ID + open_curly_braket+fully_typed_params+closed_curly_braket + type_anotation
+
+#param_list_typed <param-list-typed> -> <typed-param> | <typed-param> , <param-list-typed>
+fully_typed_params %= fully_typed_param
+fully_typed_params %= fully_typed_param + comma + fully_typed_params
+
+#vectors
+vector %= open_square_braket + vector_decl + close_square_braket
+
+#vector declaration
+vector_decl %= param_list 
 
 
 
