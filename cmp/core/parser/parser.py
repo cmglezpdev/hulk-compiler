@@ -9,7 +9,6 @@ def parse(tokens: list[Token]):
     result = parse(tokens,True)
 
     right_parse, operations = result
-    print(right_parse)
-    return 
+
     ast = evaluate_reverse_parse(right_parse, operations, tokens)
     return ast
