@@ -1,5 +1,6 @@
 from abc import ABC
 from cmp.pycompiler import Grammar
+from cmp.utils import Token
 
 class Parser(ABC):
     def __init__(self, G: Grammar):
@@ -25,7 +26,7 @@ class ShiftReduceParser(Parser, ABC):
         self.goto = {}
         super().__init__(G)
 
-    def __call__(self, w, get_shift_reduce=False):
+    def __call__(self, w: list[Token], get_shift_reduce=False):
         stack = [ 0 ]
         cursor = 0
         output = []
@@ -33,7 +34,7 @@ class ShiftReduceParser(Parser, ABC):
         
         while True:
             state = stack[-1]
-            lookahead = w[cursor]
+            lookahead = w[cursor].token_type
             if self.verbose: 
                 print(stack, '<---||--->', w[cursor:])
                 
