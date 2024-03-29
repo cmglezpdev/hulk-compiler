@@ -289,7 +289,7 @@ function_call %= ID + open_curly_braket + closed_curly_braket, lambda h,s: CallN
 # type_instanciation %= new + ID + open_curly_braket + closed_curly_braket
 
 #param list <param-list> -> <expression> | <expression> , <param-list>
-param_list %= expression, lambda h,s: s[1]
+param_list %= expression, lambda h,s: [s[1]]
 param_list %= expression + comma + param_list, lambda h,s: [s[1]] + s[3]
 
 #variable atribute use <var-atrr>-> ID.ID
