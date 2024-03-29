@@ -28,8 +28,19 @@ SYMBOLS = {
 symbols = '|'.join([digits, lowers, uppers,
     '|'.join(SYMBOLS)                   
 ])
-printables = '|'.join([printable for printable in string.printable])
-STRINGS_VALUES = f'"({symbols})*"'
+def mapping(string):
+    if string == '|':
+        return r'\|'
+    if string == '*':
+        return r'\*'
+    if string == '(':
+        return r'\('
+    if string == ')':
+        return r'\)'           
+    else:
+        return string
+printables = '|'.join([printable for printable in list(map(mapping,string.printable))])
+STRINGS_VALUES = f'(\")({printables})*(\")'
 INTEGER = f'({digits})(.|{EPSILON})({digits})*'
 SPACE = '(\n|\t|\f|\r|\v| )(\n|\t|\f|\r|\v| )*'
 KEYWORDS = [
@@ -69,10 +80,14 @@ def build_lexer():
     table.append((not_,'!'))
     table.append((gt,'>'))
     table.append((lt,'<'))
-    table.append((lte,'=<'))
+    table.append((lte,'<='))
     table.append((gte,'>='))
     table.append((eq,'=='))
     table.append((neq,'!='))
+    table.append((exponentiation,'^'))
+    table.append((open_square_braket,'['))
+    table.append((close_square_braket,']'))
+    table.append((gen_pattern_symbol,r'\|\|'))
     table.append((string_operator_space,'@@'))
     table.append((string_operator,'@'))
     table.append((asignation,':='))
@@ -86,6 +101,8 @@ def build_lexer():
     table.append((number, INTEGER))
 
     table.append((while_,'while'))
+    table.append((protocol,'protocol'))
+    table.append((extends,'extends'))
     table.append((for_,'for'))
     table.append((let,'let'))
     table.append((in_,'in'))
@@ -96,9 +113,8 @@ def build_lexer():
     table.append((false,'false'))
     table.append((new,'new'))
     table.append((type,'type'))
-    table.append((number_type,'Number'))
-
-    table.append((string,STRINGS_VALUES))
+    table.append((inherits,'inherits'))
+    table.append((string_,STRINGS_VALUES))
     table.append((ID,identifier))
 
     print('>>> Building Lexer...')
