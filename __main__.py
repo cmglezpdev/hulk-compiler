@@ -2,6 +2,36 @@ from cmp.core.lexer.scanner import build_lexer, tokenizer
 from cmp.core.parser.parser import parse
 
 tests = [
+    """
+    function tan(x) => sin(x) / cos(x) ;
+    function cot(x) => 1 / tan(x);
+    function tan(x) => sin(x) / cos(x);
+
+     function operate(x, y) {
+    print(x + y);
+    print(x - y);
+    print(x * y);
+    print(x / y);
+}
+    type Point {
+    x = 0;
+    y = 0;
+
+    getX() => self.x;
+    getY() => self.y;
+
+    setX(x) => self.x[0] := x;
+    setY(y) => self.y[int(sin(self.y))] := y;
+}
+let array =[1,2,3,4] in
+let a = [x^(sen(4)+3) || x in array ] in {
+    if(a.length ==0){
+      a:= new Point(0,4);
+      a.getX();
+    };
+}
+
+    """,
     "42",
     "print(42);",
     "print((((1 + 2) * 3) * 4) / 5);",
@@ -52,29 +82,6 @@ let pt = new Point() in
     print("x: " @ pt.getX() @ "; y: " @ pt.getY());
 """,
     """
-    function tan(x) => sin(x) / cos(x)
-    function cot(x) => 1 / tan(x)
-    function tan(x) => sin(x) / cos(x)
-
-     function operate(x, y) {
-    print(x + y);
-    print(x - y);
-    print(x * y);
-    print(x / y);
-}
-    type Point {
-    x = 0;
-    y = 0;
-
-    getX() => self.x;
-    getY() => self.y;
-
-    setX(x) => self.x[0] := x;
-    setY(y) => self.y[int(sin(self.y))] := y;
-}
-
-    """,
-    """
 type Knight inherits Person {
     name() => "Sir" @@ base();
 }
@@ -109,7 +116,10 @@ let a = [1,2,3,4] in for (x in a ){
 """,
 """
 let squares = [x^2 || x in range(1,10)] in print(x);
+""",
 """
+let squares = [x^(arr[4]^(sin(x)-9)) || x in range(1,10)] in print(x);
+""",
 
     # """
     # (5.5 + 0.5) * 2 - 34 /2;

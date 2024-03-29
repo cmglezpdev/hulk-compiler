@@ -114,7 +114,6 @@ def build_lexer():
     table.append((new,'new'))
     table.append((type,'type'))
     table.append((inherits,'inherits'))
-    # table.append((number_type,'Number'))
     table.append((string_,STRINGS_VALUES))
     table.append((ID,identifier))
 
