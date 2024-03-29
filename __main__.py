@@ -106,6 +106,9 @@ protocol Equatable extends Hashable {
 let a = [1,2,3,4] in for (x in a ){
   print(a);
 }
+""",
+"""
+let squares = [x^2 || x in range(1,10)] in print(x);
 """
 
     # """

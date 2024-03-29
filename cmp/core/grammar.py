@@ -281,7 +281,7 @@ else_statement %= else_ + full_else
 while_loop %= while_ + open_curly_braket + conditional_expression + closed_curly_braket + scope
 
 #for instruction <for-loop> -> for ( Id in <iterable-expression>) <scope> 
-for_loop %= for_ + open_curly_braket + identifier + in_ + var_use + closed_curly_braket + scope
+for_loop %= for_ + open_curly_braket + identifier + in_ + expression + closed_curly_braket + scope
 
 #conditional expression <conditional-expression> -> <condition> & <conditiona-expression> | <condition> '|' <conditiona-expression> | !<condition> | <condition>
 conditional_expression %= condition + and_ + conditional_expression
@@ -399,6 +399,7 @@ vector %= open_square_braket + vector_decl + close_square_braket
 
 #vector declaration
 vector_decl %= param_list 
+vector_decl %= expression + gen_pattern_symbol + identifier + in_ + expression
 
 
 
