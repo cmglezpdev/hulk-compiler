@@ -56,6 +56,7 @@ variable_atribute = G.NonTerminal('<var-attr>')
 variable_method = G.NonTerminal('<var-method>')
 identifier = G.NonTerminal('<identifier>')
 type_anotation = G.NonTerminal('<type-anotation>')
+var_use = G.NonTerminal('<var-use>')
 
 #terminals
 semicolon = G.Terminal(';')
@@ -94,7 +95,7 @@ false = G.Terminal('false')
 gt = G.Terminal('>')
 lt = G.Terminal('<')
 gte = G.Terminal('>=')
-lte = G.Terminal('=<')
+lte = G.Terminal('<=')
 eq = G.Terminal('==')
 neq = G.Terminal('!=')
 
@@ -108,11 +109,13 @@ type_asignator = G.Terminal(':')
 
 #entry point
 #<program> -> <instr-list>
-program %= instr_wrapper
-program %= program_level_decl_list
+# program %= instr_wrapper  
+program %=  instr_wrapper
+program %= program_level_decl_list# + program
+# program %= G.Epsilon
 
 program_level_decl_list%= program_level_decl
-program_level_decl %= program_level_decl
+program_level_decl_list %= program_level_decl + program_level_decl_list
 
 program_level_decl %= type_declaration
 program_level_decl %= function_declaration
@@ -120,6 +123,7 @@ program_level_decl %= function_declaration
 #intruction list
 #<instr-list> -> <instr>; | <instr>; <instr-list>
 instr_list %= instr + semicolon
+instr_list %= instr + semicolon + instr_list
 
 instr_wrapper %= instr
 instr_wrapper %= instr + semicolon
@@ -132,6 +136,7 @@ instr %= scope
 instr %= flux_control
 instr %= var_asignation
 instr %= expression
+instr %= var_dec
 
 #var declaration <var-dec> -> let <var-init-list> in <var-decl-expression> 
 var_dec %= let + var_inicialization_list+ in_ + var_decl_expression
@@ -149,18 +154,18 @@ var_inicialization_list %= var_initialization + comma + var_inicialization_list
 
 #var initialization <var-init> -> ID = <expression> | ID = <var-asign>
 var_initialization %= identifier + inicialization + expression
-var_initialization %= identifier + inicialization  + var_asignation #TODO desambiguar let a = b=c =4 y let a = c:=4
+var_initialization %= identifier + inicialization  + var_asignation 
 
 # #id list <id-list> -> <identifier> | <identifier>, <id-list>
-# id_list %= identifier
-# id_list %= identifier + comma + id_list
+id_list %= identifier
+id_list %= identifier + comma + id_list
 
 #identifier <identifier> -> ID | ID <type-anotation>
 identifier %= ID
 identifier %= ID + type_anotation
 
 # #type anotation <type-anotation> -> : Number
-# type_anotation %= type_asignator + number_type
+type_anotation %= type_asignator + ID
 
 #scopes <scope> -> { <inst-list> } | {}
 scope%=open_bracket+instr_list+closed_bracket
@@ -169,7 +174,9 @@ scope%=open_bracket+closed_bracket
 #expressions <expresion> -> <aritmetic-op> | <type-instanciation> | <string-operation>
 expression %= aritmetic_operation
 # expression %= type_instanciation
-# expression %= string_operation
+expression %= atom + string_operator + expression
+expression %= atom + string_operator_space + expression
+#expression %= string_operation
 
 #artimetic expresssion <aritmetic-expresion> -> <factor> + <aritmetic-expression> | <factor> - <aritmetic-expression> | <factor>
 
@@ -183,39 +190,44 @@ factor %= atom + division + factor
 factor %= atom
 
 #atom <atom> -> (<expression>) | number | <function-call> | id
-atom %= open_curly_braket + aritmetic_operation + closed_curly_braket
+atom %= open_curly_braket + expression + closed_curly_braket
 atom %= number
 atom %= function_call
-atom %= ID
+atom %= var_use
 # atom %= variable_atribute
-# atom %= variable_method
+atom %= variable_method
+atom %= string_
+atom %= type_instanciation
 
 #string_operation <string-operation> -> <string-atom> @ <string-operation> | <string-atom>
-string_operation %= string_atom
-string_operation %= string_atom + string_operator + string_operation
+# string_operation %= string_atom
+# string_operation %= string_atom + string_operator + string_operation
 # string_operation %= string_atom + string_operator_space + string_operation
 
-#string_atom <string-atom> -> string_| <function-call> | ID
-string_atom %= string_
-string_atom %= function_call
-string_atom %= ID
-string_atom %= variable_atribute
-string_atom %= variable_method
-string_atom %= open_curly_braket + string_operation + closed_curly_braket
+# #string_atom <string-atom> -> string_| <function-call> | ID
+# string_atom %= string_
+# string_atom %= function_call
+# string_atom %= ID
+# string_atom %= variable_atribute
+# string_atom %= variable_method
+# string_atom %= open_curly_braket + string_operation + closed_curly_braket
 
-#variable asignation <var-asignation> -> let id
-var_asignation %= ID + asignation + expression
+#variable asignation <var-asignation> ->  <var-use> := <expression>
+var_asignation %= var_use + asignation + expression
+var_asignation %= var_use + asignation + var_asignation
 
 #function declaration <function-declaration> -> <func-inline-declaration> | <func-full-dec>
-function_declaration %= function_inline_declaration
-function_declaration %= function_full_declaration 
+function_declaration %= function + ID +open_curly_braket + id_list + closed_curly_braket + function_inline_declaration
+function_declaration %= function + ID +open_curly_braket + id_list + closed_curly_braket +function_full_declaration 
+function_declaration %= function + ID +open_curly_braket + closed_curly_braket + function_inline_declaration
+function_declaration %= function + ID +open_curly_braket + closed_curly_braket +function_full_declaration 
 
 #function full declaration <function-full-declaration> -> function ID(<id-list>)<scope> | function ID()<scope>
-function_full_declaration %= function + ID + open_curly_braket + id_list + closed_curly_braket + scope
-function_full_declaration %= function + ID + open_curly_braket + closed_curly_braket + scope
+function_full_declaration %= scope
+function_full_declaration %= type_anotation + scope
 #function inline declaration <function-inline-declaration> -> function ID (<id-list> ) => <expression> | function ID () => <expression>
-function_inline_declaration %= function + ID + open_curly_braket + id_list + closed_curly_braket + func_arrow + expression
-function_inline_declaration %= function + ID + open_curly_braket + closed_curly_braket + func_arrow + expression
+function_inline_declaration %= func_arrow + instr
+function_inline_declaration %= type_anotation+  func_arrow + instr
 
 #conditional  <conditional> -> <inline-conditional> | <full-conditional>
 conditional %= inline_conditional 
@@ -226,8 +238,8 @@ inline_conditional %= if_ + open_curly_braket + conditional_expression + closed_
 inline_conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + expression
 
 #full conditional <full-conditional> -> if (<conditional>) { <instruction> } <else-statement> | if (<conditional>) { <instruction> } 
-full_conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + open_bracket + instr_list + closed_bracket
-full_conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + open_bracket + instr_list + closed_bracket + else_statement
+full_conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + scope
+full_conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + scope+ else_statement
 
 #else statement <else-statement> -> <inline-else> | <full-else>
 else_statement %= else_ + inline_else
@@ -237,7 +249,7 @@ else_statement %= else_ + full_else
 while_loop %= while_ + open_curly_braket + conditional_expression + closed_curly_braket + scope
 
 #for instruction <for-loop> -> for ( Id in <iterable-expression>) <scope> 
-for_loop %= for_ + open_curly_braket + ID + iterable_expression + closed_curly_braket + scope
+for_loop %= for_ + open_curly_braket + identifier + in_ + var_use + closed_curly_braket + scope
 
 #conditional expression <conditional-expression> -> <condition> & <conditiona-expression> | <condition> '|' <conditiona-expression> | !<condition> | <condition>
 conditional_expression %= condition + and_ + conditional_expression
@@ -280,11 +292,14 @@ declaration %= atribute_declaration
 declaration %= method_declaration
 
 #atribute declaration <atribute-declaration> -> ID = <expression>
-atribute_declaration %= ID + expression
+atribute_declaration %= identifier +inicialization+ expression
 
 #method declaration <method-declaration>-> ID (<params>) => <expression> | ID (<params>) => { <inst-list> } 
-method_declaration %= ID + open_curly_braket + id_list + closed_curly_braket + func_arrow + expression 
-method_declaration %= ID + open_curly_braket + id_list + closed_curly_braket + open_bracket + instr_list +closed_bracket
+method_declaration %= ID + open_curly_braket + id_list + closed_curly_braket + function_inline_declaration
+method_declaration %= ID + open_curly_braket + id_list + closed_curly_braket + function_full_declaration
+
+method_declaration %= ID + open_curly_braket + closed_curly_braket + function_inline_declaration
+method_declaration %= ID + open_curly_braket + closed_curly_braket + function_full_declaration
 
 #function call <func-call> -> ID(<param-list>) | ID()
 function_call %= ID + open_curly_braket + param_list + closed_curly_braket
@@ -299,14 +314,17 @@ param_list %= param
 param_list %= param + comma + param_list
 
 param%=expression
-param%=string_operation
+# param%=string_operation
 
+#var use <var-use> -> Id | <variable-atribute>
+var_use %= ID
+var_use %= variable_atribute
 #variable atribute use <var-atrr>-> ID.ID
 variable_atribute %= ID + dot + ID
 
+
 #variable method use <var-method> -> ID.ID(param_list) | ID.ID()
-variable_method %= ID + dot + ID + open_curly_braket + param_list+ closed_curly_braket
-variable_method %= ID + dot + ID + open_curly_braket + closed_curly_braket
+variable_method %= ID + dot + function_call
 
 #flux controllers <flux-control> -> <while> | if | for
 

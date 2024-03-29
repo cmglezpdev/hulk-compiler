@@ -80,7 +80,7 @@ def build_lexer():
     table.append((not_,'!'))
     table.append((gt,'>'))
     table.append((lt,'<'))
-    table.append((lte,'=<'))
+    table.append((lte,'<='))
     table.append((gte,'>='))
     table.append((eq,'=='))
     table.append((neq,'!='))
@@ -107,7 +107,7 @@ def build_lexer():
     table.append((false,'false'))
     table.append((new,'new'))
     table.append((type,'type'))
-    table.append((number_type,'Number'))
+    # table.append((number_type,'Number'))
     table.append((string_,STRINGS_VALUES))
     table.append((ID,identifier))
 

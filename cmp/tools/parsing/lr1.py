@@ -14,7 +14,7 @@ class LR1Parser(ShiftReduceParser):
         automaton = self.build_LR1_automaton(G)
         for i, node in enumerate(automaton):
             if self.verbose: 
-                print(i, '\t', '\n\t '.join(str(x) for x in node.state), '\n')
+               print(i, '\t', '\n\t '.join(str(x) for x in node.state), '\n')
             node.idx = i
 
         for node in automaton:
@@ -38,6 +38,7 @@ class LR1Parser(ShiftReduceParser):
     
     @staticmethod
     def _register(table, key, value):
+        print(key,value)
         assert key not in table or table[key] == value, f'Shift-Reduce or Reduce-Reduce conflict!!!: {key, value}'
         table[key] = value
 

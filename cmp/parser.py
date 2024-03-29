@@ -40,8 +40,9 @@ class ShiftReduceParser(Parser, ABC):
                 
             # (Detect error)
             if (state, lookahead) not in self.action:
-                print(self.action)
+                print('pila',stack)
                 print((state, lookahead))
+                print((w[:cursor], lookahead))
                 print('Error, Aborting...')
 
                 return None
