@@ -21,18 +21,52 @@ class BinaryNode(ExpressionNode):
         self.right = rnode
         
 # Declarations Nodes
+class VarsDeclarationsListNode(StatementNode):
+    def __init__(self, declarations) -> None:
+        self.declarations = declarations
+
 class VarDeclarationNode(StatementNode):
     def __init__(self, idx, expr) -> None:
         self.id = idx
         self.expr = expr
 
-class FuncDeclarationNode(StatementNode):
+class VarAssignation(StatementNode):
+    def __init__(self, idx, expr) -> None:
+        self.id = idx
+        self.expr = expr
+
+
+class BlockNode(StatementNode):
+    def __init__(self, exprs) -> None:
+        self.exprs = exprs
+
+
+class FuncFullDeclarationNode(StatementNode):
     def __init__(self, idx, params, body) -> None:
         self.id = idx
         self.params = params
         self.body = body
     
  # Builtin Math functions
+
+class FuncInlineDeclarationNode(StatementNode):
+    def __init__(self, idx, params, body) -> None:
+        self.id = idx
+        self.params = params
+        self.body = body
+    
+ # Builtin Math functions
+
+
+class CallNode(ExpressionNode):
+    def __init__(self, idx, args, obj=None, typex=None):
+        self.obj = obj
+        self.id = idx
+        self.args = args
+        self.type = typex
+
+
+
 
 class SqrtNode(StatementNode):
     def __init__(self, expr) -> None:
@@ -65,6 +99,9 @@ class ConstantNode(AtomicNode):
     pass
 
 class VariableNode(AtomicNode):
+    pass
+
+class BooleanNode(AtomicNode):
     pass
 
 
@@ -143,7 +180,7 @@ class WhileNode(ExpressionNode):
         self.body = body
 
 # list of variables declarations
-class VarsDeclarationsNode(ExpressionNode):
+class VarsDeclarationsListNode(ExpressionNode):
     def __init__(self, decls, body) -> None:
         self.decls = decls
         self.body = body
