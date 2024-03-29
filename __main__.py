@@ -23,7 +23,7 @@ if __name__ == '__main__':
     print([t.lex for t in code_tokens])
     print([t.token_type for t in code_tokens])
 
-    parse([t.token_type for t in code_tokens])
+    parse(code_tokens)
 
 
 
