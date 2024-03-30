@@ -62,7 +62,7 @@ type_anotation = G.NonTerminal('<type-anotation>')
 protocol_declaration =G.NonTerminal('<protocol-declaration>')
 var_use = G.NonTerminal('<var-use>')
 protocol_body = G.NonTerminal('<protocol-body>')
-protocol_definer = G.NonTerminal('<protocol-definer>')
+extend_definer = G.NonTerminal('<extend-definer>')
 virtual_method_list = G.NonTerminal('<virtual-method-list>')
 virtual_method = G.NonTerminal('<virtual-method>')
 fully_typed_params = G.NonTerminal('<fully-typed-params>')
@@ -320,9 +320,10 @@ boolean_value %= false, lambda h,s: BooleanNode(s[1])
 
 #type declaration <type-declaration> -> <type-declaration> -> type + <constructor> + <decl-body> | type<constructor>inherits <constructor><decl-body>
 type_declaration %= type + ID + constructor + decl_body, lambda h,s: TypeDeclarationNode(s[2], s[3], s[4])
-# type_declaration %= type + ID + constructor +inherits+ constructor + decl_body #TODO: this work, but i don't know attribute it
-type_declaration %= type + ID + constructor + decl_body + semicolon, lambda h,s: TypeDeclarationNode(s[2], s[3], [])
-# type_declaration %= type + ID + constructor +inherits+ constructor + decl_body + semicolon #TODO: this work, but i don't know attribute it
+type_declaration %= type + ID + constructor +inherits+ ID + constructor + decl_body, lambda h,s: TypeDeclarationNode(s[2], s[3], s[6], s[5])
+type_declaration %= type + ID + constructor + decl_body + semicolon, lambda h,s: TypeDeclarationNode(s[2], s[3], s[4])
+type_declaration %= type + ID + constructor +inherits+ ID + constructor + decl_body + semicolon, lambda h,s: TypeDeclarationNode(s[2], s[3], s[6], s[5])
+
 #constructor <constructor> -> ID | ID()
 constructor %= open_curly_braket + param_list + closed_curly_braket, lambda h,s: s[2]
 constructor %= open_curly_braket + closed_curly_braket, lambda h,s: []
@@ -385,30 +386,32 @@ flux_control %= while_loop, lambda h,s: s[1]
 flux_control %= conditional, lambda h,s: s[1]
 flux_control %= for_loop, lambda h,s: s[1]
 
-# #protocol declaration <protocol-declaration> -> protocol <protocol-definer> <protocol-body>
+#protocol declaration <protocol-declaration> -> protocol <protocol-definer> <protocol-body>
 
-# protocol_declaration %= protocol + protocol_definer + protocol_body
-# protocol_declaration %= protocol + protocol_definer + protocol_body + semicolon
+protocol_declaration %= protocol + ID + protocol_body, lambda h,s: ProtocolNode(s[2], s[3])
+protocol_declaration %= protocol + ID + protocol_body + semicolon, lambda h,s: ProtocolNode(s[2], s[3])
+protocol_declaration %= protocol + ID + extends + ID + protocol_body, lambda h,s: ProtocolNode(s[2], s[5], s[4])
+protocol_declaration %= protocol + ID + extends + ID + protocol_body + semicolon, lambda h,s: ProtocolNode(s[2], s[5], s[4])
 
-# #protocol definer <protocol-definer> -> ID | ID extends
+# # #extend definer <extend-definer> -> extends ID | epsilon
 
-# protocol_definer %= ID
-# protocol_definer %= ID + extends + protocol_definer
+# extend_definer %= extends + ID + extend_definer
+# extend_definer %= G.Epsilon, lambda h,s: []
 
-# #protocol body (type decl body with full typing) <protocol-body> -> {<virtual-method-list>}
-# protocol_body %= open_bracket+virtual_method_list+closed_bracket
+#protocol body (type decl body with full typing) <protocol-body> -> {<virtual-method-list>}
+protocol_body %= open_bracket+virtual_method_list+closed_bracket, lambda h,s: s[2]
 
-# #virtual method list <virtual-method-list> -> <virtual-method>;|<virtual-method>;<virtual-method-list>
-# virtual_method_list %= virtual_method + semicolon
-# virtual_method_list %= virtual_method + semicolon + virtual_method_list
+#virtual method list <virtual-method-list> -> <virtual-method>;|<virtual-method>;<virtual-method-list>
+virtual_method_list %= virtual_method + semicolon, lambda h,s: s[1]
+virtual_method_list %= virtual_method + semicolon + virtual_method_list, lambda h,s: [s[1]] + s[3]
 
-# #virtual method <virtual-method> -> ID():ID | ID(param_list_typed):ID
-# virtual_method %= ID + open_curly_braket+closed_curly_braket + type_anotation
-# virtual_method %= ID + open_curly_braket+fully_typed_params+closed_curly_braket + type_anotation
+#virtual method <virtual-method> -> ID():ID | ID(param_list_typed):ID
+virtual_method %= ID + open_curly_braket+closed_curly_braket + type_anotation, lambda h,s: ProtocolMethod(s[1], s[4], [])
+virtual_method %= ID + open_curly_braket+fully_typed_params+closed_curly_braket + type_anotation, lambda h,s: ProtocolMethod(s[1], s[5], s[3])
 
-# #param_list_typed <param-list-typed> -> <typed-param> | <typed-param> , <param-list-typed>
-# fully_typed_params %= fully_typed_param
-# fully_typed_params %= fully_typed_param + comma + fully_typed_params
+#param_list_typed <param-list-typed> -> <typed-param> | <typed-param> , <param-list-typed>
+fully_typed_params %= fully_typed_param, lambda h,s: s[1]
+fully_typed_params %= fully_typed_param + comma + fully_typed_params, lambda h,s: [s[1]] + s[3]
 
 #vectors
 vector %= open_square_braket + vector_decl + close_square_braket, lambda h,s: VecDecExplSyntaxNode(s[2])

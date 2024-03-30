@@ -2,13 +2,6 @@ from cmp.core.lexer.scanner import build_lexer, tokenizer
 from cmp.core.parser.parser import parse, build_parser
 
 tests = [
-    #"""
-    # let a = 6, b = a * 7 in print(b);
-    # let a = 5, b = 10, c = 20 in {
-    # print(a+b);
-    # print(b*c);
-    # print(c/a);
-    # }
     """
     function tan(x) => sin(x) / cos(x) ;
     function cot(x) => 1 / tan(x);
@@ -94,11 +87,7 @@ let a = [x^(sen(4)+3) || x in array ] in {
 let pt = new Point() in
     print("x: " @ pt.getX() @ "; y: " @ pt.getY());
 """,
-    """
-type Knight inherits Person {
-    name() => "Sir" @@ base();
-}
-    """,
+    
     """
 type Knight inherits Person {
     name() => "Sir" @@ base();
