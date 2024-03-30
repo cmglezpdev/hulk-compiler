@@ -89,9 +89,15 @@ class SemanticCheckerVisitor(object):
 
     @visitor.when(VariableNode)
     def visit(self, node,context ,scope):
-        print(type(node),type(node.id))
-        if not scope.is_var_defined(node.id):
-            self.errors.append(f'variable not defined {node.id}')
+
+
+        if  isinstance(node.id,str):
+            if not scope.is_var_defined(node.id):
+                print(type(node),type(node.id),node.id)
+                self.errors.append(f'variable not defined {node.id}')
+        else:
+            self.visit(node.id)
+
 
 
     @visitor.when(VarAssignation)
@@ -131,6 +137,7 @@ class SemanticCheckerVisitor(object):
                 self.errors.append(e.message)
 
         for method in inner_scope.local_funcs:
+            print(method.name)
             try:
                 context.get_type(node.id).define_method(method.name,'Any','Any','Any')
             except e:
@@ -172,15 +179,17 @@ class SemanticCheckerVisitor(object):
 
     @visitor.when(VarAssignation)
     def visit(self,node,context,scope):
-        if not scope.is_var_defined(node.id):
-            self.errors.append(f'variable {node.id} is not defined')
+        if isinstance(node.id,str):
+            if not scope.is_var_defined(node.id):
+                self.errors.append(f'variable {node.id} is not defined')
+        else:
+            self.visit(node.id,context,scope)
         self.visit(node.expr,context,scope.create_child_scope())
        
     @visitor.when(WhileLoopNode)
     def visit(self,node,context,scope):
-        new_scope = scope.create_child_scope()
-        self.visit(node.expr,context,new_scope)
-        self.visit(node.body,context,new_scope)
+        self.visit(node.expr,context,scope)
+        self.visit(node.body,context,scope)
 
     @visitor.when(IfNode)
     def visit(self,node,context,scope):
@@ -188,9 +197,17 @@ class SemanticCheckerVisitor(object):
         self.visit(node.then_expr,context,scope,scope.create_child_scope())
         self.visit(node.else_expr,context,scope,scope.create_child_scope())
 
-    @visitor.when(ForLoopNode)
+    @visitor.when(WhileLoopNode)
     def visit(self,node,context,scope):
-        new_scope = scope.create_child_scope()
-        self.visit(node.var,context,new_scope)
-        self.visit(node.expr,context,scope)
-        self.visit(node.body,context,scope)
+        self.visit(node.if_expr)
+
+    @visitor.when(CallTypeAttr)
+    def visit(self,node,context,scope):
+       if not scope.is_var_defined(node.type_id) or  not scope.is_local_var(node.attr):
+          self.errors.append(f'atribute {node.type_id}.{node.attr} not defined') 
+
+   
+    @visitor.when(VecInstNode)
+    def visit(self,node,context,scope):
+        if not scope.is_var_defined(node.var):
+            self.errors.append(f'variable{node.var} not defined')

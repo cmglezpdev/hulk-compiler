@@ -215,7 +215,6 @@ class Scope:
         return True
 
     def is_var_defined(self, vname):
-        print('verificando',vname)
         is_defined_local = False
 
         for var in self.local_vars:
@@ -247,20 +246,17 @@ class Scope:
         return self.get_local_function_info(fname, n) is not None
 
     def get_local_variable_info(self, vname):
-        local_filtered = list(filter(lambda v:v.name==vname,self.local_vars))
-
-        # if self.parent is not None and not len(local_filtered)>0:
-        #     local_filtered = [self.parent.get_local_variable_info(vname)]
-        return local_filtered[0]
+        for var in self.local_vars:
+            if var.name == vname:
+                return True
+        return False
     
     def get_local_function_info(self, fname, n):
-        if n ==0:
-            return None
-        local_filtered = list(filter(lambda v:v.name==fname,self.local_funcs))
+        for var in self.local_vars:
+            if var.name == fname and var.params ==n:
+                return True
+        return False
 
-        # if self.parent is not None and not len(local_filtered)>0:
-        #     local_filtered = [self.parent.get_local_function_info(fname,n-1)]
-        return local_filtered[0]
     def set_variable_type(self,vname,vtype):
         founded = False
         for var in self.local_vars:

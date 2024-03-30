@@ -355,8 +355,6 @@ method_declaration %= ID + open_curly_braket + id_list + closed_curly_braket + f
 method_declaration %= ID + open_curly_braket + closed_curly_braket + func_arrow + expression, lambda h,s: FuncInlineDeclarationNode(s[1], [], s[5])
 method_declaration %= ID + open_curly_braket + closed_curly_braket + function_full_declaration, lambda h,s: FuncFullDeclarationNode(s[1], [], s[4])
 
-
-
 #function call <func-call> -> ID(<param-list>) | ID()
 function_call %= ID + open_curly_braket + param_list + closed_curly_braket, lambda h,s: CallNode(s[1], s[3])
 function_call %= ID + open_curly_braket + closed_curly_braket, lambda h,s: CallNode(s[1], [])
@@ -374,10 +372,12 @@ param %= expression, lambda h,s: s[1]
 
 #var use <var-use> -> Id | <variable-atribute>
 var_use %= ID, lambda h,s: VariableNode(s[1])
-var_use %= atom+open_square_braket+atom+close_square_braket, lambda h,s: VecInstNode(s[1], s[3])
+var_use %= atom+open_square_braket+expression+close_square_braket, lambda h,s: VecInstNode(s[1], s[3])
 var_use %= variable_atribute, lambda h,s: s[1]
 #variable atribute use <var-atrr>-> ID.ID
 variable_atribute %= ID + dot + ID, lambda h,s: CallTypeAttr(s[1], s[3])
+variable_atribute %= ID + dot + variable_atribute, lambda h,s: CallTypeAttr(s[1], s[3])
+# variable_atribute %= variable_atribute + open_square_braket+atom+close_square_braket, lambda h,s: CallTypeAttr(s[1], s[3])
 
 
 #variable method use <var-method> -> ID.ID(param_list) | ID.ID()
