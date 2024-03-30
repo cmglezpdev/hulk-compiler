@@ -4,6 +4,7 @@ from cmp.core.parser.parser import parse, build_parser
 from cmp.core.semantics  import SemanticCheckerVisitor
 
 
+
 def load_tests():
     files = os.listdir('./tests/')
     files = [file for file in files if file.endswith('.hulk')]

@@ -99,6 +99,19 @@ class VecInstNode(ExpressionNode):
         self.var = var
         self.index = index
 
+class ProtocolNode(ExpressionNode):
+    def __init__(self, idx, methods ,extends = None) -> None:
+        self.id = idx
+        self.extends = extends
+        self.methods = methods
+
+class ProtocolMethod(ExpressionNode):
+    def __init__(self, idx, typex, params) -> None:
+        self.id = idx
+        self.type = typex
+        self.params = params
+
+
 class AtomicNode(ExpressionNode):
     def __init__(self, lex) -> None:
         self.lex = lex
