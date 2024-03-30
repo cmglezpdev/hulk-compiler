@@ -22,7 +22,7 @@ if __name__ == '__main__':
     parser = build_parser()
     semantic_checker = SemanticCheckerVisitor()
 
-    for file, content in tests[0:1]:
+    for file, content in tests:
         print(f'Parsing code: {file}\n\n')
         
         code_tokens = tokenizer(content, lexer=lexer)
@@ -37,6 +37,7 @@ if __name__ == '__main__':
         print('----semantics checking---')
         errors = semantic_checker.visit(ast)
         print(errors)
+        semantic_checker.errors =[]
 
 
 
