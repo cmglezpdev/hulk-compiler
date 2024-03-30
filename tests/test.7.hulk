@@ -1,0 +1,2 @@
+let pt = new Point() in
+    print("x: " @ pt.getX() @ "; y: " @ pt.getY());

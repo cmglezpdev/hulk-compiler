@@ -16,8 +16,9 @@ class ExpressionNode(Node):
        
 # Declarations Nodes
 class VarsDeclarationsListNode(StatementNode):
-    def __init__(self, declarations) -> None:
+    def __init__(self, declarations, body) -> None:
         self.declarations = declarations
+        self.body = body
 
 class VarDeclarationNode(StatementNode):
     def __init__(self, idx, expr) -> None:
@@ -40,10 +41,41 @@ class FuncInlineDeclarationNode(StatementNode):
         self.id = idx
         self.params = params
         self.body = body
-    
+        
+class TypeDeclarationNode(StatementNode):
+    def __init__(self, idx, args, features, inherit=None) -> None:
+        self.id = idx
+        self.args = args
+        self.features = features
+        # self.attrs = attrs
+        # self.funcs = funcs
+        self.inherit = inherit
 
+class TypeInheritNode(StatementNode):
+    def __init__(self, idx, args) -> None:
+        self.id = idx
+        self.args = args
 
+class AttrDeclarationNode(StatementNode):
+    def __init__(self, idx, typex, expr=None) -> None:
+        self.id = idx
+        self.type = typex
+        self.expr = expr
 
+class VecDecExplSyntaxNode(StatementNode):
+    def __init__(self, args) -> None:
+        self.args = args
+
+class VecDecImplSyntaxNode(ExpressionNode):
+    def __init__(self, expr, var, in_) -> None:
+        self.expr = expr
+        self.var = var
+        self.in_ = in_
+
+class VecInstNode(ExpressionNode):
+    def __init__(self, var, index) -> None:
+        self.var = var
+        self.index = index
 
 class AtomicNode(ExpressionNode):
     def __init__(self, lex) -> None:
@@ -65,9 +97,15 @@ class CallNode(ExpressionNode):
         self.args = args
         self.type = typex
 
+class CallTypeAttr(ExpressionNode):
+    def __init__(self, type_id, attr) -> None:
+        self.type_id = type_id
+        self.attr = attr
 
-
-
+class CallTypeFunc(ExpressionNode):
+    def __init__(self, type_id, func) -> None:
+        self.type_id = type_id
+        self.func = func
 
 class NumberNode(AtomicNode):
     pass
@@ -81,8 +119,10 @@ class BooleanNode(AtomicNode):
 class VariableNode(AtomicNode):
     pass
 
-
-
+class InstantiateTypeNode(ExpressionNode):
+    def __init__(self, idx, args) -> None:
+        self.id = idx
+        self.args = args
 
 
 # Operations
@@ -147,14 +187,16 @@ class WhileLoopNode(ExpressionNode):
         self.body = body
 
 class ForLoopNode(ExpressionNode):
-    def __init__(self, ) -> None:
-        super().__init__()
+    def __init__(self, var, expr, body) -> None:
+        self.var = var
+        self.expr = expr
+        self.body = body
 
 class IfNode(ExpressionNode):
-    def __init__(self, if_expr, then_expr, elif_expr, else_expr) -> None:
+    def __init__(self, if_expr, then_expr, else_expr) -> None:
         self.if_expr = if_expr
         self.then_expr = then_expr
-        self.elif_expr = elif_expr
+        # self.elif_expr = elif_expr
         self.else_expr = else_expr
 
 
@@ -162,41 +204,16 @@ class IfNode(ExpressionNode):
 
 
 
-class TypeDeclarationNode(StatementNode):
-    def __init__(self, idx, args, attrs, funcs, inherit=None) -> None:
-        self.id = idx
-        self.args = args
-        self.attrs = attrs
-        self.funcs = funcs
-        self.inherit = inherit
 
-class AttrDeclarationNode(StatementNode):
-    def __init__(self, idx, typex, expr=None) -> None:
+
+class ParamNode(StatementNode):
+    def __init__(self, idx, typex=None) -> None:
         self.id = idx
         self.type = typex
+
+class ParenthesisExpr(ExpressionNode):
+    def __init__(self, expr) -> None:
         self.expr = expr
-
-# class ParamNode(StatementNode):
-#     def __init__(self, idx, typex) -> None:
-#         self.id = idx
-#         self.type = typex
-
-# Expressions Nodes
-# class SimpleExpressionNode(ExpressionNode):
-#     def __init__(self, expr) -> None:
-#         self.expr = expr
-
-# list of variables declarations
-# class VarsDeclarationsListNode(ExpressionNode):
-#     def __init__(self, decls, body) -> None:
-#         self.decls = decls
-#         self.body = body
-
-# simple variable declaration
-
-# class ParenthesisExpr(ExpressionNode):
-#     def __init__(self, expr) -> None:
-#         self.expr = expr
 
 
 
