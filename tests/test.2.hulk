@@ -1,10 +1,15 @@
 let o:Point =new Point(8,8) in {
-    if (o.x < o.y)  45;
+    if (o.x < o.y)  45
+    elif (o.x == o.y) 50
+    else 60;
     while (o.length() < 5){
         o := o+1;
         for (a in iterable){
             if ((a<o) | ((o.x^8)>=5 & o.length()+2 <= 3 ) & !a ==40 ){
             o:=0;
+            }
+            else  { 
+                o:=0;
             };
             o := a - o;
         };
