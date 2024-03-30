@@ -273,17 +273,17 @@ function_inline_declaration %= func_arrow + expression +semicolon, lambda h,s: s
 function_inline_declaration %= type_anotation + func_arrow + expression + semicolon, lambda h,s: s[3] # TODO: this has type
 
 #conditional  <conditional> -> <inline-conditional> | <full-conditional>
-conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + expression + else_statement, lambda h,s: IfNode(s[3], s[5], s[6])
-conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + scope + else_statement, lambda h,s: IfNode(s[3], s[5], s[6])
+conditional %= if_ + inline_conditional,lambda h,s : s[1]
+conditional %= if_ + full_conditional, lambda h,s :s[1]
 
 #inline conditional <inline-conditional> -> if (<conditional-expression>) expression <else-staement>
-
-
+inline_conditional %=  open_curly_braket + conditional_expression + closed_curly_braket + expression + else_statement, lambda h,s: IfNode(s[2], s[4], s[5])
+full_conditional %= open_curly_braket + conditional_expression + closed_curly_braket + scope + else_statement, lambda h,s: IfNode(s[2], s[4], s[5])
 #full conditional <full-conditional> -> if (<conditional>) { <instruction> } <else-statement>
 
-#else statement <else-statement> -> <inline-else> | <full-else>
-else_statement %= elif_ + open_curly_braket + conditional_expression + closed_curly_braket + expression + else_statement, lambda h,s: [s[2]] + s[3]
-else_statement %= elif_ + open_curly_braket + conditional_expression + closed_curly_braket + scope + else_statement, lambda h,s: [s[2]] + s[3]
+else_statement %= elif_ + inline_conditional ,lambda h,s:s[1]
+else_statement %= elif_ +full_conditional,lambda h,s:s[1]
+
 else_statement %= else_ + inline_else, lambda h,s: s[2]
 else_statement %= else_ + full_else, lambda h,s: s[2]
 

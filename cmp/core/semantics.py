@@ -89,8 +89,6 @@ class SemanticCheckerVisitor(object):
 
     @visitor.when(VariableNode)
     def visit(self, node,context ,scope):
-
-
         if  isinstance(node.id,str):
             if not scope.is_var_defined(node.id):
                 print(type(node),type(node.id),node.id)
@@ -124,9 +122,12 @@ class SemanticCheckerVisitor(object):
     def visit(self,node,context,scope):
         inner_scope = scope.create_child_scope()
         inner_scope.define_variable('self')
+
         context.create_type(node.id)
         if node.inherit :
             self.visit(node.inherit,context,inner_scope)
+
+
         for feature in node.features:
             self.visit(feature,context,inner_scope)
         
@@ -137,16 +138,21 @@ class SemanticCheckerVisitor(object):
                 self.errors.append(e.message)
 
         for method in inner_scope.local_funcs:
-            print(method.name)
             try:
                 context.get_type(node.id).define_method(method.name,'Any','Any','Any')
             except e:
                 self.errors.append(e.message)
+    @visitor.when(CallTypeAttr)
+    def visit(self,node,context,scope):
+              self.visit(node.attr,context,scope)
            
     @visitor.when(TypeInheritNode)
     def visit(self,node,context,scope):
-        context.get_type(node.id)
-        pass
+        try:
+            scope.define_function('base',node.args)
+            context.get_type(node.id)
+        except:
+            self.errors.append(f"cannot inherit from unexisting {node.id} type")
 
     @visitor.when(AttrDeclarationNode)
     def visit(self,node,context,scope):
@@ -164,7 +170,12 @@ class SemanticCheckerVisitor(object):
     
     @visitor.when(InstantiateTypeNode)
     def visit(self,node,context,scope):
-        context.get_type(node.id)
+        try:
+            context.get_type(node.id)
+            for arg in node.args:
+                self.visit(arg,context,scope)
+        except:
+            self.errors.append(f'type {node.id} not defined')
 
     
     @visitor.when(VarsDeclarationsListNode)
@@ -173,8 +184,11 @@ class SemanticCheckerVisitor(object):
 
     @visitor.when(VarDeclarationNode)
     def visit(self,node,context,scope):
-        if scope.is_var_defined(node.id):
-            self.errors.append(f'variable {node.id} already defined')
+        if isinstance(node.id,str):
+            if scope.is_var_defined(node.id):
+                self.errors.append(f'variable {node.id} already defined')
+        else:
+            print(node.type,node.attr)
         self.visit(node.expr,context,scope.create_child_scope())
 
     @visitor.when(VarAssignation)
@@ -209,5 +223,24 @@ class SemanticCheckerVisitor(object):
    
     @visitor.when(VecInstNode)
     def visit(self,node,context,scope):
-        if not scope.is_var_defined(node.var):
-            self.errors.append(f'variable{node.var} not defined')
+        self.visit(node.var,context,scope)
+        self.visit(node.index,context,scope)
+
+    @visitor.when(ProtocolNode)
+    def visit(self,node,context,scope):
+        inner_scope = scope.create_child_scope()
+        try:
+         context.create_type(node.id)
+        except:
+            self.errors.append(f'invalid re declaration of {node.id} type')
+        if node.extends is not None:
+            self.visit(node.extends)
+        for method in node.methods:
+            self.visit(method,context,inner_scope)
+        for method in inner_scope.local_funcs:
+            try:
+                context.get_type(node.id).define_method(method.name,'Any','Any','Any')
+            except e:
+                self.errors.append(e.message)
+        
+           
