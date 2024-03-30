@@ -282,8 +282,8 @@ conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_b
 #full conditional <full-conditional> -> if (<conditional>) { <instruction> } <else-statement>
 
 #else statement <else-statement> -> <inline-else> | <full-else>
-else_statement %= elif_ + expression + else_statement, lambda h,s: [s[2]] + s[3]
-else_statement %= elif_ + scope + else_statement, lambda h,s: [s[2]] + s[3]
+else_statement %= elif_ + open_curly_braket + conditional_expression + closed_curly_braket + expression + else_statement, lambda h,s: [s[2]] + s[3]
+else_statement %= elif_ + open_curly_braket + conditional_expression + closed_curly_braket + scope + else_statement, lambda h,s: [s[2]] + s[3]
 else_statement %= else_ + inline_else, lambda h,s: s[2]
 else_statement %= else_ + full_else, lambda h,s: s[2]
 
