@@ -9,7 +9,7 @@ def parse(tokens: list[Token]):
     print('>>> Parsing...')
 
     if parser == None:
-        parse = LR1Parser(G,verbose=True)
+        parse = LR1Parser(G,verbose=False)
     result = parse(tokens, get_shift_reduce=True)
 
     right_parse, operations = result

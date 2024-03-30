@@ -1,9 +1,22 @@
 class Node:
+    def __str__(self):
+        return str(type(Node))
     pass
+
+class TypeAnotationNode(Node):
+    def __init__(self,type):
+        self.type = type
 
 class ProgramNode(Node):
     def __init__(self, statements) -> None:
         self.statements = statements
+    def __str__(self):
+        code =''
+        for staement in self.statements:
+            code += str(staement)
+            print(staement)
+        return code
+        
         
 class StatementNode(Node):
     pass
@@ -19,22 +32,31 @@ class VarsDeclarationsListNode(StatementNode):
     def __init__(self, declarations, body) -> None:
         self.declarations = declarations
         self.body = body
+    def __str__(self):
+            return str(self.declarations) +' in '+str(self.body)
 
 class VarDeclarationNode(StatementNode):
     def __init__(self, idx, expr) -> None:
         self.id = idx
         self.expr = expr
+    def __str__(self):
+            return'let '+str(self.id)+' = '+str(self.expr)
+
 
 class VarAssignation(StatementNode):
     def __init__(self, idx, expr) -> None:
         self.id = idx
         self.expr = expr
+    def __str__(self):
+            return str(self.id) +' := '+str(self.expr)
 
 class FuncFullDeclarationNode(StatementNode):
     def __init__(self, idx, params, body) -> None:
         self.id = idx
         self.params = params
         self.body = body
+    def __str__(self):
+            return 'function '+ str(self.id) +'( '+str(self.params)+')'+str(self.body)
     
 class FuncInlineDeclarationNode(StatementNode):
     def __init__(self, idx, params, body) -> None:
@@ -117,6 +139,9 @@ class BooleanNode(AtomicNode):
     pass
 
 class VariableNode(AtomicNode):
+    def __init__(self,id,type='Any'):
+      self.id=id
+      self.type =type
     pass
 
 class InstantiateTypeNode(ExpressionNode):
