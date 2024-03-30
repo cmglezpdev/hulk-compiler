@@ -71,6 +71,7 @@ vector = G.NonTerminal('<vector>')
 vector_decl = G.NonTerminal('<vector-decl>')
 generation_pattern = G.NonTerminal('<generation-pattern>')
 function_declaration_id = G.NonTerminal('<func-decl-id>')
+inherits_type = G.NonTerminal('<inherits-type>')
 
 #terminals
 semicolon = G.Terminal(';')
@@ -320,14 +321,15 @@ boolean_value %= false, lambda h,s: BooleanNode(s[1])
 
 #type declaration <type-declaration> -> <type-declaration> -> type + <constructor> + <decl-body> | type<constructor>inherits <constructor><decl-body>
 type_declaration %= type + ID + constructor + decl_body, lambda h,s: TypeDeclarationNode(s[2], s[3], s[4])
-# type_declaration %= type + ID + constructor +inherits+ constructor + decl_body #TODO: this work, but i don't know attribute it
+type_declaration %= type + ID + constructor + inherits_type + decl_body, lambda h,s: TypeDeclarationNode(s[2], s[3], s[5], s[4])
 type_declaration %= type + ID + constructor + decl_body + semicolon, lambda h,s: TypeDeclarationNode(s[2], s[3], [])
-# type_declaration %= type + ID + constructor +inherits+ constructor + decl_body + semicolon #TODO: this work, but i don't know attribute it
+type_declaration %= type + ID + constructor + inherits_type + decl_body + semicolon, lambda h,s: TypeDeclarationNode(s[2], s[3], s[5], s[4])
 #constructor <constructor> -> ID | ID()
 constructor %= open_curly_braket + param_list + closed_curly_braket, lambda h,s: s[2]
 constructor %= open_curly_braket + closed_curly_braket, lambda h,s: []
 constructor %= G.Epsilon, lambda h,s: []
 
+inherits_type %= inherits + ID + constructor, lambda h,s: TypeInheritNode(s[2], s[3])
 
 #declaration body <decl-body> -> {<decl-list>} | {}
 decl_body %= open_bracket+closed_bracket, lambda h,s: []
