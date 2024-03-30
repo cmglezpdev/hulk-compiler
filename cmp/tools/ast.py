@@ -1,7 +1,6 @@
 class Node:
     def __str__(self):
         return str(type(Node))
-    pass
 
 class TypeAnotationNode(Node):
     def __init__(self,type):
