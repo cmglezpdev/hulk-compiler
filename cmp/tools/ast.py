@@ -51,6 +51,11 @@ class TypeDeclarationNode(StatementNode):
         # self.funcs = funcs
         self.inherit = inherit
 
+class TypeInheritNode(StatementNode):
+    def __init__(self, idx, args) -> None:
+        self.id = idx
+        self.args = args
+
 class AttrDeclarationNode(StatementNode):
     def __init__(self, idx, typex, expr=None) -> None:
         self.id = idx
