@@ -207,9 +207,9 @@ class SemanticCheckerVisitor(object):
 
     @visitor.when(IfNode)
     def visit(self,node,context,scope):
-        self.visit(node.if_expr,context,scope)
-        self.visit(node.then_expr,context,scope)
-        self.visit(node.elsse_expr,context,scope)
+        self.visit(node.if_expr,context,scope.create_child_scope())
+        self.visit(node.then_expr,context,scope,scope.create_child_scope())
+        self.visit(node.else_expr,context,scope,scope.create_child_scope())
 
     @visitor.when(WhileLoopNode)
     def visit(self,node,context,scope):

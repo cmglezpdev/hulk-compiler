@@ -252,7 +252,7 @@ class ForLoopNode(ExpressionNode):
         return "<ForLoopNode>"
 
 class IfNode(ExpressionNode):
-    def __init__(self, if_expr, then_expr,else_expr) -> None:
+    def __init__(self, if_expr, then_expr, else_expr) -> None:
         self.if_expr = if_expr
         self.then_expr = then_expr
         self.else_expr = else_expr

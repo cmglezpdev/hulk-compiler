@@ -281,7 +281,6 @@ inline_conditional %=  open_curly_braket + conditional_expression + closed_curly
 full_conditional %= open_curly_braket + conditional_expression + closed_curly_braket + scope + else_statement, lambda h,s: IfNode(s[2], s[4], s[5])
 #full conditional <full-conditional> -> if (<conditional>) { <instruction> } <else-statement>
 
-#else statement <else-statement> -> <inline-else> | <full-else>
 else_statement %= elif_ + inline_conditional ,lambda h,s:s[1]
 else_statement %= elif_ +full_conditional,lambda h,s:s[1]
 
