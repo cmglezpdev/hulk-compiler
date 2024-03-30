@@ -108,6 +108,7 @@ def build_lexer():
     table.append((in_,'in'))
     table.append((function,'function'))
     table.append((if_,'if'))
+    table.append((elif_,'elif'))
     table.append((else_,'else'))
     table.append((true,'true'))
     table.append((false,'false'))
