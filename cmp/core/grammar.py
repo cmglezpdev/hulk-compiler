@@ -326,6 +326,7 @@ type_declaration %= type + ID + constructor + decl_body + semicolon, lambda h,s:
 #constructor <constructor> -> ID | ID()
 constructor %= open_curly_braket + param_list + closed_curly_braket, lambda h,s: s[2]
 constructor %= open_curly_braket + closed_curly_braket, lambda h,s: []
+constructor %= G.Epsilon, lambda h,s: []
 
 
 #declaration body <decl-body> -> {<decl-list>} | {}
