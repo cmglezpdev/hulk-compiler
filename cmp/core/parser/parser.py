@@ -16,3 +16,6 @@ def parse(tokens: list[Token]):
     return right_parse
     ast = evaluate_reverse_parse(right_parse, operations, tokens)
     return ast
+
+def build_parser():
+    return LR1Parser(G, verbose=True)

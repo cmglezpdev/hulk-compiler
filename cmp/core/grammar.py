@@ -194,9 +194,8 @@ fully_typed_param %= ID + type_anotation
 # #type anotation <type-anotation> -> : Number
 type_anotation %= type_asignator + ID
 
-#scopes <scope> -> { <inst-list> } | {}
+#scopes <scope> -> { <inst-list> }
 scope%=open_bracket+instr_list+closed_bracket
-scope%=open_bracket+closed_bracket
 
 #expressions <expresion> -> <aritmetic-op> | <type-instanciation> | <string-operation>
 expression %= aritmetic_operation
@@ -256,6 +255,8 @@ var_asignation %= var_use + asignation + expression
 
 function_declaration %= function_declaration_id+open_curly_braket +id_list+ closed_curly_braket + function_full_declaration
 function_declaration %= function_declaration_id+open_curly_braket + closed_curly_braket + function_full_declaration
+function_declaration %= function_declaration_id+open_curly_braket +id_list+ closed_curly_braket + function_full_declaration + semicolon
+function_declaration %= function_declaration_id+open_curly_braket + closed_curly_braket + function_full_declaration + semicolon
 
 function_declaration %= function_declaration_id+open_curly_braket +id_list+ closed_curly_braket + function_inline_declaration
 function_declaration %= function_declaration_id+open_curly_braket + closed_curly_braket + function_inline_declaration
@@ -317,6 +318,8 @@ boolean_value %= false
 #type declaration <type-declaration> -> <type-declaration> -> type + <constructor> + <decl-body> | type<constructor>inherits <constructor><decl-body>
 type_declaration %= type + constructor + decl_body
 type_declaration %= type + constructor +inherits+ constructor + decl_body
+type_declaration %= type + constructor + decl_body + semicolon
+type_declaration %= type + constructor +inherits+ constructor + decl_body + semicolon
 #constructor <constructor> -> ID | ID()
 constructor %= ID
 constructor %= function_call
@@ -381,6 +384,7 @@ flux_control %= for_loop
 #protocol declaration <protocol-declaration> -> protocol <protocol-definer> <protocol-body>
 
 protocol_declaration  %= protocol + protocol_definer + protocol_body
+protocol_declaration  %= protocol + protocol_definer + protocol_body + semicolon
 
 #protocol definer <protocol-definer> -> ID | ID extends
 

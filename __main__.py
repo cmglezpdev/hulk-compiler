@@ -1,7 +1,14 @@
 from cmp.core.lexer.scanner import build_lexer, tokenizer
-from cmp.core.parser.parser import parse
+from cmp.core.parser.parser import parse, build_parser
 
 tests = [
+    #"""
+    # let a = 6, b = a * 7 in print(b);
+    # let a = 5, b = 10, c = 20 in {
+    # print(a+b);
+    # print(b*c);
+    # print(c/a);
+    # }
     """
     function tan(x) => sin(x) / cos(x) ;
     function cot(x) => 1 / tan(x);
@@ -13,6 +20,12 @@ tests = [
     print(x * y);
     print(x / y);
 }
+     function operate(x, y) {
+    print(x + y);
+    print(x - y);
+    print(x * y);
+    print(x / y);
+};
     type Point {
     x = 0;
     y = 0;
@@ -87,11 +100,18 @@ type Knight inherits Person {
 }
     """,
     """
+type Knight inherits Person {
+    name() => "Sir" @@ base();
+};
+    """,
+    """
 type Person(firstname, lastname) {
     firstname = firstname;
     lastname = lastname;
 
-    name() => self.firstname @@ self.lastname;
+    name() {
+        self.firstname @@ self.lastname;
+        };
 }
     """,
     """
@@ -103,6 +123,9 @@ type PolarPoint(phi, rho) inherits Point(rho * sin(phi), rho * cos(phi)) {
 protocol Hashable {
     hash(): Number;
 }
+protocol Hashable {
+    hash(): Number;
+};
 """,
 """
 protocol Equatable extends Hashable {
@@ -131,14 +154,15 @@ let squares = [x^(arr[4]^(sin(x)-9)) || x in range(1,10)] in print(x);
 
 if __name__ == '__main__':
     lexer = build_lexer()
-    
+    parser = build_parser()
+
     for t in tests:
         print(f'Parsing:\n{t}\n\n')
         
         code_tokens = tokenizer(t, lexer=lexer)
         print([t.lex for t in code_tokens])
         print([t.token_type for t in code_tokens])
-        right_most_parse = parse(code_tokens)
+        right_most_parse, operations = parser(code_tokens, get_shift_reduce=True)
         print(right_most_parse)
         print(f'Code {t} parsed successfully!!\n\n\n')
         print('------------------------------------------')
