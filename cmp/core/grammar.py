@@ -101,6 +101,7 @@ string_operator_space = G.Terminal('@@')
 function = G.Terminal('function')
 func_arrow = G.Terminal('=>')
 if_ = G.Terminal('if')
+elif_ = G.Terminal('elif')
 else_ = G.Terminal('else')
 and_ = G.Terminal('&')
 or_ = G.Terminal('|')
@@ -272,18 +273,17 @@ function_inline_declaration %= func_arrow + expression +semicolon, lambda h,s: s
 function_inline_declaration %= type_anotation + func_arrow + expression + semicolon, lambda h,s: s[3] # TODO: this has type
 
 #conditional  <conditional> -> <inline-conditional> | <full-conditional>
-conditional %= inline_conditional, lambda h,s: s[1]
-conditional %= full_conditional, lambda h,s: s[1]
+conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + expression + else_statement, lambda h,s: IfNode(s[3], s[5], s[6][0], s[6][1])
+conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + scope + else_statement, lambda h,s: IfNode(s[3], s[5], s[6][0], s[6][1])
 
-#inline conditional <inline-conditional> -> if (<conditional-expression>) expression <else-staement> | if (<conditional-expression>) expression
-inline_conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + expression + else_statement, lambda h,s: IfNode(s[3], s[5], s[6])
-inline_conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + expression, lambda h,s: IfNode(s[3], s[5], None)
+#inline conditional <inline-conditional> -> if (<conditional-expression>) expression <else-staement>
 
-#full conditional <full-conditional> -> if (<conditional>) { <instruction> } <else-statement> | if (<conditional>) { <instruction> } 
-full_conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + scope, lambda h,s: IfNode(s[3], s[5], None)
-full_conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + scope+ else_statement, lambda h,s: IfNode(s[3], s[5], s[6])
+
+#full conditional <full-conditional> -> if (<conditional>) { <instruction> } <else-statement>
 
 #else statement <else-statement> -> <inline-else> | <full-else>
+else_statement %= elif_ + expression + else_statement, lambda h,s: [s[2]] + s[3]
+else_statement %= elif_ + scope + else_statement, lambda h,s: [s[2]] + s[3]
 else_statement %= else_ + inline_else, lambda h,s: s[2]
 else_statement %= else_ + full_else, lambda h,s: s[2]
 
