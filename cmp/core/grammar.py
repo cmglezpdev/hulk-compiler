@@ -273,8 +273,8 @@ function_inline_declaration %= func_arrow + expression +semicolon, lambda h,s: s
 function_inline_declaration %= type_anotation + func_arrow + expression + semicolon, lambda h,s: s[3] # TODO: this has type
 
 #conditional  <conditional> -> <inline-conditional> | <full-conditional>
-conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + expression + else_statement, lambda h,s: IfNode(s[3], s[5], s[6][0], s[6][1])
-conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + scope + else_statement, lambda h,s: IfNode(s[3], s[5], s[6][0], s[6][1])
+conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + expression + else_statement, lambda h,s: IfNode(s[3], s[5], s[6])
+conditional %= if_ + open_curly_braket + conditional_expression + closed_curly_braket + scope + else_statement, lambda h,s: IfNode(s[3], s[5], s[6])
 
 #inline conditional <inline-conditional> -> if (<conditional-expression>) expression <else-staement>
 
