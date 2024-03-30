@@ -176,39 +176,99 @@ class Context:
         return str(self)
 
 class VariableInfo:
-    def __init__(self, name, vtype):
+    def __init__(self, name, vtype="any"):
         self.name = name
         self.type = vtype
+class FunctionInfo:
+    def __init__(self,fname,params):
+         self.name=fname
+         self.params = params
+
+class AtributeInfo:
+    def __init__(self,aname,tname):
+        self.name = aname
+        self.tname = tname
 
 class Scope:
     def __init__(self, parent=None):
-        self.locals = []
+        self.local_vars = []
+        self.local_funcs = []
         self.parent = parent
         self.children = []
-        self.index = 0 if parent is None else len(parent)
+        self.var_index_at_parent = 0 if parent is None else len(parent.local_vars)
+        self.func_index_at_parent = 0 if parent is None else len(parent.local_funcs)
 
-    def __len__(self):
-        return len(self.locals)
+        #inicializando valores consstantes del lenguaje
 
-    def create_child(self):
-        child = Scope(self)
-        self.children.append(child)
-        return child
+        
+    def create_child_scope(self):
+        child_scope = Scope(self)
+        self.children.append(child_scope)
+        return child_scope
 
-    def define_variable(self, vname, vtype):
-        info = VariableInfo(vname, vtype)
-        self.locals.append(info)
-        return info
+    def define_variable(self, vname):
+        self.local_vars.append(VariableInfo(vname)) 
+        return True
+    
+    def define_function(self, fname, params):
+        self.local_funcs.append(FunctionInfo(fname,params))
+        return True
 
-    def find_variable(self, vname, index=None):
-        locals = self.locals if index is None else itt.islice(self.locals, index)
-        try:
-            return next(x for x in locals if x.name == vname)
-        except StopIteration:
-            return self.parent.find_variable(vname, self.index) if self.parent is None else None
+    def is_var_defined(self, vname):
+        print('verificando',vname)
+        is_defined_local = False
 
-    def is_defined(self, vname):
-        return self.find_variable(vname) is not None
+        for var in self.local_vars:
+            if var.name ==vname:
+                is_defined_local = True
+                break
+        if self.parent is not None:
+            is_defined_local = is_defined_local or self.parent.is_var_defined(vname)
 
-    def is_local(self, vname):
-        return any(True for x in self.locals if x.name == vname)
+        return is_defined_local
+    
+    
+    def is_func_defined(self, fname, n):
+        is_defined_local = False
+        for func in self.local_funcs:
+            if func.name == fname and func.params ==n :
+                is_defined_local=True
+                break
+        
+        if self.parent is not None:
+            is_defined_local = is_defined_local or self.parent.is_func_defined(fname,n)
+        return is_defined_local
+
+
+    def is_local_var(self, vname):
+        return self.get_local_variable_info(vname) is not None
+    
+    def is_local_func(self, fname, n):
+        return self.get_local_function_info(fname, n) is not None
+
+    def get_local_variable_info(self, vname):
+        local_filtered = list(filter(lambda v:v.name==vname,self.local_vars))
+
+        # if self.parent is not None and not len(local_filtered)>0:
+        #     local_filtered = [self.parent.get_local_variable_info(vname)]
+        return local_filtered[0]
+    
+    def get_local_function_info(self, fname, n):
+        if n ==0:
+            return None
+        local_filtered = list(filter(lambda v:v.name==fname,self.local_funcs))
+
+        # if self.parent is not None and not len(local_filtered)>0:
+        #     local_filtered = [self.parent.get_local_function_info(fname,n-1)]
+        return local_filtered[0]
+    def set_variable_type(self,vname,vtype):
+        founded = False
+        for var in self.local_vars:
+            if var.name == vname:
+                var.vtype = vtype
+                founded = True
+                break
+        if not founded:
+            for child_scope in self.children:
+                if child_scope.set_variable_type(vname,vtype):
+                    break

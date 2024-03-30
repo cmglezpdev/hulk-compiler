@@ -137,7 +137,7 @@ close_square_braket = G.Terminal(']')
 program %= program_level_decl_list, lambda h,s: ProgramNode(s[1])
 # program %= G.Epsilon
 
-program_level_decl_list%= instr_wrapper, lambda h,s: s[1]
+program_level_decl_list%= instr_wrapper, lambda h,s: [s[1]]
 program_level_decl_list %= program_level_decl + program_level_decl_list, lambda h,s: [s[1]] + s[2]
 program_level_decl_list %= G.Epsilon, lambda h,s: []
 
@@ -193,7 +193,7 @@ identifier %= fully_typed_param, lambda h,s: s[1]
 fully_typed_param %= ID + type_anotation, lambda h,s: s[1] #TODO: this has type
 
 # #type anotation <type-anotation> -> : Number
-type_anotation %= type_asignator + ID, lambda h,s: s[1] #TODO: this has type
+type_anotation %= type_asignator + ID, lambda h,s: TypeAnotationNode(s[2]) #TODO: this has type
 
 #scopes <scope> -> { <inst-list> }
 scope%=open_bracket+instr_list+closed_bracket, lambda h,s: BlockNode(s[2])
@@ -256,7 +256,7 @@ var_asignation %= var_use + asignation + expression, lambda h,s: VarAssignation(
 
 function_declaration %= function_declaration_id+open_curly_braket +id_list+ closed_curly_braket + function_full_declaration, lambda h,s: FuncFullDeclarationNode(s[1], s[3], s[5])
 function_declaration %= function_declaration_id+open_curly_braket + closed_curly_braket + function_full_declaration, lambda h,s: FuncFullDeclarationNode(s[1], [], s[4])
-function_declaration %= function_declaration_id+open_curly_braket +id_list+ closed_curly_braket + function_full_declaration + semicolon, lambda h,s: FuncFullDeclarationNode(s[1], s[4], s[5])
+function_declaration %= function_declaration_id+open_curly_braket +id_list+ closed_curly_braket + function_full_declaration + semicolon, lambda h,s: FuncFullDeclarationNode(s[1], s[3], s[5])
 function_declaration %= function_declaration_id+open_curly_braket + closed_curly_braket + function_full_declaration + semicolon, lambda h,s: FuncFullDeclarationNode(s[1], [], s[4])
 
 function_declaration %= function_declaration_id+open_curly_braket +id_list+ closed_curly_braket + function_inline_declaration, lambda h,s: FuncInlineDeclarationNode(s[1], s[3], s[5])
