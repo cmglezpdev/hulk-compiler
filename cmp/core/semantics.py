@@ -94,7 +94,7 @@ class SemanticCheckerVisitor(object):
                 print(type(node),type(node.id),node.id)
                 self.errors.append(f'variable not defined {node.id}')
         else:
-            self.visit(node.id)
+            self.visit(node.id,context,scope)
 
 
 
