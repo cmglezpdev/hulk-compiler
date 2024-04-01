@@ -1,3 +1,5 @@
+from cmp.core.semantics import SemanticCheckerVisitor
+from cmp.core.type_check import TypeCheckingVisitor
 from cmp.tools.regex import EPSILON
 from cmp.utils import Token
 from .lexer import Lexer
@@ -147,4 +149,27 @@ def tokenizer(code: str, lexer: Lexer = None):
         return tokens
 
 
+def semantic_checker(ast, semantic_checker = None):
+    if semantic_checker is None:
+        semantic_checker = SemanticCheckerVisitor()
+        
+    print('>>> Semantic Checking...')
+    try:
+        serrors = semantic_checker.visit(ast)
+        return serrors
+    except Exception as e:
+        print(e)
+        
+def type_checker(ast, type_checker = None):
+    if type_checker is None:
+        type_checker = TypeCheckingVisitor()
+        
+    print('>>> Type Checking...')
+    try:
+        terrors = type_checker.visit(ast)
+        return terrors
+    except Exception as e:
+        print(e)
+        
 
+        

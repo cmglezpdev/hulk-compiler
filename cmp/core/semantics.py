@@ -30,7 +30,7 @@ class SemanticCheckerVisitor(object):
         scope.define_function('pow',2)
 
         context = Context()
-        print(len(node.statements))
+        # print(len(node.statements))
         for statement in node.statements:
                 self.visit(statement,context,scope)
         return self.errors
@@ -91,7 +91,7 @@ class SemanticCheckerVisitor(object):
     def visit(self, node,context ,scope):
         if  isinstance(node.id,str):
             if not scope.is_var_defined(node.id):
-                print(type(node),type(node.id),node.id)
+                # print(type(node),type(node.id),node.id)
                 self.errors.append(f'variable not defined {node.id}')
         else:
             self.visit(node.id,context,scope)
@@ -134,13 +134,13 @@ class SemanticCheckerVisitor(object):
         for attr in inner_scope.local_vars:
             try:
                 context.get_type(node.id).define_attribute(attr.name,'Any')
-            except e:
+            except Exception as e:
                 self.errors.append(e.message)
 
         for method in inner_scope.local_funcs:
             try:
                 context.get_type(node.id).define_method(method.name,'Any','Any','Any')
-            except e:
+            except Exception as e:
                 self.errors.append(e.message)
     @visitor.when(CallTypeAttr)
     def visit(self,node,context,scope):
@@ -187,8 +187,8 @@ class SemanticCheckerVisitor(object):
         if isinstance(node.id,str):
             if scope.is_var_defined(node.id):
                 self.errors.append(f'variable {node.id} already defined')
-        else:
-            print(node.type,node.attr)
+        # else:
+        #     print(node.type,node.attr)
         self.visit(node.expr,context,scope.create_child_scope())
 
     @visitor.when(VarAssignation)
@@ -240,7 +240,7 @@ class SemanticCheckerVisitor(object):
         for method in inner_scope.local_funcs:
             try:
                 context.get_type(node.id).define_method(method.name,'Any','Any','Any')
-            except e:
+            except Exception as e:
                 self.errors.append(e.message)
         
            

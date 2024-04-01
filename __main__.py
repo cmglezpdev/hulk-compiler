@@ -1,5 +1,6 @@
 import os
-from cmp.core.lexer.scanner import build_lexer, tokenizer
+import sys
+from cmp.core.lexer.scanner import build_lexer, semantic_checker, tokenizer
 from cmp.core.parser.parser import parse, build_parser
 from cmp.core.semantics  import SemanticCheckerVisitor
 from cmp.core.type_check import TypeCheckingVisitor
@@ -21,28 +22,22 @@ if __name__ == '__main__':
     tests = load_tests()
     lexer = build_lexer()
     parser = build_parser()
-    semantic_checker = SemanticCheckerVisitor()
+    sem_checker = SemanticCheckerVisitor()
     type_checker = TypeCheckingVisitor()
 
     for file, content in tests:
         print(f'Parsing code: {file}\n\n')
         
         code_tokens = tokenizer(content, lexer=lexer)
-        print([t.lex for t in code_tokens])
-        print([t.token_type for t in code_tokens])
-        # right_most_parse, operations = parser(code_tokens, get_shift_reduce=True)
-        # print(right_most_parse)
         ast = parse(code_tokens)
-        print(f'Code parsed successfully!!\n\n\n')
-        print('------------------------------------------')
-        print(ast) 
-        print('----semantics checking---')
-        serrors = semantic_checker.visit(ast)
-        if len(serrors)==0 :
+        serrors = semantic_checker(ast, sem_checker)
+        
+        if len(serrors) == 0:
             terrors = type_checker.visit(ast)
             print(terrors)
+
         print(serrors)
-        semantic_checker.errors =[]
+        sem_checker.errors =[]
 
 
 

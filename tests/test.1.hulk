@@ -1,6 +1,6 @@
- function tan(x) => sin(x) / cos(x);
- function cot(x) => 1 / tan(x);
- function tan(x) => sin(x) / cos(x);
+ function tan(x: Number) => sin(x) / cos(x);
+ function cot(x: Number) => 1 / tan(x);
+ function tan(x: Number) => sin(x) / cos(x);
   
 function operate(x, y) {
     print(x + y);
