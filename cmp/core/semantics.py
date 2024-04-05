@@ -19,6 +19,7 @@ class SemanticCheckerVisitor(object):
     
     @visitor.when(ProgramNode)
     def visit(self, node, context=None ,scope=None):
+        self.errors=[]
         scope = Scope()
 
         scope.define_variable('pi')
@@ -121,9 +122,15 @@ class SemanticCheckerVisitor(object):
         inner_scope = scope.create_child_scope()
         inner_scope.define_variable('self')
 
-        context.create_type(node.id)
+        type = context.create_type(node.id)
         if node.inherit :
             self.visit(node.inherit,context,inner_scope)
+            try:
+                context.get_type(node.inherit.id)
+                type.set_parent()
+            except Exception as e:
+               pass
+
 
 
         for feature in node.features:
@@ -149,7 +156,7 @@ class SemanticCheckerVisitor(object):
         try:
             scope.define_function('base',node.args)
             context.get_type(node.id)
-        except:
+        except Exception as e:
             self.errors.append(f"cannot inherit from unexisting {node.id} type")
 
     @visitor.when(AttrDeclarationNode)

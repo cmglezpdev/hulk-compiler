@@ -2,8 +2,6 @@ from cmp.semantic import Context
 from cmp.tools.ast import *
 from cmp import visitor
 
-
-
 class TypeCheckingVisitor(object):
     def __init__(self):
         self.errors = []
@@ -14,6 +12,7 @@ class TypeCheckingVisitor(object):
     
     @visitor.when(ProgramNode)
     def visit(self, node, context=None):
+        self.errors=[]
         for statement in node.statements:
                 self.visit(statement,context)
         return self.errors
@@ -37,9 +36,14 @@ class TypeCheckingVisitor(object):
     def visit(self, node,context):
         self.visit(node.left,context)
         self.visit(node.right,context)
-
-        if node.left.type_of() != node.right.type_of():
-            self.errors.append(f'mismatch types between {str(node.left)} {str(node.right)}')
+        
+        global_cont = context.get_type('Global')
+        
+        type1 = context.get_type(node.left.type_of())
+        type2 = context.get_type(node.right.type_of())
+        
+        if not type1.conforms_to(type2):
+            self.errors.append(f'mismatch types between {str(node.left)} and {str(node.right)} ({type1.name} and {type2.name})')
 
     @visitor.when(BlockNode)
     def visit(self,node,context):
@@ -93,7 +97,6 @@ class TypeCheckingVisitor(object):
     def visit(self,node,context):
         if node.inherit :
             self.visit(node.inherit,context)
-        context.create_type(node.id)
         for feature in node.features:
             self.visit(feature,context)
         
@@ -101,9 +104,6 @@ class TypeCheckingVisitor(object):
     def visit(self,node,context):
          self.visit(node.attr,context)
            
-    @visitor.when(TypeInheritNode)
-    def visit(self,node,context):
-        context.create_type(node.id)
 
     @visitor.when(AttrDeclarationNode)
     def visit(self,node,context):
