@@ -179,7 +179,7 @@ var_inicialization_list %= var_initialization, lambda h,s: [s[1]]
 var_inicialization_list %= var_initialization + comma + var_inicialization_list, lambda h,s: [s[1]] + s[3]
 
 #var initialization <var-init> -> ID = <expression> | ID = <var-asign>
-var_initialization %= identifier + inicialization + expression, lambda h,s: lambda h,s: VarDeclarationNode(s[1], s[3])
+var_initialization %= identifier + inicialization + instr, lambda h,s: lambda h,s: VarDeclarationNode(s[1], s[3])
 # var_initialization %= identifier + inicialization  + var_asignation 
 
 # #id list <id-list> -> <identifier> | <identifier>, <id-list>
@@ -206,6 +206,7 @@ expression %= atom + string_operator + expression, lambda h,s: StringSimpleConca
 expression %= atom + string_operator_space + expression, lambda h,s: StringSpaceConcatNode(s[1], s[3])
 expression %= var_asignation, lambda h,s: s[1]
 #expression %= string_operation
+# expression %= instr,None
 
 #artimetic expresssion <aritmetic-expresion> -> <factor> + <aritmetic-expression> | <factor> - <aritmetic-expression> | <factor>
 
