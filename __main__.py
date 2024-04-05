@@ -65,7 +65,7 @@ if __name__ == '__main__':
         print(f'\n\n\nParsing code: {file}')
         
         code_tokens = tokenizer(content, lexer=lexer)
-        ast = parse(code_tokens)
+        ast = parse(code_tokens,parser=parser)
         
         context = type_collector(ast)
         serrors = semantic_checker(ast, sem_checker,context)
