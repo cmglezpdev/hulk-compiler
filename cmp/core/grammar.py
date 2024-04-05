@@ -163,7 +163,6 @@ instr %= flux_control, lambda h,s: s[1]
 # instr %= var_asignation
 instr %= expression, lambda h,s: s[1]
 instr %= var_dec, lambda h,s: s[1]
-
 #var declaration <var-dec> -> let <var-init-list> in <var-decl-expression> 
 var_dec %= let + var_inicialization_list+ in_ + var_decl_expression, lambda h,s: VarsDeclarationsListNode(s[2], s[4])
 

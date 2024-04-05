@@ -28,8 +28,6 @@ class SemanticCheckerVisitor(object):
         scope.define_function('cos',1)
         scope.define_function('tan',1)
         scope.define_function('pow',2)
-
-        context = Context()
         # print(len(node.statements))
         for statement in node.statements:
                 self.visit(statement,context,scope)
