@@ -222,6 +222,10 @@ def get_formatter():
         @visitor.when(ArgNode)
         def visit(self, node):
             return f'ARG {node.name}'
+        
+        @visitor.when(PrintNode)
+        def visit(self, node):
+            return f'PRINT {node.str_addr} '
 
         @visitor.when(ReturnNode)
         def visit(self, node):
