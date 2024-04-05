@@ -163,7 +163,6 @@ instr %= flux_control, lambda h,s: s[1]
 # instr %= var_asignation
 instr %= expression, lambda h,s: s[1]
 instr %= var_dec, lambda h,s: s[1]
-
 #var declaration <var-dec> -> let <var-init-list> in <var-decl-expression> 
 var_dec %= let + var_inicialization_list+ in_ + var_decl_expression, lambda h,s: VarsDeclarationsListNode(s[2], s[4])
 
@@ -179,8 +178,8 @@ var_inicialization_list %= var_initialization, lambda h,s: [s[1]]
 var_inicialization_list %= var_initialization + comma + var_inicialization_list, lambda h,s: [s[1]] + s[3]
 
 #var initialization <var-init> -> ID = <expression> | ID = <var-asign>
-var_initialization %= identifier + inicialization + expression, lambda h,s: lambda h,s: VarDeclarationNode(s[1], s[3])
-# var_initialization %= identifier + inicialization  + var_asignation 
+var_initialization %= identifier + inicialization + instr, lambda h,s: lambda h,s: VarDeclarationNode(s[1], s[3])
+# var_initialization %= identifier + inicialization  + open_curly_braket + instr + closed_curly_braket, lambda h,s: lambda h,s: VarDeclarationNode(s[1], s[4]) 
 
 # #id list <id-list> -> <identifier> | <identifier>, <id-list>
 id_list %= identifier, lambda h,s: [s[1]]
@@ -206,6 +205,7 @@ expression %= atom + string_operator + expression, lambda h,s: StringSimpleConca
 expression %= atom + string_operator_space + expression, lambda h,s: StringSpaceConcatNode(s[1], s[3])
 expression %= var_asignation, lambda h,s: s[1]
 #expression %= string_operation
+# expression %= instr,None
 
 #artimetic expresssion <aritmetic-expresion> -> <factor> + <aritmetic-expression> | <factor> - <aritmetic-expression> | <factor>
 
@@ -292,6 +292,7 @@ full_else %= scope, lambda h,s: s[1]
 
 #while instruction <while-loop> -> while (<condition-expression>) <scope>
 while_loop %= while_ + open_curly_braket + conditional_expression + closed_curly_braket + scope, lambda h,s: WhileLoopNode(s[3], s[5])
+while_loop %= while_ + open_curly_braket + conditional_expression + closed_curly_braket + expression, lambda h,s: WhileLoopNode(s[3], s[5])
 
 #for instruction <for-loop> -> for ( Id in <iterable-expression>) <scope> 
 for_loop %= for_ + open_curly_braket + identifier + in_ + expression + closed_curly_braket + scope, lambda h,s: ForLoopNode(s[3], s[5], s[7])

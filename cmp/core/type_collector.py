@@ -13,5 +13,51 @@ class TypeCollectorVisitor(object):
     def visit(self, node,context:Context):
         pass    
     
+    @visitor.when(ProgramNode)
+    def visit(self, node, context=None):
+        context = Context()
+        context.create_type('Number')
+        context.create_type('Bool')
+        context.create_type('String')
+        context.create_type('Any')
+        context.create_type('Void')
+        context.create_type('Vec')
+
+        context.create_type('Global')
         
-           
+        global_context = context.get_type('Global')
+        
+        
+        global_context.define_method('print','Object','Void')
+        global_context.define_method('sin','Number','Number')
+        global_context.define_method('cos','Number','Number')
+        global_context.define_method('tan','Number','Number')
+
+        global_context.define_attribute('pi','Number')
+        for statement in node.statements:
+                self.visit(statement,context)
+        return context
+    
+    @visitor.when(VarDeclarationNode)
+    def visit(self, node,context):
+        context.define_attribute(node.id,node.type_of())
+
+    
+    @visitor.when(FuncFullDeclarationNode)
+    def visit(self, node,context):
+        self.visit(node.body,context)
+        param_types = []
+        for param in node.params:
+            self.visit(param,context)
+            param_types.append(param.type_of())
+        context.define_method(node.id,param_types,node.body.type_of())
+    
+    @visitor.when(FuncInlineDeclarationNode)
+    def visit(self, node,context):        
+        self.visit(node.body,context)
+        param_types = []
+        for param in node.params:
+            self.visit(param,context)
+            param_types.append(param.type_of())
+        context.define_method(node.id,param_types,node.body.type_of())
+    

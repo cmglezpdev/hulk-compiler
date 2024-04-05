@@ -14,14 +14,6 @@ class TypeCheckingVisitor(object):
     
     @visitor.when(ProgramNode)
     def visit(self, node, context=None):
-        context = Context()
-        context.create_type('Number')
-        context.create_type('Bool')
-        context.create_type('String')
-        context.create_type('Any')
-        context.create_type('Void')
-        context.create_type('Vec')
-
         for statement in node.statements:
                 self.visit(statement,context)
         return self.errors
