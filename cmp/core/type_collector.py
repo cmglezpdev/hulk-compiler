@@ -28,10 +28,10 @@ class TypeCollectorVisitor(object):
         global_context = context.get_type('Global')
         
         
-        global_context.define_method('print','Object','Void')
-        global_context.define_method('sin','Number','Number')
-        global_context.define_method('cos','Number','Number')
-        global_context.define_method('tan','Number','Number')
+        global_context.define_method('print','x','Object','Void')
+        global_context.define_method('sin','x','Number','Number')
+        global_context.define_method('cos','x','Number','Number')
+        global_context.define_method('tan','x','Number','Number')
 
         global_context.define_attribute('pi','Number')
         for statement in node.statements:
@@ -47,17 +47,21 @@ class TypeCollectorVisitor(object):
     def visit(self, node,context):
         self.visit(node.body,context)
         param_types = []
+        param_names = []
         for param in node.params:
             self.visit(param,context)
-            param_types.append(param.type_of())
-        context.define_method(node.id,param_types,node.body.type_of())
+            param_types.append('Object')
+            param_names.append(param.id)
+        context.define_method(node.id,param_names,param_types,node.body.type_of())
     
     @visitor.when(FuncInlineDeclarationNode)
     def visit(self, node,context):        
         self.visit(node.body,context)
         param_types = []
+        param_names = []
         for param in node.params:
             self.visit(param,context)
             param_types.append(param.type_of())
-        context.define_method(node.id,param_types,node.body.type_of())
+            param_names.append(param.id)
+        context.define_method(node.id,param_names,param_types,node.body.type_of())
     

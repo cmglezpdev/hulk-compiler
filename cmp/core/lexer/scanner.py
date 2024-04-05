@@ -152,16 +152,15 @@ def tokenizer(code: str, lexer: Lexer = None):
 
 
 def semantic_checker(ast, semantic_checker = None,context = None):
-    if semantic_checker is None:
-        semantic_checker = SemanticCheckerVisitor()
+    semantic_checker = SemanticCheckerVisitor()
         
     print('>>> Semantic Checking...')
     try:
         if context is None:
             context = Context()
-        serrors = semantic_checker.visit(ast)
+        serrors = semantic_checker.visit(ast,context)
         return serrors
-    except Exception as e:
+    except e:
         print(e)
         
 def type_checker(ast, type_checker = None,context = None):

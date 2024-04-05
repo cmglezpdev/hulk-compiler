@@ -37,9 +37,10 @@ class TypeCheckingVisitor(object):
     def visit(self, node,context):
         self.visit(node.left,context)
         self.visit(node.right,context)
+        
 
-        if node.left.type_of() != node.right.type_of():
-            self.errors.append(f'mismatch types between {str(node.left)} {str(node.right)}')
+        if node.left.type_of() != node.right.type_of() or (node.left.type_of() != 'Object' or node.right.type_of() !='Object'):
+            self.errors.append(f'mismatch types between {str(node.left)} and {str(node.right)}')
 
     @visitor.when(BlockNode)
     def visit(self,node,context):
@@ -93,7 +94,6 @@ class TypeCheckingVisitor(object):
     def visit(self,node,context):
         if node.inherit :
             self.visit(node.inherit,context)
-        context.create_type(node.id)
         for feature in node.features:
             self.visit(feature,context)
         
@@ -101,9 +101,6 @@ class TypeCheckingVisitor(object):
     def visit(self,node,context):
          self.visit(node.attr,context)
            
-    @visitor.when(TypeInheritNode)
-    def visit(self,node,context):
-        context.create_type(node.id)
 
     @visitor.when(AttrDeclarationNode)
     def visit(self,node,context):

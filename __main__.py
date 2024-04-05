@@ -2,7 +2,7 @@ import os
 import sys
 import argparse
 from cmp.core.lexer.scanner import build_lexer, semantic_checker, tokenizer, type_checker,type_collector
-from cmp.core.parser.parser import build_parser
+from cmp.core.parser.parser import build_parser,parse
 from cmp.core.semantics  import SemanticCheckerVisitor
 from cmp.core.type_check import TypeCheckingVisitor
 
@@ -65,13 +65,12 @@ if __name__ == '__main__':
         print(f'\n\n\nParsing code: {file}')
         
         code_tokens = tokenizer(content, lexer=lexer)
-        ast = parser(code_tokens)
-
+        ast = parse(code_tokens)
+        
         context = type_collector(ast)
         serrors = semantic_checker(ast, sem_checker,context)
         terrors = type_checker(ast, t_checker,context)
         
-        print(serrors, terrors)
         if(len(serrors) > 0):
             print(">>> %d errors founded:" %(len(serrors)))
             for e in serrors:

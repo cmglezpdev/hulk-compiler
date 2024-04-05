@@ -177,7 +177,7 @@ class AtomicNode(ExpressionNode):
     def __init__(self, lex):
         self.lex = lex
     def __str__(self):
-        return "<AtomicNode>"
+        return self.lex
 
 class BinaryNode(ExpressionNode):
     def __init__(self, lnode, rnode):
@@ -206,9 +206,15 @@ class CallNode(ExpressionNode):
         self.args = args
         self.type = typex
     def __str__(self):
-        return "<CallNode>"
+        args = []
+        for arg in self.args:
+            args.append(arg.id)
+        if self.type:
+            return f"{str(self.type)}.{str(self.id)}({str(args)})"
+        else:
+            return f"{self.id}({args})"
     def type_of(self):
-        return self._type
+        return self.type
 
 class CallTypeAttr(ExpressionNode):
     def __init__(self, type_id, attr):
