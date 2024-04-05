@@ -180,7 +180,7 @@ var_inicialization_list %= var_initialization + comma + var_inicialization_list,
 
 #var initialization <var-init> -> ID = <expression> | ID = <var-asign>
 var_initialization %= identifier + inicialization + instr, lambda h,s: lambda h,s: VarDeclarationNode(s[1], s[3])
-# var_initialization %= identifier + inicialization  + var_asignation 
+# var_initialization %= identifier + inicialization  + open_curly_braket + instr + closed_curly_braket, lambda h,s: lambda h,s: VarDeclarationNode(s[1], s[4]) 
 
 # #id list <id-list> -> <identifier> | <identifier>, <id-list>
 id_list %= identifier, lambda h,s: [s[1]]
@@ -293,6 +293,7 @@ full_else %= scope, lambda h,s: s[1]
 
 #while instruction <while-loop> -> while (<condition-expression>) <scope>
 while_loop %= while_ + open_curly_braket + conditional_expression + closed_curly_braket + scope, lambda h,s: WhileLoopNode(s[3], s[5])
+while_loop %= while_ + open_curly_braket + conditional_expression + closed_curly_braket + expression, lambda h,s: WhileLoopNode(s[3], s[5])
 
 #for instruction <for-loop> -> for ( Id in <iterable-expression>) <scope> 
 for_loop %= for_ + open_curly_braket + identifier + in_ + expression + closed_curly_braket + scope, lambda h,s: ForLoopNode(s[3], s[5], s[7])
