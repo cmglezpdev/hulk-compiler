@@ -3,7 +3,7 @@ class Node:
         self._type = 'Object'
         return "<Node>"
     def type_of(self):
-        return 'Object'
+        return self._type
     def set_type(self,newtype):
         self._type = newtype
 
@@ -51,8 +51,8 @@ class VarDeclarationNode(StatementNode):
         return f"<VarDeclarationNode>: let {self.id} = { str(self.expr) }"
 
     def type_of(self):
-        if self.expr.typeof() is not None:
-            return self.expr.typeof()
+        if self.expr.type_of() is not None:
+            return self.expr.type_of()
         else:
             return 'Object'
 
@@ -63,8 +63,8 @@ class VarAssignation(StatementNode):
     def __str__(self):
         return f"<VarAssignation> {self.id} := {str(self.expr)}"
     def type_of(self):
-        if self.expr.typeof() is not None:
-            return self.expr.typeof()
+        if self.expr.type_of() is not None:
+            return self.expr.type_of()
         else:
             return 'Object'
 
@@ -91,8 +91,8 @@ class FuncInlineDeclarationNode(StatementNode):
         return f"<FuncInlineDeclarationNode> {self.id}{str(self.params)} => {str(self.body)}"
 
     def type_of(self):
-        if self.body.typeof() is not None:
-            return self.body.typeof()
+        if self.body.type_of() is not None:
+            return self.body.type_of()
         else:
             return 'Void'
 
@@ -124,7 +124,7 @@ class AttrDeclarationNode(StatementNode):
         return f"<AttrDeclarationNode> {self.id} {str(self.expr)}"
 
     def type_of(self):
-        return self.expr.typeof()
+        return self.expr.type_of()
     
 
 class VecDecExplSyntaxNode(StatementNode):
@@ -184,10 +184,11 @@ class BinaryNode(ExpressionNode):
         self.left = lnode
         self.right = rnode
     def __str__(self):
-        return "<BinaryNode>"
+        return f"{str(self.left)} {str(self.right)}"
+
     def type_of(self):
         try:
-            return self.lnode.type_of()
+            return self.left.type_of()
         except:
             return 'Object'
 
@@ -214,7 +215,10 @@ class CallNode(ExpressionNode):
         else:
             return f"{self.id}({args})"
     def type_of(self):
-        return self.type
+        if self.type is None:
+            return 'Object'
+        else:
+            return self.type
 
 class CallTypeAttr(ExpressionNode):
     def __init__(self, type_id, attr):
@@ -254,7 +258,7 @@ class VariableNode(AtomicNode):
         self.id = id
         self.type = type
     def __str__(self):
-        return "<VariableNode>"
+        return self.id
     def type_of(self):
         return self.type
 
@@ -268,52 +272,66 @@ class InstantiateTypeNode(ExpressionNode):
         return self.idx
 
 class PlusNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}+{str(self.right)}"
 
 class MinusNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}-{str(self.right)}"
 
 class StarNode(BinaryNode):
     pass
 
 class DivNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}/{str(self.right)}"
 
 class PowNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}^{str(self.right)}"
 
 class AndNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}+{str(self.right)}"
 
 class OrNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}||{str(self.right)}"
 
 class NotNode(AtomicNode):
     pass
 
 class GreaterThatNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}>{str(self.right)}"
 
 class LessThatNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}<{str(self.right)}"
 
 class GreaterOrEqualThatNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}>={str(self.right)}"
 
 class LessOrEqualThatNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}<={str(self.right)}"
 
 class EqualNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}=={str(self.right)}"
 
 class NotEqualNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}!={str(self.right)}"
 
 class StringSimpleConcatNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}@{str(self.right)}"
 
 class StringSpaceConcatNode(BinaryNode):
-    pass
+    def __str__(self):
+        return f"{str(self.left)}@@{str(self.right)}"
 
 class WhileLoopNode(ExpressionNode):
     def __init__(self, expr, body):
@@ -357,4 +375,6 @@ class ParenthesisExpr(ExpressionNode):
     def __init__(self, expr):
         self.expr = expr
     def __str__(self):
-        return "<ParenthesisExpr>"
+        return f"({str(self.expr)})"
+    def type_of(self):
+        return self.expr.type_of()

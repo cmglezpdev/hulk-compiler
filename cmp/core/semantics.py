@@ -19,6 +19,7 @@ class SemanticCheckerVisitor(object):
     
     @visitor.when(ProgramNode)
     def visit(self, node, context=None ,scope=None):
+        self.errors=[]
         scope = Scope()
 
         scope.define_variable('pi')
