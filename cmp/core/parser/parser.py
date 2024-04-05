@@ -17,4 +17,5 @@ def parse(tokens: list[Token]):
     return ast
 
 def build_parser():
+    print('>>> Building Parser...')
     return LR1Parser(G, verbose=False)

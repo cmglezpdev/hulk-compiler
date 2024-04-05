@@ -60,7 +60,7 @@ class TypeCheckingVisitor(object):
         for arg in node.args:
             self.visit(arg,context)
         try:
-            type = context.get_type(node.id).atributes[0]
+            type = context.get_type(node.id).attributes[0]
             node.set_type(type)
         except:
             pass
