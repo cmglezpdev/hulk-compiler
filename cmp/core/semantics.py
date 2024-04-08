@@ -55,8 +55,9 @@ class SemanticCheckerVisitor(object):
                 param_names=[]
                 param_types=[]
                 for param in node.params:
-                   param_names.append(param.id) 
-                   param_names.append(param.type_of())
+                   print(param)
+                   param_names.append(param) 
+                   param_names.append('Object')
                 type.define_method(node.id,param_names,param_types,node.body.type_of())
             except Exception as e:
                 self.errors.append(e)
@@ -77,8 +78,8 @@ class SemanticCheckerVisitor(object):
                 param_names=[]
                 param_types=[]
                 for param in node.params:
-                   param_names.append(param.id) 
-                   param_names.append(param.type_of())
+                   param_names.append(param) 
+                   param_names.append('Object')
                 type.define_method(node.id,param_names,param_types,node.body.type_of())
             except Exception as e:
                 self.errors.append(e)
@@ -151,8 +152,6 @@ class SemanticCheckerVisitor(object):
                 type.set_parent()
             except Exception as e:
                pass
-
-
 
         for feature in node.features:
             self.visit(feature,context,inner_scope,type)
