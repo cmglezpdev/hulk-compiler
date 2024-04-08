@@ -1,1 +1,6 @@
+type A inherits B{
+    a = 9;
+}
+
+
 let squares = [x^(arr[4]^(sin(x)-9)) || x in range(1,10)] in print(x);

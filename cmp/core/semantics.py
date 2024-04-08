@@ -144,14 +144,18 @@ class SemanticCheckerVisitor(object):
         inner_scope = scope.create_child_scope()
         inner_scope.define_variable('self')
 
-        type = context.create_type(node.id)
+        type =None
+        try:
+            type = context.get_type(node.id)
+        except Exception as e:
+               self.errors.append(f'invalid use of {node.id} type (it doesnt exist)')
+
         if node.inherit :
             self.visit(node.inherit,context,inner_scope)
             try:
                 context.get_type(node.inherit.id)
-                type.set_parent()
             except Exception as e:
-               pass
+               self.errors.append(f'invalid use of {node.inherit.id} type (it doesnt exist)')
 
         for feature in node.features:
             self.visit(feature,context,inner_scope,type)
@@ -177,7 +181,7 @@ class SemanticCheckerVisitor(object):
         child_scope = scope.create_child_scope()
         self.visit(node.expr,context,child_scope)
         try:
-            type.define_attribute(node.id,node.expr.type_of())
+            type.get_attribute(node.id)
         except Exception as e:
             self.errors.append(e)
 
@@ -248,9 +252,9 @@ class SemanticCheckerVisitor(object):
     def visit(self,node,context,scope):
         inner_scope = scope.create_child_scope()
         try:
-         context.create_type(node.id)
+         context.get_type(node.id)
         except:
-            self.errors.append(f'invalid re declaration of {node.id} type')
+            self.errors.append(f'invalid use of {node.id} type (it doesnt existe)')
         if node.extends is not None:
             self.visit(node.extends)
         for method in node.methods:
