@@ -160,7 +160,7 @@ def semantic_checker(ast, semantic_checker = None,context = None):
             context = Context()
         serrors = semantic_checker.visit(ast,context)
         return serrors
-    except e:
+    except Exception as e:
         print(e)
         
 def type_checker(ast, type_checker = None,context = None):

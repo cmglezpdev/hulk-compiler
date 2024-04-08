@@ -178,7 +178,7 @@ var_inicialization_list %= var_initialization, lambda h,s: [s[1]]
 var_inicialization_list %= var_initialization + comma + var_inicialization_list, lambda h,s: [s[1]] + s[3]
 
 #var initialization <var-init> -> ID = <expression> | ID = <var-asign>
-var_initialization %= identifier + inicialization + instr, lambda h,s: lambda h,s: VarDeclarationNode(s[1], s[3])
+var_initialization %= identifier + inicialization + instr, lambda h,s: VarDeclarationNode(s[1], s[3])
 # var_initialization %= identifier + inicialization  + open_curly_braket + instr + closed_curly_braket, lambda h,s: lambda h,s: VarDeclarationNode(s[1], s[4]) 
 
 # #id list <id-list> -> <identifier> | <identifier>, <id-list>
