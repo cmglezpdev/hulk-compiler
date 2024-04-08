@@ -1,1 +1,2 @@
-let a = while (x > 3) 5 in a;
+let pt = new Point() in
+    print("x: " @ pt.getX() @ "; y: " @ pt.getY());

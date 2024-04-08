@@ -7,7 +7,7 @@ from cmp.core.grammar import G
 def parse(tokens: list[Token],parser=None):
     print('>>> Parsing...')
     if parser == None:
-        parser = LR1Parser(G,verbose=False)
+        parser = LR1Parser(G,verbose=True)
     result = parser(tokens, get_shift_reduce=True)
 
     right_parse, operations = result
