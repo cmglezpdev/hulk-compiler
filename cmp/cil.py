@@ -63,10 +63,15 @@ class DivNode(ArithmeticNode):
     pass
 
 class GetAttribNode(InstructionNode):
-    pass
+    def __init__(self, dest, type_id, attr):
+        self.dest = dest
+        self.type_id = type_id
+        self.attr = attr
 
 class SetAttribNode(InstructionNode):
-    pass
+    def __init__(self, value, attr):
+        self.value = value
+        self.attr = attr
 
 class GetIndexNode(InstructionNode):
     pass
@@ -145,6 +150,27 @@ class PrintNode(InstructionNode):
     def __init__(self, str_addr):
         self.str_addr = str_addr
 
+class SenNode(InstructionNode):
+    def __init__(self, dest, x):
+        self.x = x
+        self.dest = dest
+
+class CosNode(InstructionNode):
+    def __init__(self, dest, x):
+        self.x = x
+        self.dest = dest
+
+class TanNode(InstructionNode):
+    def __init__(self, dest, x):
+        self.x = x
+        self.dest = dest
+
+class PowNode(InstructionNode):
+    def __init__(self, dest, base, x):
+        self.base = base
+        self.x = x
+        self.dest = dest
+
 def get_formatter():
 
     class PrintVisitor(object):
@@ -159,6 +185,10 @@ def get_formatter():
             dotcode = '\n'.join(self.visit(t) for t in node.dotcode)
 
             return f'.TYPES\n{dottypes}\n\n.DATA\n{dotdata}\n\n.CODE\n{dotcode}'
+
+        @visitor.when(DataNode)
+        def visit(self, node):
+            return f'{node.name} = {node.value}'
 
         @visitor.when(TypeNode)
         def visit(self, node):
@@ -218,6 +248,14 @@ def get_formatter():
         @visitor.when(DynamicCallNode)
         def visit(self, node):
             return f'{node.dest} = VCALL {node.type} {node.method}'
+        
+        @visitor.when(GetAttribNode)
+        def visit(self, node):
+            return f'{node.dest} = GETATTR {node.type_id} {node.attr}'
+       
+        @visitor.when(SetAttribNode)
+        def visit(self, node):
+            return f'SETATTR {node.attr} {node.value}'
 
         @visitor.when(ArgNode)
         def visit(self, node):
@@ -226,6 +264,22 @@ def get_formatter():
         @visitor.when(PrintNode)
         def visit(self, node):
             return f'PRINT {node.str_addr} '
+        
+        @visitor.when(SenNode)
+        def visit(self, node):
+            return f'{node.dest} = SEN {node.x} '
+        
+        @visitor.when(CosNode)
+        def visit(self, node):
+            return f'{node.dest} = COS {node.x} '
+        
+        @visitor.when(TanNode)
+        def visit(self, node):
+            return f'{node.dest} = TAN {node.x} '
+        
+        @visitor.when(PowNode)
+        def visit(self, node):
+            return f'{node.dest} = {node.base} ^ {node.x} '
 
         @visitor.when(ReturnNode)
         def visit(self, node):

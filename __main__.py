@@ -5,6 +5,8 @@ from cmp.core.lexer.scanner import build_lexer, semantic_checker, tokenizer, typ
 from cmp.core.parser.parser import build_parser,parse
 from cmp.core.semantics  import SemanticCheckerVisitor
 from cmp.core.type_check import TypeCheckingVisitor
+from cmp.core.hulkToCIL import HULKToCIL
+from cmp.cil import get_formatter
 
 
 def load_tests(left_test, right_test):
@@ -61,14 +63,14 @@ if __name__ == '__main__':
     sem_checker = SemanticCheckerVisitor()
     t_checker = TypeCheckingVisitor()
 
-    for file, content in tests:
+    for file, content in tests[:6]:
         print(f'\n\n\nParsing code: {file}')
         
         code_tokens = tokenizer(content, lexer=lexer)
         ast = parse(code_tokens,parser=parser)
         
         context = type_collector(ast)
-        serrors = semantic_checker(ast, sem_checker,context)
+        scope, serrors = semantic_checker(ast, sem_checker,context)
         terrors = type_checker(ast, t_checker,context)
         
         if(len(serrors) > 0):
@@ -84,7 +86,14 @@ if __name__ == '__main__':
         
         
         sem_checker.errors = []
+        
+        print('--------------------------')
+        print(context)
+        print('--------------------------')
 
-
+        hulkToCil = HULKToCIL(context)
+        cil_ast = hulkToCil.visit(ast, scope)
+        formatter = get_formatter()
+        print(formatter(cil_ast))
 
 

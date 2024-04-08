@@ -32,7 +32,7 @@ class SemanticCheckerVisitor(object):
         # print(len(node.statements))
         for statement in node.statements:
                 self.visit(statement,context,scope)
-        return self.errors
+        return scope, self.errors
     
     @visitor.when(VarDeclarationNode)
     def visit(self, node,context, scope):
@@ -253,12 +253,11 @@ class SemanticCheckerVisitor(object):
             self.errors.append(f'invalid re declaration of {node.id} type')
         if node.extends is not None:
             self.visit(node.extends)
-        for method in node.methods:
-            self.visit(method,context,inner_scope)
-        # for method in inner_scope.local_funcs:
-        #     try:
-        #         context.get_type(node.id).define_method(method.name,'Any','Any','Any')
-        #     except Exception as e:
-        #         self.errors.append(e)
+        self.visit(node.methods,context,inner_scope)
+        for method in inner_scope.local_funcs:
+            try:
+                context.get_type(node.id).define_method(method.name,'Any','Any','Any')
+            except Exception as e:
+                self.errors.append(e)
         
            
