@@ -40,7 +40,7 @@ class SemanticCheckerVisitor(object):
         self.visit(node.expression,context,scope)
     
     @visitor.when(FuncFullDeclarationNode)
-    def visit(self, node,context, scope):
+    def visit(self, node,context, scope,type=None):
         inner_scope =scope.create_child_scope()
         for n in node.params:
             inner_scope.define_variable(n)
@@ -49,9 +49,20 @@ class SemanticCheckerVisitor(object):
         else:
             scope.define_function(node.id,len(node.params))
         self.visit(node.body,context,inner_scope)
+
+        if type is not None:
+            try:
+                param_names=[]
+                param_types=[]
+                for param in node.params:
+                   param_names.append(param.id) 
+                   param_names.append(param.type_of())
+                type.define_method(node.id,param_names,param_types,node.body.type_of())
+            except Exception as e:
+                self.errors.append(e)
     
     @visitor.when(FuncInlineDeclarationNode)
-    def visit(self, node,context, scope):        
+    def visit(self, node,context, scope,type=None):        
         inner_scope =scope.create_child_scope()
         for n in node.params:
             inner_scope.define_variable(n)
@@ -61,6 +72,16 @@ class SemanticCheckerVisitor(object):
         else:
             scope.define_function(node.id,len(node.params))
         self.visit(node.body,context,inner_scope)
+        if type is not None:
+            try:
+                param_names=[]
+                param_types=[]
+                for param in node.params:
+                   param_names.append(param.id) 
+                   param_names.append(param.type_of())
+                type.define_method(node.id,param_names,param_types,node.body.type_of())
+            except Exception as e:
+                self.errors.append(e)
 
  
     
@@ -134,19 +155,8 @@ class SemanticCheckerVisitor(object):
 
 
         for feature in node.features:
-            self.visit(feature,context,inner_scope)
+            self.visit(feature,context,inner_scope,type)
         
-        for attr in inner_scope.local_vars:
-            try:
-                context.get_type(node.id).define_attribute(attr.name,'Any')
-            except Exception as e:
-                self.errors.append(e.message)
-
-        for method in inner_scope.local_funcs:
-            try:
-                context.get_type(node.id).define_method(method.name,'Any','Any','Any')
-            except Exception as e:
-                self.errors.append(e.message)
     @visitor.when(CallTypeAttr)
     def visit(self,node,context,scope):
               self.visit(node.attr,context,scope)
@@ -160,13 +170,17 @@ class SemanticCheckerVisitor(object):
             self.errors.append(f"cannot inherit from unexisting {node.id} type")
 
     @visitor.when(AttrDeclarationNode)
-    def visit(self,node,context,scope):
+    def visit(self,node,context,scope,type):
         if scope.is_var_defined(node.id):
             self.errors.append(f'atribute duplication {node.id}')
             return
         scope.define_variable(node.id)
         child_scope = scope.create_child_scope()
         self.visit(node.expr,context,child_scope)
+        try:
+            type.define_attribute(node.id,node.expr.type_of())
+        except Exception as e:
+            self.errors.append(e)
 
     @visitor.when(VecInstNode)
     def visit(self,node,context,scope):
@@ -242,10 +256,10 @@ class SemanticCheckerVisitor(object):
             self.visit(node.extends)
         for method in node.methods:
             self.visit(method,context,inner_scope)
-        for method in inner_scope.local_funcs:
-            try:
-                context.get_type(node.id).define_method(method.name,'Any','Any','Any')
-            except Exception as e:
-                self.errors.append(e.message)
+        # for method in inner_scope.local_funcs:
+        #     try:
+        #         context.get_type(node.id).define_method(method.name,'Any','Any','Any')
+        #     except Exception as e:
+        #         self.errors.append(e)
         
            
