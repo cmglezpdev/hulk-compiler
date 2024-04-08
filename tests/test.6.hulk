@@ -1,1 +1,10 @@
-let a = while (x > 3) 5 in a;
+protocol PolarPoint{
+  x(x)=>x.name
+}
+type PolarPoint(phi, rho) inherits Point(rho * sin(phi), rho * cos(phi)) {
+    length()=> phi*rho + (cos(rho))/(sen(phi));
+}
+
+type Knight inherits Person {
+    name() => "Sir" @@ base();
+};

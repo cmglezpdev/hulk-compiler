@@ -10,11 +10,11 @@ class TypeCollectorVisitor(object):
         self.errors = []
 
     @visitor.on("node")
-    def visit(self, node,context:Context):
+    def visit(self, node,context:Context,type=None):
         pass    
     
     @visitor.when(ProgramNode)
-    def visit(self, node, context=None):
+    def visit(self, node, context=None,type=None):
         context = Context()
         obj =  context.create_type('Object')
 
@@ -45,13 +45,13 @@ class TypeCollectorVisitor(object):
         return context
     
     @visitor.when(VarDeclarationNode)
-    def visit(self, node,context):
-        self.visit(node.expr)
+    def visit(self, node,context,type=None):
+        self.visit(node.expr,context)
         self.global_context.define_attribute(node.id,node.expr.type_of())
 
     
     @visitor.when(FuncFullDeclarationNode)
-    def visit(self, node,context):
+    def visit(self, node,context,type=None):
         self.visit(node.body,context)
         param_types = []
         param_names = []
@@ -60,12 +60,15 @@ class TypeCollectorVisitor(object):
             param_types.append('Object')
             param_names.append(param)
         try:
-            self.global_context.define_method(node.id,param_names,param_types,node.body.type_of())
+            if type is not None:
+                type.global_context.define_method(node.id,param_names,param_types,node.body.type_of())
+            else:
+                self.global_context.define_method(node.id,param_names,param_types,node.body.type_of())
         except Exception as e:
           pass
     
     @visitor.when(FuncInlineDeclarationNode)
-    def visit(self, node,context):        
+    def visit(self, node,context,type=None):        
         self.visit(node.body,context)
         param_types = []
         param_names = []
@@ -74,7 +77,43 @@ class TypeCollectorVisitor(object):
             param_types.append('Object')
             param_names.append(param)
         try:
-            self.global_context.define_method(node.id,param_names,param_types,node.body.type_of())
+            if type is not None:
+                type.global_context.define_method(node.id,param_names,param_types,node.body.type_of())
+            else:
+                self.global_context.define_method(node.id,param_names,param_types,node.body.type_of())
         except Exception as e:
             pass
     
+    @visitor.when(TypeDeclarationNode)
+    def visit(self,node,context,type=None):
+        type = context.create_type(node.id)
+        if node.inherit :
+            self.visit(node.inherit,context)
+            try:
+                p_type = context.get_type(node.inherit.id)
+                type.set_parent(p_type)
+            except Exception as e:
+               pass
+
+        for feature in node.features:
+            self.visit(feature,context,type)
+            
+    
+    @visitor.when(AttrDeclarationNode)
+    def visit(self,node,context,type=None):
+        self.visit(node.expr,context)
+        try:
+            type.define_attribute(node.id,node.expr.type_of())
+        except Exception as e:
+            self.errors.append(e)
+
+    @visitor.when(ProtocolNode)
+    def visit(self,node,context,tye=None):
+        try:
+         context.create_type(node.id)
+        except:
+            self.errors.append(f'invalid re declaration of {node.id} type')
+        if node.extends is not None:
+            self.visit(node.extends,context)
+        for method in node.methods:
+            self.visit(method,context)

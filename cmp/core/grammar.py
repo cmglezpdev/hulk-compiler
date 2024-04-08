@@ -397,6 +397,7 @@ protocol_declaration %= protocol + ID + protocol_body + semicolon, lambda h,s: P
 protocol_declaration %= protocol + ID + extends + ID + protocol_body, lambda h,s: ProtocolNode(s[2], s[5], s[4])
 protocol_declaration %= protocol + ID + extends + ID + protocol_body + semicolon, lambda h,s: ProtocolNode(s[2], s[5], s[4])
 
+
 # # #extend definer <extend-definer> -> extends ID | epsilon
 
 # extend_definer %= extends + ID + extend_definer
