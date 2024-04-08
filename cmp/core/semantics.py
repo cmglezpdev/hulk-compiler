@@ -157,17 +157,6 @@ class SemanticCheckerVisitor(object):
         for feature in node.features:
             self.visit(feature,context,inner_scope,type)
         
-        for attr in inner_scope.local_vars:
-            try:
-                context.get_type(node.id).define_attribute(attr.name,'Any')
-            except Exception as e:
-                self.errors.append(e)
-
-        for method in inner_scope.local_funcs:
-            try:
-                context.get_type(node.id).define_method(method.name,'Any','Any','Any')
-            except Exception as e:
-                self.errors.append(e)
     @visitor.when(CallTypeAttr)
     def visit(self,node,context,scope):
               self.visit(node.attr,context,scope)
