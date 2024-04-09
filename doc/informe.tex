@@ -4,16 +4,37 @@
 \usepackage{listings}
 \usepackage{courier}
 \usepackage[margin=2cm]{geometry}
-\usepackage[spanish]{babel}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{subfig}
 \usepackage{float}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+\usepackage{subcaption}
 
 \begin{document}
-\title{Compilador de Hulk}
-\author{Carlos Manuel González Peña C411 \\ Jorge Alberto Aspiolea C412 \\ Alex Sánchez Saez C412}
-\maketitle
+    \sloppypar
+    \begin{titlepage}
+        \centering
+        {\bfseries\LARGE\texttt{Universidad de La Hábana} \par}
+        \vspace{3cm}
+        {\scshape\Large\texttt{Facultad de Matemáticas y Ciencias de la Computación} \par}
+        \vspace{2cm}
+        \vspace{2cm}
+        {\scshape\huge\texttt{Compilador de HULK}\par}
+        \vfill
+        \vspace{1cm}
+        {\LARGE\texttt{Integrantes:} \par}
+        \vspace{0.5cm}
+        {\Large\texttt{Alex Sánchez Saez C412} \par}
+        {\Large\texttt{Carlos Manuel González C411} \par}
+        {\Large\texttt{Jorge Alberto Aspiolea González C412} \par}
+        \vfill
+        {\Large\texttt{Abril 2024} \par}
+    \end{titlepage}
 
 \section{Uso del compilador}
 \subsection{Compilar un archivo .hulk}
@@ -42,6 +63,9 @@ Se usó un parser \textbf{LR(1)} el cual recibe una lista de tokens obtenidos me
 
 
 \subsection{Generación de código}
-% TODO: añadir el texto
+\paragraph{}
+Una vez que el AST está correcto, al igual que el contexto, y el scope, con ellos se construye el AST de CIL correspondiente al código, es cual es un lenguaje intermedio para que facilitará la generación de código.
+\paragraph{}
+Para esto el compilador ira por cada nodo del AST del HULK utilizando el patrón visitor. Primero definirá la función 'entry' y dentro las funciones predefinidas(sin, cos, etc). Luego por cada nodo ira creado las otras funciones, tipos y datos. Para lo cual utiliza la clase cil definida en \textit{cmp/cil.py}, y se crea un nodo del nuevo AST según sea necesario. Ejemplo de estos serían los nodos GETATTR, SETATTR o GOTO, utilizados para acceder a valores, asignarlos, y hacer saltos en el código, simulando el \textbf{if}, respectivamente.
 
 \end{document}
